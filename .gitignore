@@ -1,0 +1,6 @@
+node_modules/
+.next/
+north-shore-projects/
+nul
+.DS_Store
+*.log
