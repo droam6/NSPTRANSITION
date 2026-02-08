@@ -307,6 +307,7 @@
     </div>
   </footer>
 
+  <script src="../js/form-validation.js" defer></script>
   <script>
     /* --- Mobile Menu Toggle --- */
     (function () {
@@ -332,38 +333,6 @@
       }
     })();
 
-    /* --- Form Submission Handler --- */
-    (function () {
-      var form = document.getElementById('enquiry-form');
-
-      if (form) {
-        form.addEventListener('submit', function (e) {
-          e.preventDefault();
-
-          var formData = new FormData(form);
-          var selectedService = formData.get('service') || '';
-          var source = formData.get('source') || 'organic';
-
-          window.dataLayer = window.dataLayer || [];
-          window.dataLayer.push({
-            'event': 'form_submission',
-            'service': selectedService,
-            'source': source
-          });
-
-          // CONVERSION TRACKING
-
-          fetch(form.action, {
-            method: 'POST',
-            body: formData
-          }).then(function () {
-            form.innerHTML = '<div class="form-success" role="alert"><i class="fas fa-check-circle" aria-hidden="true"></i><h3>Thank You!</h3><p>Your enquiry has been received. We will be in touch within 24 hours.</p></div>';
-          }).catch(function () {
-            form.innerHTML = '<div class="form-success" role="alert"><i class="fas fa-check-circle" aria-hidden="true"></i><h3>Thank You!</h3><p>Your enquiry has been received. We will be in touch within 24 hours.</p></div>';
-          });
-        });
-      }
-    })();
   </script>
 </body>
 </html>

@@ -1206,6 +1206,81 @@ p {
   animation: fadeInUp 0.6s ease forwards;
 }
 
+/* --- Form Validation States --- */
+.form-group .form-error {
+  display: none;
+  color: var(--color-error);
+  font-size: 0.8rem;
+  margin-top: 4px;
+  font-weight: 500;
+}
+
+.form-group.has-error .form-error {
+  display: block;
+}
+
+.form-group.has-error input,
+.form-group.has-error select,
+.form-group.has-error textarea {
+  border-color: var(--color-error);
+}
+
+.form-group.has-error input:focus,
+.form-group.has-error select:focus,
+.form-group.has-error textarea:focus {
+  box-shadow: 0 0 0 3px rgba(220, 53, 69, 0.15);
+}
+
+.form-group.is-valid input,
+.form-group.is-valid select,
+.form-group.is-valid textarea {
+  border-color: var(--color-success);
+}
+
+.form-group .char-count {
+  display: block;
+  text-align: right;
+  font-size: 0.75rem;
+  color: var(--color-medium-gray);
+  margin-top: 4px;
+}
+
+.form-group .char-count.warn {
+  color: var(--color-error);
+}
+
+.btn.is-loading {
+  pointer-events: none;
+  opacity: 0.7;
+  position: relative;
+}
+
+.btn.is-loading::after {
+  content: '';
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  margin-left: 8px;
+  border: 2px solid transparent;
+  border-top-color: currentColor;
+  border-radius: 50%;
+  animation: spin 0.6s linear infinite;
+  vertical-align: middle;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+.hp-field {
+  position: absolute;
+  left: -9999px;
+  opacity: 0;
+  height: 0;
+  width: 0;
+  overflow: hidden;
+}
+
 /* --- Print Styles --- */
 @media print {
   .nav, .footer, .form-section, .cta-banner {

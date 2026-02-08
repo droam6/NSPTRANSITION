@@ -589,6 +589,7 @@
   </footer>
 
   <!-- JavaScript -->
+  <script src="js/form-validation.js" defer></script>
   <script>
     // Mobile menu toggle
     (function() {
@@ -604,37 +605,6 @@
       }
     })();
 
-    // Form submission handler
-    function handleFormSubmit(formId, successId) {
-      var form = document.getElementById(formId);
-      var success = document.getElementById(successId);
-
-      if (!form || !success) return;
-
-      form.addEventListener('submit', function(e) {
-        e.preventDefault();
-
-        var selectedService = form.querySelector('select[name="service"]');
-        var source = form.querySelector('input[name="source"]');
-
-        // Push to dataLayer for GTM
-        window.dataLayer = window.dataLayer || [];
-        window.dataLayer.push({
-          'event': 'form_submission',
-          'service': selectedService ? selectedService.value : '',
-          'source': source ? source.value : 'organic'
-        });
-
-        // CONVERSION TRACKING - fire GTM event here
-
-        // Show success message
-        form.style.display = 'none';
-        success.style.display = 'block';
-      });
-    }
-
-    handleFormSubmit('sidebarForm', 'sidebarSuccess');
-    handleFormSubmit('contactForm', 'contactSuccess');
   </script>
 </body>
 </html>

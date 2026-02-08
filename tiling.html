@@ -207,7 +207,7 @@
             <div class="sidebar-form">
               <h3>Quick Enquiry</h3>
               <p>Get a free tiling quote. We respond within 2 hours during business hours.</p>
-              <form id="sidebar-form" class="form" aria-label="Quick enquiry form">
+              <form id="sidebar-form" class="form" action="/api/contact" aria-label="Quick enquiry form">
                 <div class="form-group">
                   <label for="sidebar-name">Full Name <span class="required">*</span></label>
                   <input type="text" id="sidebar-name" name="name" required autocomplete="name" placeholder="Your full name">
@@ -434,7 +434,7 @@
         <h2 class="section-title">Request Your Free Tiling Quote</h2>
         <p class="section-subtitle">Fill in the form below and one of our tiling specialists will be in touch within 2 hours during business hours. All fields marked with * are required.</p>
         <div class="form-container">
-          <form id="contact-form" class="form" aria-label="Tiling enquiry form">
+          <form id="contact-form" class="form" action="/api/contact" aria-label="Tiling enquiry form">
             <div class="form-row">
               <div class="form-group">
                 <label for="contact-name">Full Name <span class="required">*</span></label>
@@ -529,6 +529,7 @@
     </div>
   </footer>
 
+  <script src="js/form-validation.js" defer></script>
   <script>
     // Mobile Menu Toggle
     (function () {
@@ -554,49 +555,6 @@
       }
     })();
 
-    // Form Handler with dataLayer Push
-    (function () {
-      function handleFormSubmit(form, formName) {
-        form.addEventListener('submit', function (e) {
-          e.preventDefault();
-
-          var formData = new FormData(form);
-          var data = {};
-          formData.forEach(function (value, key) {
-            data[key] = value;
-          });
-
-          // Push form submission event to dataLayer for GTM tracking
-          window.dataLayer = window.dataLayer || [];
-          window.dataLayer.push({
-            event: 'form_submission',
-            form_name: formName,
-            form_service: data.service || '',
-            form_suburb: data.suburb || ''
-          });
-
-          // Google Ads Conversion Tracking
-          // gtag('event', 'conversion', { 'send_to': 'AW-XXXXXXXXX/XXXXXXXXXXXXXXX' });
-
-          // Display success message
-          var successMsg = document.createElement('div');
-          successMsg.className = 'form-success';
-          successMsg.setAttribute('role', 'alert');
-          successMsg.innerHTML = '<i class="fas fa-check-circle" aria-hidden="true"></i> Thank you! Your enquiry has been submitted. We will be in touch within 2 hours during business hours.';
-          form.parentNode.insertBefore(successMsg, form.nextSibling);
-          form.reset();
-
-          // Scroll to success message
-          successMsg.scrollIntoView({ behavior: 'smooth', block: 'center' });
-        });
-      }
-
-      var sidebarForm = document.getElementById('sidebar-form');
-      var contactForm = document.getElementById('contact-form');
-
-      if (sidebarForm) handleFormSubmit(sidebarForm, 'sidebar_quick_enquiry');
-      if (contactForm) handleFormSubmit(contactForm, 'tiling_contact_form');
-    })();
   </script>
 </body>
 </html>

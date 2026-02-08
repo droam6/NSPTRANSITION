@@ -277,14 +277,10 @@
 </footer>
 
 <!-- ===== JAVASCRIPT ===== -->
+<script src="../js/form-validation.js" defer></script>
 <script>
   // Mobile menu toggle
   (function(){var t=document.querySelector('.nav-toggle'),m=document.getElementById('mobile-menu');if(t&&m){t.addEventListener('click',function(){var o=m.classList.toggle('active');t.classList.toggle('active');t.setAttribute('aria-expanded',o?'true':'false');t.setAttribute('aria-label',o?'Close mobile menu':'Open mobile menu')});m.querySelectorAll('a').forEach(function(l){l.addEventListener('click',function(){m.classList.remove('active');t.classList.remove('active');t.setAttribute('aria-expanded','false');t.setAttribute('aria-label','Open mobile menu')})})}})();
-
-  // Form submission handler with dataLayer push
-  (function(){var f=document.getElementById('enquiry-form'),s=document.getElementById('form-success');if(f&&s){f.addEventListener('submit',function(e){e.preventDefault();var d=new FormData(f);window.dataLayer=window.dataLayer||[];window.dataLayer.push({event:'form_submission',service:d.get('service')||'',source:d.get('source')||'organic',landing:d.get('landing')||''});
-  // CONVERSION TRACKING - fire GTM conversion event here
-  fetch(f.action,{method:'POST',body:d}).then(function(){f.style.display='none';s.style.display='block'}).catch(function(){f.style.display='none';s.style.display='block'})})}})();
 </script>
 </body>
 </html>

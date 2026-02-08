@@ -266,9 +266,9 @@
 </footer>
 
 <!-- ===== JAVASCRIPT ===== -->
+<script src="../js/form-validation.js" defer></script>
 <script>
   (function(){var t=document.querySelector('.nav-toggle'),m=document.getElementById('mobile-menu');if(t&&m){t.addEventListener('click',function(){var o=m.classList.toggle('active');t.classList.toggle('active');t.setAttribute('aria-expanded',o?'true':'false');t.setAttribute('aria-label',o?'Close mobile menu':'Open mobile menu')});m.querySelectorAll('a').forEach(function(l){l.addEventListener('click',function(){m.classList.remove('active');t.classList.remove('active');t.setAttribute('aria-expanded','false');t.setAttribute('aria-label','Open mobile menu')})})}})();
-  (function(){var f=document.getElementById('enquiry-form'),s=document.getElementById('form-success');if(f&&s){f.addEventListener('submit',function(e){e.preventDefault();var d=new FormData(f);window.dataLayer=window.dataLayer||[];window.dataLayer.push({event:'form_submission',service:d.get('service')||'',source:d.get('source')||'organic',landing:d.get('landing')||''});fetch(f.action,{method:'POST',body:d}).then(function(){f.style.display='none';s.style.display='block'}).catch(function(){f.style.display='none';s.style.display='block'})})}})();
   (function(){if(!('IntersectionObserver' in window))return;var els=document.querySelectorAll('.fade-in-up');els.forEach(function(el){el.style.opacity='0';el.style.transform='translateY(20px)';el.style.transition='opacity 0.6s ease, transform 0.6s ease'});var obs=new IntersectionObserver(function(entries){entries.forEach(function(entry){if(entry.isIntersecting){entry.target.style.opacity='1';entry.target.style.transform='translateY(0)';obs.unobserve(entry.target)}})},{threshold:0.1,rootMargin:'0px 0px -40px 0px'});els.forEach(function(el){obs.observe(el)})})();
 </script>
 </body>

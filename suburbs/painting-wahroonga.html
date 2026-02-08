@@ -184,7 +184,7 @@
             <div class="sidebar-form" id="contact">
               <h3>Get a Free Painting Quote</h3>
               <p>Tell us about your Wahroonga painting project. We respond within 2 hours during business hours.</p>
-              <form id="enquiry-form" class="form" aria-label="Painting enquiry form">
+              <form id="enquiry-form" class="form" action="/api/contact" aria-label="Painting enquiry form">
                 <input type="hidden" name="source" value="organic">
                 <input type="hidden" name="suburb_page" value="Wahroonga">
                 <div class="form-group">
@@ -279,6 +279,7 @@
   </footer>
 
   <!-- ===== JAVASCRIPT ===== -->
+  <script src="../js/form-validation.js" defer></script>
   <script>
     /* --- Mobile Menu Toggle --- */
     (function () {
@@ -297,37 +298,6 @@
             toggle.classList.remove('active');
             mobileNav.classList.remove('active');
           });
-        });
-      }
-    })();
-
-    /* --- Form Submission Handler with dataLayer Push --- */
-    (function () {
-      var form = document.getElementById('enquiry-form');
-      if (form) {
-        form.addEventListener('submit', function (e) {
-          e.preventDefault();
-          var formData = new FormData(form);
-          var data = {};
-          formData.forEach(function (value, key) { data[key] = value; });
-
-          window.dataLayer = window.dataLayer || [];
-          window.dataLayer.push({
-            event: 'form_submission',
-            form_name: 'painting_wahroonga_enquiry',
-            form_service: data.service || '',
-            form_source: data.source || 'organic'
-          });
-
-          /* CONVERSION TRACKING - fire GTM/Google Ads event here */
-
-          var successMsg = document.createElement('div');
-          successMsg.className = 'form-success';
-          successMsg.setAttribute('role', 'alert');
-          successMsg.innerHTML = '<i class="fas fa-check-circle" aria-hidden="true"></i> Thank you! Your enquiry has been submitted. We will be in touch within 2 hours during business hours.';
-          form.parentNode.insertBefore(successMsg, form.nextSibling);
-          form.reset();
-          successMsg.scrollIntoView({ behavior: 'smooth', block: 'center' });
         });
       }
     })();

@@ -325,6 +325,7 @@
     </footer>
 
     <!-- JavaScript -->
+    <script src="../js/form-validation.js" defer></script>
     <script>
         // Mobile menu toggle
         (function () {
@@ -345,37 +346,6 @@
                         toggle.classList.remove('active');
                         toggle.setAttribute('aria-expanded', 'false');
                     });
-                });
-            }
-        })();
-
-        // Form submission with dataLayer push
-        (function () {
-            var form = document.getElementById('contact-form');
-            var formSuccess = document.querySelector('.form-success');
-
-            if (form) {
-                form.addEventListener('submit', function (e) {
-                    e.preventDefault();
-
-                    var selectedService = form.querySelector('[name="service"]').value;
-                    var source = form.querySelector('[name="source"]').value;
-
-                    // dataLayer push for GTM
-                    window.dataLayer = window.dataLayer || [];
-                    window.dataLayer.push({
-                        'event': 'form_submission',
-                        'service': selectedService,
-                        'source': source,
-                        'suburb': 'Neutral Bay'
-                    });
-
-                    // CONVERSION TRACKING - fire GTM event here
-
-                    form.style.display = 'none';
-                    if (formSuccess) {
-                        formSuccess.style.display = 'block';
-                    }
                 });
             }
         })();

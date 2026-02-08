@@ -399,6 +399,7 @@
   </footer>
 
   <!-- ============ JAVASCRIPT ============ -->
+  <script src="js/form-validation.js" defer></script>
   <script>
     /* --- Mobile Menu Toggle --- */
     (function () {
@@ -424,55 +425,6 @@
       }
     })();
 
-    /* --- Contact Form Handler --- */
-    (function () {
-      var form = document.getElementById('contact-form');
-      var successDiv = document.getElementById('form-success');
-
-      if (form && successDiv) {
-        form.addEventListener('submit', function (e) {
-          e.preventDefault();
-
-          var formData = new FormData(form);
-          var data = {};
-          formData.forEach(function (value, key) {
-            data[key] = value;
-          });
-
-          /* dataLayer push for GTM tracking */
-          window.dataLayer = window.dataLayer || [];
-          window.dataLayer.push({
-            event: 'form_submission',
-            form_name: 'contact_enquiry',
-            service: data.service || '',
-            suburb: data.suburb || ''
-          });
-
-          /* Google Ads conversion tracking */
-          // gtag('event', 'conversion', { 'send_to': 'AW-XXXXXXX/XXXXXXX' });
-
-          /* Submit via fetch */
-          fetch(form.action, {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify(data)
-          })
-          .then(function (response) {
-            if (response.ok) {
-              form.style.display = 'none';
-              successDiv.style.display = 'block';
-            } else {
-              alert('Something went wrong. Please call us on 0433 333 332.');
-            }
-          })
-          .catch(function () {
-            /* Show success anyway if endpoint not configured yet */
-            form.style.display = 'none';
-            successDiv.style.display = 'block';
-          });
-        });
-      }
-    })();
   </script>
 
 </body>

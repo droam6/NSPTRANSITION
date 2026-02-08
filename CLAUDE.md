@@ -117,3 +117,34 @@ All enquiry forms POST to `/api/contact` with fields:
 - [ ] Set up Google Ads conversion tracking
 - [ ] Add actual Google Map embed on contact page
 - [ ] Create privacy.html and terms.html pages
+- [ ] Add favicon and apple-touch-icon
+- [ ] Remove landing pages from sitemap.xml
+- [ ] Add `Disallow: /landing/` to robots.txt
+- [ ] Replace placeholder ABN with real ABN
+- [ ] Replace placeholder aggregate ratings with real review data
+- [ ] Standardise hidden field names (`landing` vs `suburb_page`) across suburb pages
+- [ ] Minify form-validation.js for production
+
+---
+
+## File Tracking Protocol
+
+This project maintains two tracking files that must be kept current across all sessions:
+
+### `progress.md`
+- **Purpose:** Tracks what has been built, what remains, and known issues
+- **When to update:** After completing any feature, fixing a bug, or discovering a new issue
+- **Structure:** Phased checklist (Done/Remaining/Known Issues tables)
+
+### `decisions.md`
+- **Purpose:** Logs every significant architectural or design decision with rationale
+- **When to update:** When making a non-trivial choice (new technology, structural change, naming convention, etc.)
+- **Structure:** Numbered entries (D01, D02...) with Decision, Rationale, and Trade-offs
+- **Next ID:** D16
+
+### Rules for All Sessions
+1. **Read both files at the start** of any session that involves code changes
+2. **Update `progress.md`** whenever you complete a task, discover a bug, or add something to the remaining work list
+3. **Add to `decisions.md`** whenever you make a choice that a future developer would want to understand (use the next available D-number)
+4. **Never delete decision entries** — if a decision is reversed, add a new entry explaining the reversal and reference the original
+5. **Keep `progress.md` timestamps current** — update the "Last updated" date at the top

@@ -106,6 +106,18 @@
       .trust-badges { gap: 10px; }
       .form-box { padding: 24px 20px; }
     }
+
+    /* Form Validation */
+    .form-group .form-error{display:none;color:#dc3545;font-size:0.8rem;margin-top:4px;font-weight:500}
+    .form-group.has-error .form-error{display:block}
+    .form-group.has-error input,.form-group.has-error select,.form-group.has-error textarea{border-color:#dc3545}
+    .form-group.is-valid input,.form-group.is-valid select,.form-group.is-valid textarea{border-color:#28a745}
+    .form-group .char-count{display:block;text-align:right;font-size:0.75rem;color:#777;margin-top:4px}
+    .form-group .char-count.warn{color:#dc3545}
+    .btn.is-loading,.cta-btn.is-loading{pointer-events:none;opacity:0.7;position:relative}
+    .btn.is-loading::after,.cta-btn.is-loading::after{content:'';display:inline-block;width:16px;height:16px;margin-left:8px;border:2px solid transparent;border-top-color:currentColor;border-radius:50%;animation:spin 0.6s linear infinite;vertical-align:middle}
+    @keyframes spin{to{transform:rotate(360deg)}}
+    .hp-field{position:absolute;left:-9999px;opacity:0;height:0;width:0;overflow:hidden}
   </style>
 
   <!-- JSON-LD: LocalBusiness -->
@@ -187,7 +199,7 @@
 
     <!-- Right Form -->
     <div class="form-box">
-      <form id="enquiry-form">
+      <form id="enquiry-form" action="/api/contact">
         <h3>Get Your Free Quote Today</h3>
         <p class="form-subtitle">We respond within 2 hours</p>
 
@@ -254,24 +266,6 @@
 
   </section>
 
-  <script>
-    document.getElementById('enquiry-form').addEventListener('submit', function(e) {
-      e.preventDefault();
-
-      // DataLayer push for GTM
-      window.dataLayer = window.dataLayer || [];
-      window.dataLayer.push({
-        'event': 'form_submission',
-        'service': 'Painting',
-        'source': 'meta-ad'
-      });
-
-      // CONVERSION TRACKING - fire GTM event here
-
-      // Show success message, hide form
-      this.style.display = 'none';
-      document.getElementById('form-success').style.display = 'block';
-    });
-  </script>
+  <script src="../js/form-validation.js" defer></script>
 </body>
 </html>
