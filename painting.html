@@ -431,6 +431,7 @@
         const navbarToggle = document.getElementById('navbarToggle');
         const mobileMenu = document.getElementById('mobileMenu');
         navbarToggle.addEventListener('click', () => {
+            console.log('hamburger clicked');
             navbarToggle.classList.toggle('active');
             mobileMenu.classList.toggle('active');
             document.body.style.overflow = mobileMenu.classList.contains('active') ? 'hidden' : '';
