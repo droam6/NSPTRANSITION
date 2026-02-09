@@ -3,16 +3,48 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- GOOGLE TAG MANAGER -->
+
     <title>North Shore Projects | Tiling, Painting, Removals & Cleaning | Sydney</title>
     <meta name="description" content="Sydney's trusted construction services. Professional Tiling, Painting, Removals & Cleaning. Licensed, ABN registered, fully insured. Quality workmanship guaranteed.">
+    <link rel="canonical" href="https://northshoreprojects.com.au/">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Professional Tiling, Painting, Removals &amp; Cleaning | North Shore Projects">
+    <meta property="og:description" content="Sydney's trusted construction services. Professional Tiling, Painting, Removals &amp; Cleaning. Licensed, ABN registered, fully insured.">
+    <meta property="og:image" content="https://northshoreprojects.com.au/images/og-home.jpg">
+    <meta property="og:url" content="https://northshoreprojects.com.au/">
+    <meta property="og:type" content="website">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.min.css">
     <link rel="stylesheet" href="css/styles.css">
+
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "North Shore Projects",
+      "url": "https://northshoreprojects.com.au",
+      "description": "Sydney's trusted construction services. Professional Tiling, Painting, Removals & Cleaning.",
+      "telephone": "0433 333 332",
+      "areaServed": {
+        "@type": "City",
+        "name": "Sydney",
+        "addressRegion": "NSW",
+        "addressCountry": "AU"
+      },
+      "serviceType": ["Tiling", "Painting", "Removals", "Cleaning"]
+    }
+    </script>
 </head>
 <body>
+    <!-- GTM NOSCRIPT -->
 
     <!-- FLOATING NAVBAR -->
     <nav class="navbar" id="navbar">
@@ -731,6 +763,8 @@
 
                     formStatus.style.display = 'block';
                     if (result.success) {
+                        window.dataLayer = window.dataLayer || [];
+                        window.dataLayer.push({ event: 'form_submission', service: formData.service || 'general', source: 'organic' });
                         formStatus.innerHTML = '<div style="background: #d4edda; color: #155724; padding: 15px; border-radius: 8px;"><strong>Success!</strong> ' + result.message + '</div>';
                         contactForm.reset();
                     } else {

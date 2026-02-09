@@ -95,12 +95,21 @@ app.post('/api/contact', async (req, res) => {
     // Format service name for email
     const serviceName = service ? service.charAt(0).toUpperCase() + service.slice(1) : 'General';
 
+    // Service-specific email routing
+    const emailRouting = {
+      tiling: 'northshoretiling8@gmail.com',
+      painting: 'northshorepainting88@gmail.com',
+      cleaning: 'northshorecleaning8@gmail.com',
+      removals: 'northshoreremovals1@gmail.com'
+    };
+    const notificationEmail = emailRouting[service] || emailRouting.tiling;
+
     // Send email notification
-    if (process.env.SMTP_USER && process.env.NOTIFICATION_EMAIL) {
+    if (process.env.SMTP_USER) {
       try {
         await transporter.sendMail({
           from: process.env.SMTP_USER,
-          to: process.env.NOTIFICATION_EMAIL,
+          to: notificationEmail,
           subject: `New ${serviceName} Quote Request from ${name}`,
           html: `
             <h2>New Quote Request - ${serviceName} Service</h2>
