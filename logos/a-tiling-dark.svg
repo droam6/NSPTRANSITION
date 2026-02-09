@@ -1,11 +1,12 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 50" fill="none">
     <svg x="0" y="0" width="50" height="50" viewBox="0 0 200 200">
-        <rect width="200" height="200" rx="36" fill="#1A1A2E"/>
-        <rect x="90" y="38" width="20" height="80" rx="2" fill="#C19A6B"/>
-        <polygon points="100,28 130,68 70,68" fill="#C19A6B"/>
-        <polygon points="35,140 100,105 165,140" fill="#C19A6B"/>
-        <polygon points="55,140 100,115 145,140" fill="#1A1A2E"/>
-        <line x1="100" y1="32" x2="100" y2="42" stroke="white" stroke-width="3" stroke-linecap="round"/>
+        <rect width="200" height="200" rx="40" fill="#1A1A2E"/>
+        <polygon points="100,30 128,66 72,66" fill="#C19A6B"/>
+        <rect x="92" y="60" width="16" height="82" fill="#C19A6B"/>
+        <rect x="72" y="93" width="56" height="10" fill="#C19A6B"/>
+        <polygon points="50,136 100,170 150,136" fill="#C19A6B"/>
+        <polygon points="67,136 100,156 133,136" fill="#1A1A2E"/>
+        <line x1="100" y1="33" x2="100" y2="42" stroke="#FFFFFF" stroke-width="2.5" stroke-linecap="round"/>
     </svg>
     <text x="66" y="31" font-family="'Montserrat', sans-serif" font-size="18" fill="#1A1A2E">
         <tspan font-weight="300">North Shore </tspan><tspan font-weight="600">Tiling</tspan>
