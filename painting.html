@@ -105,22 +105,12 @@
     <!-- MOBILE MENU -->
     <div class="mobile-menu" id="mobileMenu">
         <ul class="mobile-menu-nav">
-            <li class="mobile-dropdown">
-                <button class="mobile-dropdown-toggle">Services
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="m6 9 6 6 6-6"/></svg>
-                </button>
-                <ul class="mobile-dropdown-menu">
-                    <li><a href="tiling.html">Tiling Services</a></li>
-                    <li><a href="painting.html">Painting Services</a></li>
-                    <li><a href="removals.html">Removals Services</a></li>
-                    <li><a href="cleaning.html">Cleaning Services</a></li>
-                </ul>
-            </li>
-            <li><a href="/#process">How It Works</a></li>
-            <li><a href="/#why-us">Why Us</a></li>
-            <li><a href="/#faq">FAQ</a></li>
-            <div class="mobile-menu-divider"></div>
-            <li><a href="#enquiry" class="btn btn-primary" style="text-align: center;">Get a Quote</a></li>
+            <li><a href="/">Home</a></li>
+            <li><a href="tiling.html">Tiling</a></li>
+            <li><a href="painting.html">Painting</a></li>
+            <li><a href="cleaning.html">Cleaning</a></li>
+            <li><a href="https://northshoreremovals.com/" target="_blank" rel="noopener noreferrer">Removals</a></li>
+            <li><a href="#enquiry" class="mobile-menu-cta">Get a Quote</a></li>
         </ul>
     </div>
 
@@ -446,11 +436,6 @@
             document.body.style.overflow = mobileMenu.classList.contains('active') ? 'hidden' : '';
         });
 
-        // Mobile dropdown toggle
-        document.querySelectorAll('.mobile-dropdown-toggle').forEach(toggle => {
-            toggle.addEventListener('click', () => toggle.parentElement.classList.toggle('active'));
-        });
-
         // Close mobile menu on link click
         document.querySelectorAll('.mobile-menu-nav a').forEach(link => {
             link.addEventListener('click', () => {
@@ -458,6 +443,15 @@
                 mobileMenu.classList.remove('active');
                 document.body.style.overflow = '';
             });
+        });
+
+        // Close mobile menu when tapping overlay background
+        mobileMenu.addEventListener('click', (e) => {
+            if (e.target === mobileMenu) {
+                navbarToggle.classList.remove('active');
+                mobileMenu.classList.remove('active');
+                document.body.style.overflow = '';
+            }
         });
 
         // Scroll to top
