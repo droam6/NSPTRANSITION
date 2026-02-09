@@ -1,7 +1,7 @@
 {
-  "name": "easen-contact-backend",
+  "name": "nsp-contact-backend",
   "version": "1.0.0",
-  "description": "Contact form backend for Easen irrigation services",
+  "description": "Contact form backend for North Shore Projects",
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
