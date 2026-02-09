@@ -94,7 +94,7 @@
                 <a href="#enquiry" class="btn btn-primary btn-shimmer">Get a Quote</a>
             </div>
 
-            <button class="navbar-toggle" id="navbarToggle" aria-label="Toggle menu" style="position: relative; z-index: 9999; pointer-events: auto;">
+            <button class="navbar-toggle" id="navbarToggle" aria-label="Toggle menu" onclick="var m=document.getElementById('mobileMenu');this.classList.toggle('active');m.classList.toggle('active');document.body.style.overflow=m.classList.contains('active')?'hidden':'';">
                 <span></span>
                 <span></span>
                 <span></span>
@@ -431,7 +431,6 @@
         const navbarToggle = document.getElementById('navbarToggle');
         const mobileMenu = document.getElementById('mobileMenu');
         navbarToggle.addEventListener('click', () => {
-            console.log('hamburger clicked');
             navbarToggle.classList.toggle('active');
             mobileMenu.classList.toggle('active');
             document.body.style.overflow = mobileMenu.classList.contains('active') ? 'hidden' : '';

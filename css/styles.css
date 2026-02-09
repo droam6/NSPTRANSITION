@@ -353,6 +353,11 @@ p {
     gap: 5px;
     padding: 0.5rem;
     background: none;
+    border: none;
+    -webkit-appearance: none;
+    appearance: none;
+    touch-action: manipulation;
+    cursor: pointer;
 }
 
 .navbar-toggle span {

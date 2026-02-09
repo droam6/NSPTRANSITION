@@ -110,7 +110,7 @@
                 <a href="#contact" class="btn btn-primary btn-shimmer">Get a Quote</a>
             </div>
 
-            <button class="navbar-toggle" id="navbarToggle" aria-label="Toggle menu" style="position: relative; z-index: 9999; pointer-events: auto;">
+            <button class="navbar-toggle" id="navbarToggle" aria-label="Toggle menu" onclick="var m=document.getElementById('mobileMenu');this.classList.toggle('active');m.classList.toggle('active');document.body.style.overflow=m.classList.contains('active')?'hidden':'';">
                 <span></span>
                 <span></span>
                 <span></span>
@@ -673,7 +673,6 @@
         const mobileMenu = document.getElementById('mobileMenu');
 
         navbarToggle.addEventListener('click', () => {
-            console.log('hamburger clicked');
             navbarToggle.classList.toggle('active');
             mobileMenu.classList.toggle('active');
             document.body.style.overflow = mobileMenu.classList.contains('active') ? 'hidden' : '';
@@ -891,32 +890,6 @@
             if (e.key === 'ArrowLeft') changeSlide(-1);
             if (e.key === 'ArrowRight') changeSlide(1);
         });
-    </script>
-    <script>
-    document.addEventListener('DOMContentLoaded', function() {
-        // Try every possible way to find the hamburger
-        var btn1 = document.getElementById('navbarToggle');
-        var btn2 = document.querySelector('.navbar-toggle');
-        var btn3 = document.querySelector('[class*="toggle"]');
-
-        console.log('btn by ID:', btn1);
-        console.log('btn by class:', btn2);
-        console.log('btn by wildcard:', btn3);
-
-        // If we found it, check what's on top of it
-        if (btn1) {
-            var rect = btn1.getBoundingClientRect();
-            console.log('Button position:', rect);
-            var topElement = document.elementFromPoint(rect.x + rect.width/2, rect.y + rect.height/2);
-            console.log('Element at button center:', topElement);
-            console.log('Is it the button?', topElement === btn1 || btn1.contains(topElement));
-        }
-
-        // Nuclear option: capture ALL clicks on the page
-        document.addEventListener('click', function(e) {
-            console.log('Click detected on:', e.target.tagName, e.target.className, e.target.id);
-        }, true);
-    });
     </script>
 </body>
 </html>
