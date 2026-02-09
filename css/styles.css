@@ -2291,7 +2291,7 @@ p {
         display: flex;
         flex-direction: column;
         align-items: center;
-        padding: 16px;
+        padding: 12px 8px;
         text-align: center;
         min-height: 0;
     }
@@ -2302,8 +2302,8 @@ p {
         margin: 0 auto 0.5rem;
     }
     .why-card-icon svg { width: 1.125rem; height: 1.125rem; }
-    .why-card h4 { font-size: 16px; margin-bottom: 0.25rem; white-space: nowrap; }
-    .why-card p { font-size: 13px; line-height: 1.4; text-align: left; }
+    .why-card h4 { font-size: 16px; margin-bottom: 0; white-space: nowrap; }
+    .why-card p { display: none; }
 
     /* -- Process cards -- */
     .process-grid { gap: 1.5rem; }
@@ -2402,10 +2402,9 @@ p {
     .bento-grid { grid-template-columns: 1fr; gap: 0.75rem; }
 
     /* -- Why cards: tighter at 480px, still 2x2 -- */
-    .why-card { padding: 12px; }
+    .why-card { padding: 10px 6px; }
     .why-card-icon { width: 36px; height: 36px; min-width: 36px; }
     .why-card h4 { font-size: 14px; }
-    .why-card p { font-size: 12px; }
 
     /* -- Process grid -- */
     .process-grid { grid-template-columns: 1fr; gap: 1.25rem; }
