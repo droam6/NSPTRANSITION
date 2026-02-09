@@ -1,0 +1,673 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>North Shore Projects — Final Logo</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        :root {
+            --navy: #1A1A2E;
+            --gold: #C19A6B;
+            --white: #FAFAFA;
+            --pure: #FFFFFF;
+            --gray: #6B7280;
+            --light-gray: #E5E5E5;
+        }
+        body {
+            font-family: 'Montserrat', -apple-system, sans-serif;
+            background: var(--pure);
+            color: var(--navy);
+            -webkit-font-smoothing: antialiased;
+        }
+        html { scroll-behavior: smooth; }
+
+        /* ---- NAV ---- */
+        .nav {
+            position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+            background: rgba(255,255,255,0.92);
+            backdrop-filter: blur(24px);
+            -webkit-backdrop-filter: blur(24px);
+            border-bottom: 1px solid rgba(0,0,0,0.06);
+        }
+        .nav-inner {
+            max-width: 1100px; margin: 0 auto;
+            padding: 0.875rem 2rem;
+            display: flex; align-items: center; justify-content: space-between;
+        }
+        .nav-title {
+            font-size: 0.7rem; font-weight: 600;
+            text-transform: uppercase; letter-spacing: 0.12em;
+            color: var(--gray);
+        }
+        .nav-links { display: flex; gap: 0.125rem; list-style: none; }
+        .nav-links a {
+            padding: 0.35rem 0.65rem; font-size: 0.65rem; font-weight: 500;
+            color: var(--gray); text-decoration: none; border-radius: 6px;
+            transition: all 150ms ease;
+        }
+        .nav-links a:hover { color: var(--navy); background: rgba(0,0,0,0.04); }
+
+        /* ---- SECTIONS ---- */
+        .section {
+            padding: 6rem 2rem;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+        .section-full {
+            padding: 6rem 2rem;
+            max-width: none;
+        }
+        .section-dark {
+            background: var(--navy);
+            color: var(--pure);
+        }
+        .section-gold {
+            background: var(--gold);
+            color: var(--navy);
+        }
+        .section-light {
+            background: var(--pure);
+            color: var(--navy);
+        }
+        .section-off {
+            background: var(--white);
+            color: var(--navy);
+        }
+        .section-inner {
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .section-label {
+            font-size: 0.65rem; font-weight: 600;
+            text-transform: uppercase; letter-spacing: 0.15em;
+            color: var(--gold); margin-bottom: 0.5rem;
+        }
+        .section-dark .section-label { color: var(--gold); }
+        .section-gold .section-label { color: var(--navy); opacity: 0.5; }
+        .section-title {
+            font-size: 1.75rem; font-weight: 700;
+            letter-spacing: -0.02em; margin-bottom: 0.75rem;
+        }
+        .section-desc {
+            font-size: 0.9rem; color: var(--gray);
+            max-width: 550px; line-height: 1.7; margin-bottom: 3rem;
+        }
+        .section-dark .section-desc { color: rgba(255,255,255,0.5); }
+        .section-gold .section-desc { color: rgba(26,26,46,0.6); }
+
+        /* ---- HERO ---- */
+        .hero {
+            min-height: 100vh;
+            display: flex; flex-direction: column;
+            align-items: center; justify-content: center;
+            text-align: center;
+            padding: 4rem 2rem;
+            background: var(--navy);
+        }
+        .hero-mark { margin-bottom: 3rem; }
+        .hero h1 {
+            font-size: 1rem; font-weight: 300;
+            letter-spacing: 0.3em; text-transform: uppercase;
+            color: rgba(255,255,255,0.4); margin-bottom: 0.5rem;
+        }
+        .hero h2 {
+            font-size: 2.5rem; font-weight: 300;
+            color: var(--pure); letter-spacing: -0.01em;
+        }
+        .hero h2 span { color: var(--gold); }
+        .hero-sub {
+            margin-top: 1.5rem;
+            font-size: 0.8rem; color: rgba(255,255,255,0.3);
+            font-weight: 400; letter-spacing: 0.05em;
+        }
+
+        /* ---- LOGO GRIDS ---- */
+        .scale-row {
+            display: flex; align-items: flex-end;
+            gap: 3rem; flex-wrap: wrap;
+            justify-content: center;
+        }
+        .scale-item {
+            display: flex; flex-direction: column;
+            align-items: center; gap: 0.75rem;
+        }
+        .scale-label {
+            font-size: 0.6rem; font-weight: 500;
+            color: var(--gray); letter-spacing: 0.05em;
+        }
+        .section-dark .scale-label { color: rgba(255,255,255,0.35); }
+
+        /* Lockup displays */
+        .lockup-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 2rem;
+        }
+        .lockup-card {
+            border-radius: 16px; padding: 3rem 2rem;
+            display: flex; flex-direction: column;
+            align-items: center; justify-content: center;
+            min-height: 220px;
+        }
+        .lockup-card.bg-white { background: var(--pure); border: 1px solid var(--light-gray); }
+        .lockup-card.bg-dark { background: var(--navy); }
+        .lockup-card.bg-gold { background: var(--gold); }
+        .lockup-card-label {
+            font-size: 0.55rem; font-weight: 600;
+            text-transform: uppercase; letter-spacing: 0.1em;
+            margin-bottom: 1.5rem; opacity: 0.4;
+        }
+
+        /* Horizontal lockup */
+        .h-lockup {
+            display: flex; align-items: center; gap: 1rem;
+        }
+        .h-lockup-text {
+            font-weight: 300; font-size: 1.15rem;
+            letter-spacing: 0.01em; white-space: nowrap;
+        }
+        .h-lockup-text small {
+            display: block; font-size: 0.55rem; font-weight: 500;
+            text-transform: uppercase; letter-spacing: 0.12em;
+            margin-top: 2px; opacity: 0.5;
+        }
+
+        /* Stacked lockup */
+        .s-lockup {
+            display: flex; flex-direction: column;
+            align-items: center; gap: 0.75rem;
+            text-align: center;
+        }
+        .s-lockup-text {
+            font-weight: 300; font-size: 1rem;
+            letter-spacing: 0.02em;
+        }
+        .s-lockup-text small {
+            display: block; font-size: 0.5rem; font-weight: 500;
+            text-transform: uppercase; letter-spacing: 0.12em;
+            margin-top: 3px; opacity: 0.5;
+        }
+
+        /* Divider */
+        .divider {
+            width: 40px; height: 1px;
+            background: var(--light-gray);
+            margin: 5rem auto;
+        }
+        .section-dark .divider { background: rgba(255,255,255,0.1); }
+
+        @media (max-width: 900px) {
+            .lockup-grid { grid-template-columns: 1fr; }
+            .hero h2 { font-size: 1.75rem; }
+            .scale-row { gap: 2rem; }
+        }
+        @media (max-width: 600px) {
+            .nav-links { display: none; }
+            .section, .section-full { padding: 4rem 1.5rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- NAV -->
+    <nav class="nav">
+        <div class="nav-inner">
+            <div class="nav-title">NSP Logo</div>
+            <ul class="nav-links">
+                <li><a href="#icon">Icon</a></li>
+                <li><a href="#primary">Primary</a></li>
+                <li><a href="#subbrand">Sub-brand</a></li>
+                <li><a href="#horizontal">Horizontal</a></li>
+                <li><a href="#stacked">Stacked</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- ============================================ -->
+    <!-- HERO -->
+    <!-- ============================================ -->
+    <section class="hero">
+        <div class="hero-mark">
+            <!-- THE REFINED COMPASS MARK — monoline, elegant -->
+            <svg width="160" height="160" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <!-- Outer rounded square -->
+                <rect x="4" y="4" width="192" height="192" rx="40" stroke="#C19A6B" stroke-width="3" fill="none"/>
+                <!--
+                    THE COMPASS MARK
+                    A single continuous-feel monoline north arrow.
+                    The arrow points up (north), with the lower flanks
+                    angling outward like a roofline / chevron base.
+                    All strokes are the same weight for monoline feel.
+                -->
+                <!-- Main upward arrow shaft -->
+                <line x1="100" y1="42" x2="100" y2="145" stroke="white" stroke-width="4" stroke-linecap="round"/>
+                <!-- Arrow head — open chevron pointing up -->
+                <polyline points="72,75 100,42 128,75" stroke="white" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+                <!-- Roof / base chevron — wider, angled outward -->
+                <polyline points="55,145 100,118 145,145" stroke="#C19A6B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+                <!-- Small horizontal crossbar (compass detail) -->
+                <line x1="85" y1="92" x2="115" y2="92" stroke="white" stroke-width="3" stroke-linecap="round"/>
+            </svg>
+        </div>
+        <h1>North Shore Projects</h1>
+        <h2>The <span>Compass</span></h2>
+        <p class="hero-sub">Final logo mark — monoline, minimal, precise</p>
+    </section>
+
+    <!-- ============================================ -->
+    <!-- 1. ICON ONLY — SCALING TEST -->
+    <!-- ============================================ -->
+    <section class="section-full section-light" id="icon">
+        <div class="section-inner">
+            <div class="section-label">01 / Icon</div>
+            <h3 class="section-title">The Mark</h3>
+            <p class="section-desc">A monoline compass arrow rising through a roof chevron. Clean at every size — from hero display to favicon.</p>
+
+            <!-- ON WHITE -->
+            <div class="scale-row" style="margin-bottom:4rem;">
+                <div class="scale-item">
+                    <svg width="200" height="200" viewBox="0 0 200 200" fill="none">
+                        <rect x="4" y="4" width="192" height="192" rx="40" stroke="#1A1A2E" stroke-width="3" fill="none"/>
+                        <line x1="100" y1="42" x2="100" y2="145" stroke="#1A1A2E" stroke-width="4" stroke-linecap="round"/>
+                        <polyline points="72,75 100,42 128,75" stroke="#1A1A2E" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+                        <polyline points="55,145 100,118 145,145" stroke="#C19A6B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+                        <line x1="85" y1="92" x2="115" y2="92" stroke="#1A1A2E" stroke-width="3" stroke-linecap="round"/>
+                    </svg>
+                    <span class="scale-label">200px</span>
+                </div>
+                <div class="scale-item">
+                    <svg width="100" height="100" viewBox="0 0 200 200" fill="none">
+                        <rect x="4" y="4" width="192" height="192" rx="40" stroke="#1A1A2E" stroke-width="3" fill="none"/>
+                        <line x1="100" y1="42" x2="100" y2="145" stroke="#1A1A2E" stroke-width="4" stroke-linecap="round"/>
+                        <polyline points="72,75 100,42 128,75" stroke="#1A1A2E" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+                        <polyline points="55,145 100,118 145,145" stroke="#C19A6B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+                        <line x1="85" y1="92" x2="115" y2="92" stroke="#1A1A2E" stroke-width="3" stroke-linecap="round"/>
+                    </svg>
+                    <span class="scale-label">100px</span>
+                </div>
+                <div class="scale-item">
+                    <svg width="64" height="64" viewBox="0 0 200 200" fill="none">
+                        <rect x="4" y="4" width="192" height="192" rx="40" stroke="#1A1A2E" stroke-width="5" fill="none"/>
+                        <line x1="100" y1="42" x2="100" y2="145" stroke="#1A1A2E" stroke-width="6" stroke-linecap="round"/>
+                        <polyline points="72,75 100,42 128,75" stroke="#1A1A2E" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+                        <polyline points="55,145 100,118 145,145" stroke="#C19A6B" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+                        <line x1="85" y1="92" x2="115" y2="92" stroke="#1A1A2E" stroke-width="5" stroke-linecap="round"/>
+                    </svg>
+                    <span class="scale-label">64px</span>
+                </div>
+                <div class="scale-item">
+                    <svg width="32" height="32" viewBox="0 0 200 200" fill="none">
+                        <rect x="4" y="4" width="192" height="192" rx="40" stroke="#1A1A2E" stroke-width="8" fill="none"/>
+                        <line x1="100" y1="42" x2="100" y2="145" stroke="#1A1A2E" stroke-width="10" stroke-linecap="round"/>
+                        <polyline points="72,75 100,42 128,75" stroke="#1A1A2E" stroke-width="10" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+                        <polyline points="55,145 100,118 145,145" stroke="#C19A6B" stroke-width="10" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+                        <line x1="85" y1="92" x2="115" y2="92" stroke="#1A1A2E" stroke-width="8" stroke-linecap="round"/>
+                    </svg>
+                    <span class="scale-label">32px</span>
+                </div>
+                <div class="scale-item">
+                    <svg width="16" height="16" viewBox="0 0 200 200" fill="none">
+                        <rect x="4" y="4" width="192" height="192" rx="40" stroke="#1A1A2E" stroke-width="14" fill="none"/>
+                        <line x1="100" y1="42" x2="100" y2="145" stroke="#1A1A2E" stroke-width="16" stroke-linecap="round"/>
+                        <polyline points="72,75 100,42 128,75" stroke="#1A1A2E" stroke-width="16" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+                        <polyline points="55,145 100,118 145,145" stroke="#C19A6B" stroke-width="16" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+                    </svg>
+                    <span class="scale-label">16px</span>
+                </div>
+            </div>
+
+            <!-- ON DARK -->
+            <div style="background:#1A1A2E; border-radius:20px; padding:3.5rem 2rem; margin-bottom:2rem;">
+                <div class="scale-row">
+                    <div class="scale-item">
+                        <svg width="200" height="200" viewBox="0 0 200 200" fill="none">
+                            <rect x="4" y="4" width="192" height="192" rx="40" stroke="white" stroke-width="3" fill="none"/>
+                            <line x1="100" y1="42" x2="100" y2="145" stroke="white" stroke-width="4" stroke-linecap="round"/>
+                            <polyline points="72,75 100,42 128,75" stroke="white" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+                            <polyline points="55,145 100,118 145,145" stroke="#C19A6B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+                            <line x1="85" y1="92" x2="115" y2="92" stroke="white" stroke-width="3" stroke-linecap="round"/>
+                        </svg>
+                        <span class="scale-label" style="color:rgba(255,255,255,0.35)">200px — on dark</span>
+                    </div>
+                    <div class="scale-item">
+                        <svg width="64" height="64" viewBox="0 0 200 200" fill="none">
+                            <rect x="4" y="4" width="192" height="192" rx="40" stroke="white" stroke-width="5" fill="none"/>
+                            <line x1="100" y1="42" x2="100" y2="145" stroke="white" stroke-width="6" stroke-linecap="round"/>
+                            <polyline points="72,75 100,42 128,75" stroke="white" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+                            <polyline points="55,145 100,118 145,145" stroke="#C19A6B" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+                            <line x1="85" y1="92" x2="115" y2="92" stroke="white" stroke-width="5" stroke-linecap="round"/>
+                        </svg>
+                        <span class="scale-label" style="color:rgba(255,255,255,0.35)">64px</span>
+                    </div>
+                    <div class="scale-item">
+                        <svg width="32" height="32" viewBox="0 0 200 200" fill="none">
+                            <rect x="4" y="4" width="192" height="192" rx="40" stroke="white" stroke-width="8" fill="none"/>
+                            <line x1="100" y1="42" x2="100" y2="145" stroke="white" stroke-width="10" stroke-linecap="round"/>
+                            <polyline points="72,75 100,42 128,75" stroke="white" stroke-width="10" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+                            <polyline points="55,145 100,118 145,145" stroke="#C19A6B" stroke-width="10" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+                            <line x1="85" y1="92" x2="115" y2="92" stroke="white" stroke-width="8" stroke-linecap="round"/>
+                        </svg>
+                        <span class="scale-label" style="color:rgba(255,255,255,0.35)">32px</span>
+                    </div>
+                    <div class="scale-item">
+                        <svg width="16" height="16" viewBox="0 0 200 200" fill="none">
+                            <rect x="4" y="4" width="192" height="192" rx="40" stroke="white" stroke-width="14" fill="none"/>
+                            <line x1="100" y1="42" x2="100" y2="145" stroke="white" stroke-width="16" stroke-linecap="round"/>
+                            <polyline points="72,75 100,42 128,75" stroke="white" stroke-width="16" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+                            <polyline points="55,145 100,118 145,145" stroke="#C19A6B" stroke-width="16" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+                        </svg>
+                        <span class="scale-label" style="color:rgba(255,255,255,0.35)">16px</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ON GOLD -->
+            <div style="background:#C19A6B; border-radius:20px; padding:3.5rem 2rem;">
+                <div class="scale-row">
+                    <div class="scale-item">
+                        <svg width="200" height="200" viewBox="0 0 200 200" fill="none">
+                            <rect x="4" y="4" width="192" height="192" rx="40" stroke="#1A1A2E" stroke-width="3" fill="none"/>
+                            <line x1="100" y1="42" x2="100" y2="145" stroke="#1A1A2E" stroke-width="4" stroke-linecap="round"/>
+                            <polyline points="72,75 100,42 128,75" stroke="#1A1A2E" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+                            <polyline points="55,145 100,118 145,145" stroke="white" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+                            <line x1="85" y1="92" x2="115" y2="92" stroke="#1A1A2E" stroke-width="3" stroke-linecap="round"/>
+                        </svg>
+                        <span class="scale-label" style="color:rgba(26,26,46,0.4)">200px — on gold</span>
+                    </div>
+                    <div class="scale-item">
+                        <svg width="64" height="64" viewBox="0 0 200 200" fill="none">
+                            <rect x="4" y="4" width="192" height="192" rx="40" stroke="#1A1A2E" stroke-width="5" fill="none"/>
+                            <line x1="100" y1="42" x2="100" y2="145" stroke="#1A1A2E" stroke-width="6" stroke-linecap="round"/>
+                            <polyline points="72,75 100,42 128,75" stroke="#1A1A2E" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+                            <polyline points="55,145 100,118 145,145" stroke="white" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+                            <line x1="85" y1="92" x2="115" y2="92" stroke="#1A1A2E" stroke-width="5" stroke-linecap="round"/>
+                        </svg>
+                        <span class="scale-label" style="color:rgba(26,26,46,0.4)">64px</span>
+                    </div>
+                    <div class="scale-item">
+                        <svg width="32" height="32" viewBox="0 0 200 200" fill="none">
+                            <rect x="4" y="4" width="192" height="192" rx="40" stroke="#1A1A2E" stroke-width="8" fill="none"/>
+                            <line x1="100" y1="42" x2="100" y2="145" stroke="#1A1A2E" stroke-width="10" stroke-linecap="round"/>
+                            <polyline points="72,75 100,42 128,75" stroke="#1A1A2E" stroke-width="10" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+                            <polyline points="55,145 100,118 145,145" stroke="white" stroke-width="10" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+                            <line x1="85" y1="92" x2="115" y2="92" stroke="#1A1A2E" stroke-width="8" stroke-linecap="round"/>
+                        </svg>
+                        <span class="scale-label" style="color:rgba(26,26,46,0.4)">32px</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!-- 2. PRIMARY LOCKUP -->
+    <!-- ============================================ -->
+    <section class="section-full section-off" id="primary">
+        <div class="section-inner">
+            <div class="section-label">02 / Primary Lockup</div>
+            <h3 class="section-title">North Shore Projects</h3>
+            <p class="section-desc">The parent brand. Icon paired with Montserrat Light (300 weight) to match the thin monoline aesthetic of the mark.</p>
+
+            <div class="lockup-grid">
+                <!-- On white -->
+                <div class="lockup-card bg-white">
+                    <span class="lockup-card-label" style="color:var(--navy);">On white</span>
+                    <div class="h-lockup">
+                        <svg width="44" height="44" viewBox="0 0 200 200" fill="none">
+                            <rect x="4" y="4" width="192" height="192" rx="40" stroke="#1A1A2E" stroke-width="3" fill="none"/>
+                            <line x1="100" y1="42" x2="100" y2="145" stroke="#1A1A2E" stroke-width="4" stroke-linecap="round"/>
+                            <polyline points="72,75 100,42 128,75" stroke="#1A1A2E" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+                            <polyline points="55,145 100,118 145,145" stroke="#C19A6B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+                            <line x1="85" y1="92" x2="115" y2="92" stroke="#1A1A2E" stroke-width="3" stroke-linecap="round"/>
+                        </svg>
+                        <span class="h-lockup-text" style="color:var(--navy);">North Shore Projects</span>
+                    </div>
+                </div>
+                <!-- On dark -->
+                <div class="lockup-card bg-dark">
+                    <span class="lockup-card-label" style="color:white;">On dark</span>
+                    <div class="h-lockup">
+                        <svg width="44" height="44" viewBox="0 0 200 200" fill="none">
+                            <rect x="4" y="4" width="192" height="192" rx="40" stroke="white" stroke-width="3" fill="none"/>
+                            <line x1="100" y1="42" x2="100" y2="145" stroke="white" stroke-width="4" stroke-linecap="round"/>
+                            <polyline points="72,75 100,42 128,75" stroke="white" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+                            <polyline points="55,145 100,118 145,145" stroke="#C19A6B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+                            <line x1="85" y1="92" x2="115" y2="92" stroke="white" stroke-width="3" stroke-linecap="round"/>
+                        </svg>
+                        <span class="h-lockup-text" style="color:white;">North Shore Projects</span>
+                    </div>
+                </div>
+                <!-- On gold -->
+                <div class="lockup-card bg-gold">
+                    <span class="lockup-card-label" style="color:var(--navy);">On gold</span>
+                    <div class="h-lockup">
+                        <svg width="44" height="44" viewBox="0 0 200 200" fill="none">
+                            <rect x="4" y="4" width="192" height="192" rx="40" stroke="#1A1A2E" stroke-width="3" fill="none"/>
+                            <line x1="100" y1="42" x2="100" y2="145" stroke="#1A1A2E" stroke-width="4" stroke-linecap="round"/>
+                            <polyline points="72,75 100,42 128,75" stroke="#1A1A2E" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+                            <polyline points="55,145 100,118 145,145" stroke="white" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+                            <line x1="85" y1="92" x2="115" y2="92" stroke="#1A1A2E" stroke-width="3" stroke-linecap="round"/>
+                        </svg>
+                        <span class="h-lockup-text" style="color:var(--navy);">North Shore Projects</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!-- 3. SUB-BRAND LOCKUP -->
+    <!-- ============================================ -->
+    <section class="section-full section-dark" id="subbrand">
+        <div class="section-inner">
+            <div class="section-label">03 / Sub-brand</div>
+            <h3 class="section-title">Service Lockups</h3>
+            <p class="section-desc">Same mark, same layout — only the service name changes. The compass stays identical across every sub-brand.</p>
+
+            <div style="display:grid; grid-template-columns:1fr 1fr; gap:1.5rem;">
+                <!-- Tiling -->
+                <div class="lockup-card bg-white">
+                    <span class="lockup-card-label" style="color:var(--navy);">Tiling</span>
+                    <div class="h-lockup">
+                        <svg width="40" height="40" viewBox="0 0 200 200" fill="none">
+                            <rect x="4" y="4" width="192" height="192" rx="40" stroke="#1A1A2E" stroke-width="3" fill="none"/>
+                            <line x1="100" y1="42" x2="100" y2="145" stroke="#1A1A2E" stroke-width="4" stroke-linecap="round"/>
+                            <polyline points="72,75 100,42 128,75" stroke="#1A1A2E" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+                            <polyline points="55,145 100,118 145,145" stroke="#C19A6B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+                            <line x1="85" y1="92" x2="115" y2="92" stroke="#1A1A2E" stroke-width="3" stroke-linecap="round"/>
+                        </svg>
+                        <span class="h-lockup-text" style="color:var(--navy);">North Shore Tiling</span>
+                    </div>
+                </div>
+                <!-- Painting -->
+                <div class="lockup-card bg-white">
+                    <span class="lockup-card-label" style="color:var(--navy);">Painting</span>
+                    <div class="h-lockup">
+                        <svg width="40" height="40" viewBox="0 0 200 200" fill="none">
+                            <rect x="4" y="4" width="192" height="192" rx="40" stroke="#1A1A2E" stroke-width="3" fill="none"/>
+                            <line x1="100" y1="42" x2="100" y2="145" stroke="#1A1A2E" stroke-width="4" stroke-linecap="round"/>
+                            <polyline points="72,75 100,42 128,75" stroke="#1A1A2E" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+                            <polyline points="55,145 100,118 145,145" stroke="#C19A6B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+                            <line x1="85" y1="92" x2="115" y2="92" stroke="#1A1A2E" stroke-width="3" stroke-linecap="round"/>
+                        </svg>
+                        <span class="h-lockup-text" style="color:var(--navy);">North Shore Painting</span>
+                    </div>
+                </div>
+                <!-- Cleaning -->
+                <div class="lockup-card bg-white">
+                    <span class="lockup-card-label" style="color:var(--navy);">Cleaning</span>
+                    <div class="h-lockup">
+                        <svg width="40" height="40" viewBox="0 0 200 200" fill="none">
+                            <rect x="4" y="4" width="192" height="192" rx="40" stroke="#1A1A2E" stroke-width="3" fill="none"/>
+                            <line x1="100" y1="42" x2="100" y2="145" stroke="#1A1A2E" stroke-width="4" stroke-linecap="round"/>
+                            <polyline points="72,75 100,42 128,75" stroke="#1A1A2E" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+                            <polyline points="55,145 100,118 145,145" stroke="#C19A6B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+                            <line x1="85" y1="92" x2="115" y2="92" stroke="#1A1A2E" stroke-width="3" stroke-linecap="round"/>
+                        </svg>
+                        <span class="h-lockup-text" style="color:var(--navy);">North Shore Cleaning</span>
+                    </div>
+                </div>
+                <!-- Removals -->
+                <div class="lockup-card bg-white">
+                    <span class="lockup-card-label" style="color:var(--navy);">Removals</span>
+                    <div class="h-lockup">
+                        <svg width="40" height="40" viewBox="0 0 200 200" fill="none">
+                            <rect x="4" y="4" width="192" height="192" rx="40" stroke="#1A1A2E" stroke-width="3" fill="none"/>
+                            <line x1="100" y1="42" x2="100" y2="145" stroke="#1A1A2E" stroke-width="4" stroke-linecap="round"/>
+                            <polyline points="72,75 100,42 128,75" stroke="#1A1A2E" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+                            <polyline points="55,145 100,118 145,145" stroke="#C19A6B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+                            <line x1="85" y1="92" x2="115" y2="92" stroke="#1A1A2E" stroke-width="3" stroke-linecap="round"/>
+                        </svg>
+                        <span class="h-lockup-text" style="color:var(--navy);">North Shore Removals</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!-- 4. HORIZONTAL LOCKUP -->
+    <!-- ============================================ -->
+    <section class="section-full section-light" id="horizontal">
+        <div class="section-inner">
+            <div class="section-label">04 / Horizontal</div>
+            <h3 class="section-title">Horizontal Lockup</h3>
+            <p class="section-desc">For headers, business cards, email signatures, and letterheads. Icon left, text right, single line.</p>
+
+            <div class="lockup-grid">
+                <!-- On white -->
+                <div class="lockup-card bg-white" style="padding:2.5rem;">
+                    <span class="lockup-card-label" style="color:var(--navy);">On white</span>
+                    <div class="h-lockup">
+                        <svg width="36" height="36" viewBox="0 0 200 200" fill="none">
+                            <rect x="4" y="4" width="192" height="192" rx="40" stroke="#1A1A2E" stroke-width="3" fill="none"/>
+                            <line x1="100" y1="42" x2="100" y2="145" stroke="#1A1A2E" stroke-width="4" stroke-linecap="round"/>
+                            <polyline points="72,75 100,42 128,75" stroke="#1A1A2E" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+                            <polyline points="55,145 100,118 145,145" stroke="#C19A6B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+                            <line x1="85" y1="92" x2="115" y2="92" stroke="#1A1A2E" stroke-width="3" stroke-linecap="round"/>
+                        </svg>
+                        <span class="h-lockup-text" style="color:var(--navy); font-size:1rem;">
+                            North Shore Projects
+                            <small>Tiling &middot; Painting &middot; Cleaning &middot; Removals</small>
+                        </span>
+                    </div>
+                </div>
+                <!-- On dark -->
+                <div class="lockup-card bg-dark" style="padding:2.5rem;">
+                    <span class="lockup-card-label" style="color:white;">On dark</span>
+                    <div class="h-lockup">
+                        <svg width="36" height="36" viewBox="0 0 200 200" fill="none">
+                            <rect x="4" y="4" width="192" height="192" rx="40" stroke="white" stroke-width="3" fill="none"/>
+                            <line x1="100" y1="42" x2="100" y2="145" stroke="white" stroke-width="4" stroke-linecap="round"/>
+                            <polyline points="72,75 100,42 128,75" stroke="white" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+                            <polyline points="55,145 100,118 145,145" stroke="#C19A6B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+                            <line x1="85" y1="92" x2="115" y2="92" stroke="white" stroke-width="3" stroke-linecap="round"/>
+                        </svg>
+                        <span class="h-lockup-text" style="color:white; font-size:1rem;">
+                            North Shore Projects
+                            <small style="color:rgba(255,255,255,0.4);">Tiling &middot; Painting &middot; Cleaning &middot; Removals</small>
+                        </span>
+                    </div>
+                </div>
+                <!-- On gold -->
+                <div class="lockup-card bg-gold" style="padding:2.5rem;">
+                    <span class="lockup-card-label" style="color:var(--navy);">On gold</span>
+                    <div class="h-lockup">
+                        <svg width="36" height="36" viewBox="0 0 200 200" fill="none">
+                            <rect x="4" y="4" width="192" height="192" rx="40" stroke="#1A1A2E" stroke-width="3" fill="none"/>
+                            <line x1="100" y1="42" x2="100" y2="145" stroke="#1A1A2E" stroke-width="4" stroke-linecap="round"/>
+                            <polyline points="72,75 100,42 128,75" stroke="#1A1A2E" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+                            <polyline points="55,145 100,118 145,145" stroke="white" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+                            <line x1="85" y1="92" x2="115" y2="92" stroke="#1A1A2E" stroke-width="3" stroke-linecap="round"/>
+                        </svg>
+                        <span class="h-lockup-text" style="color:var(--navy); font-size:1rem;">
+                            North Shore Projects
+                            <small style="color:rgba(26,26,46,0.5);">Tiling &middot; Painting &middot; Cleaning &middot; Removals</small>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!-- 5. STACKED LOCKUP -->
+    <!-- ============================================ -->
+    <section class="section-full section-off" id="stacked">
+        <div class="section-inner">
+            <div class="section-label">05 / Stacked</div>
+            <h3 class="section-title">Stacked Lockup</h3>
+            <p class="section-desc">For social media profiles, app icons, and square formats. Icon centred above text.</p>
+
+            <div class="lockup-grid">
+                <!-- On white -->
+                <div class="lockup-card bg-white" style="min-height:280px;">
+                    <span class="lockup-card-label" style="color:var(--navy);">On white</span>
+                    <div class="s-lockup">
+                        <svg width="56" height="56" viewBox="0 0 200 200" fill="none">
+                            <rect x="4" y="4" width="192" height="192" rx="40" stroke="#1A1A2E" stroke-width="3" fill="none"/>
+                            <line x1="100" y1="42" x2="100" y2="145" stroke="#1A1A2E" stroke-width="4" stroke-linecap="round"/>
+                            <polyline points="72,75 100,42 128,75" stroke="#1A1A2E" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+                            <polyline points="55,145 100,118 145,145" stroke="#C19A6B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+                            <line x1="85" y1="92" x2="115" y2="92" stroke="#1A1A2E" stroke-width="3" stroke-linecap="round"/>
+                        </svg>
+                        <span class="s-lockup-text" style="color:var(--navy);">
+                            North Shore Projects
+                            <small>Sydney's North Shore</small>
+                        </span>
+                    </div>
+                </div>
+                <!-- On dark -->
+                <div class="lockup-card bg-dark" style="min-height:280px;">
+                    <span class="lockup-card-label" style="color:white;">On dark</span>
+                    <div class="s-lockup">
+                        <svg width="56" height="56" viewBox="0 0 200 200" fill="none">
+                            <rect x="4" y="4" width="192" height="192" rx="40" stroke="white" stroke-width="3" fill="none"/>
+                            <line x1="100" y1="42" x2="100" y2="145" stroke="white" stroke-width="4" stroke-linecap="round"/>
+                            <polyline points="72,75 100,42 128,75" stroke="white" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+                            <polyline points="55,145 100,118 145,145" stroke="#C19A6B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+                            <line x1="85" y1="92" x2="115" y2="92" stroke="white" stroke-width="3" stroke-linecap="round"/>
+                        </svg>
+                        <span class="s-lockup-text" style="color:white;">
+                            North Shore Projects
+                            <small style="color:rgba(255,255,255,0.4);">Sydney's North Shore</small>
+                        </span>
+                    </div>
+                </div>
+                <!-- On gold -->
+                <div class="lockup-card bg-gold" style="min-height:280px;">
+                    <span class="lockup-card-label" style="color:var(--navy);">On gold</span>
+                    <div class="s-lockup">
+                        <svg width="56" height="56" viewBox="0 0 200 200" fill="none">
+                            <rect x="4" y="4" width="192" height="192" rx="40" stroke="#1A1A2E" stroke-width="3" fill="none"/>
+                            <line x1="100" y1="42" x2="100" y2="145" stroke="#1A1A2E" stroke-width="4" stroke-linecap="round"/>
+                            <polyline points="72,75 100,42 128,75" stroke="#1A1A2E" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+                            <polyline points="55,145 100,118 145,145" stroke="white" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+                            <line x1="85" y1="92" x2="115" y2="92" stroke="#1A1A2E" stroke-width="3" stroke-linecap="round"/>
+                        </svg>
+                        <span class="s-lockup-text" style="color:var(--navy);">
+                            North Shore Projects
+                            <small style="color:rgba(26,26,46,0.5);">Sydney's North Shore</small>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer style="text-align:center; padding:4rem 2rem; border-top:1px solid rgba(0,0,0,0.06);">
+        <svg width="24" height="24" viewBox="0 0 200 200" fill="none" style="margin-bottom:1rem; opacity:0.3;">
+            <rect x="4" y="4" width="192" height="192" rx="40" stroke="#1A1A2E" stroke-width="5" fill="none"/>
+            <line x1="100" y1="42" x2="100" y2="145" stroke="#1A1A2E" stroke-width="6" stroke-linecap="round"/>
+            <polyline points="72,75 100,42 128,75" stroke="#1A1A2E" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+            <polyline points="55,145 100,118 145,145" stroke="#C19A6B" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+        </svg>
+        <p style="font-size:0.7rem; color:var(--gray);">North Shore Projects — Final Logo</p>
+        <p style="font-size:0.6rem; color:rgba(0,0,0,0.2); margin-top:0.25rem;">Internal review. Not for distribution.</p>
+    </footer>
+</body>
+</html>
