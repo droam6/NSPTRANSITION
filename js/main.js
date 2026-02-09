@@ -1,6 +1,6 @@
 /**
- * AKA INTERIORS - Main JavaScript
- * Tiling, Painting, Removals & Cleaning | Sydney
+ * North Shore Projects - Main JavaScript
+ * One Group. Removals, Renovations & Cleaning.
  */
 
 // ==================== DOM ELEMENTS ====================
