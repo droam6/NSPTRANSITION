@@ -1069,11 +1069,6 @@ p {
     }
 }
 
-@media (max-width: 600px) {
-    .why-grid {
-        grid-template-columns: 1fr;
-    }
-}
 
 .why-card {
     padding: 2rem;
@@ -2287,30 +2282,28 @@ p {
     .bento-card-icon svg { width: 1.25rem; height: 1.25rem; }
     .bento-card p { margin-bottom: 1rem; }
 
-    /* -- Why cards: single column, horizontal layout -- */
+    /* -- Why cards: 2x2 vertical grid, compact -- */
     .why-grid {
-        grid-template-columns: 1fr;
-        gap: 0.75rem;
+        grid-template-columns: 1fr 1fr;
+        gap: 12px;
     }
     .why-card {
         display: flex;
-        flex-direction: row;
-        align-items: flex-start;
-        gap: 1rem;
-        padding: 1rem 1.25rem;
+        flex-direction: column;
+        align-items: center;
+        padding: 16px;
+        text-align: center;
+        min-height: 0;
     }
     .why-card-icon {
-        width: 2.5rem;
-        height: 2.5rem;
-        min-width: 2.5rem;
-        margin-bottom: 0;
+        width: 40px;
+        height: 40px;
+        min-width: 40px;
+        margin: 0 auto 0.5rem;
     }
     .why-card-icon svg { width: 1.125rem; height: 1.125rem; }
-    .why-card-content {
-        flex: 1;
-    }
-    .why-card h4 { font-size: 0.95rem; margin-bottom: 0.25rem; }
-    .why-card p { font-size: 0.825rem; line-height: 1.4; }
+    .why-card h4 { font-size: 16px; margin-bottom: 0.25rem; white-space: nowrap; }
+    .why-card p { font-size: 13px; line-height: 1.4; text-align: left; }
 
     /* -- Process cards -- */
     .process-grid { gap: 1.5rem; }
@@ -2408,11 +2401,11 @@ p {
     /* -- Bento single column -- */
     .bento-grid { grid-template-columns: 1fr; gap: 0.75rem; }
 
-    /* -- Why cards stay single-column horizontal -- */
-    .why-card { padding: 0.875rem 1rem; gap: 0.75rem; }
-    .why-card-icon { width: 2.25rem; height: 2.25rem; min-width: 2.25rem; }
-    .why-card h4 { font-size: 0.875rem; }
-    .why-card p { font-size: 0.8rem; }
+    /* -- Why cards: tighter at 480px, still 2x2 -- */
+    .why-card { padding: 12px; }
+    .why-card-icon { width: 36px; height: 36px; min-width: 36px; }
+    .why-card h4 { font-size: 14px; }
+    .why-card p { font-size: 12px; }
 
     /* -- Process grid -- */
     .process-grid { grid-template-columns: 1fr; gap: 1.25rem; }
@@ -2430,4 +2423,9 @@ p {
 
     /* -- CTA buttons -- */
     .btn-lg { padding: 0.75rem 1.5rem; font-size: 0.875rem; }
+}
+
+/* ---- Very small screens (max-width: 360px) ---- */
+@media (max-width: 360px) {
+    .why-grid { grid-template-columns: 1fr; }
 }
