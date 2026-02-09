@@ -2286,23 +2286,24 @@ p {
     .why-grid {
         grid-template-columns: 1fr 1fr;
         gap: 12px;
+        align-items: stretch;
     }
     .why-card {
         display: flex;
         flex-direction: column;
         align-items: center;
-        padding: 12px 8px;
+        padding: 16px 8px;
         text-align: center;
         min-height: 0;
     }
     .why-card-icon {
-        width: 40px;
-        height: 40px;
-        min-width: 40px;
-        margin: 0 auto 0.5rem;
+        width: 32px;
+        height: 32px;
+        min-width: 32px;
+        margin: 0 auto 8px;
     }
-    .why-card-icon svg { width: 1.125rem; height: 1.125rem; }
-    .why-card h4 { font-size: 16px; margin-bottom: 0; white-space: nowrap; }
+    .why-card-icon svg { width: 1rem; height: 1rem; }
+    .why-card h4 { font-size: 13px; margin-bottom: 0; white-space: nowrap; }
     .why-card p { display: none; }
 
     /* -- Process cards -- */
@@ -2402,9 +2403,9 @@ p {
     .bento-grid { grid-template-columns: 1fr; gap: 0.75rem; }
 
     /* -- Why cards: tighter at 480px, still 2x2 -- */
-    .why-card { padding: 10px 6px; }
-    .why-card-icon { width: 36px; height: 36px; min-width: 36px; }
-    .why-card h4 { font-size: 14px; }
+    .why-card { padding: 14px 6px; }
+    .why-card-icon { width: 28px; height: 28px; min-width: 28px; }
+    .why-card h4 { font-size: 12px; }
 
     /* -- Process grid -- */
     .process-grid { grid-template-columns: 1fr; gap: 1.25rem; }
