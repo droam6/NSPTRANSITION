@@ -1,0 +1,854 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>North Shore Projects — Logo Concepts</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        :root {
+            --navy: #1A1A2E;
+            --gold: #C19A6B;
+            --white: #FAFAFA;
+            --pure-white: #FFFFFF;
+            --gray: #6B7280;
+            --border: rgba(255,255,255,0.08);
+        }
+
+        body {
+            font-family: 'Montserrat', -apple-system, sans-serif;
+            background: #0D0D1A;
+            color: var(--white);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* ---- NAV ---- */
+        .top-nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 100;
+            background: rgba(13,13,26,0.9);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-bottom: 1px solid var(--border);
+        }
+        .top-nav-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1rem 2rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .top-nav-title {
+            font-size: 0.8rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--gold);
+        }
+        .top-nav-links {
+            display: flex;
+            gap: 0.25rem;
+            list-style: none;
+        }
+        .top-nav-links a {
+            padding: 0.4rem 0.75rem;
+            font-size: 0.7rem;
+            font-weight: 500;
+            color: var(--gray);
+            text-decoration: none;
+            border-radius: 6px;
+            transition: all 150ms ease;
+        }
+        .top-nav-links a:hover,
+        .top-nav-links a.active {
+            color: var(--white);
+            background: rgba(255,255,255,0.06);
+        }
+
+        /* ---- HERO ---- */
+        .hero {
+            padding: 8rem 2rem 4rem;
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .hero h1 {
+            font-size: 2.5rem;
+            font-weight: 800;
+            letter-spacing: -0.03em;
+            margin-bottom: 1rem;
+        }
+        .hero h1 span { color: var(--gold); }
+        .hero p {
+            font-size: 1rem;
+            color: var(--gray);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* ---- CONCEPT SECTION ---- */
+        .concept {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 4rem 2rem 6rem;
+            border-top: 1px solid var(--border);
+        }
+
+        .concept-header {
+            display: flex;
+            align-items: baseline;
+            gap: 1rem;
+            margin-bottom: 0.75rem;
+        }
+        .concept-number {
+            font-size: 0.7rem;
+            font-weight: 700;
+            color: var(--gold);
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            white-space: nowrap;
+        }
+        .concept-name {
+            font-size: 1.75rem;
+            font-weight: 700;
+            letter-spacing: -0.02em;
+        }
+        .concept-desc {
+            font-size: 0.9rem;
+            color: var(--gray);
+            max-width: 700px;
+            margin-bottom: 3rem;
+            line-height: 1.7;
+        }
+
+        /* Logo display grid */
+        .logo-showcase {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+            margin-bottom: 2.5rem;
+        }
+        .logo-card {
+            border-radius: 16px;
+            padding: 3rem 2rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 280px;
+            position: relative;
+        }
+        .logo-card.on-light {
+            background: var(--pure-white);
+        }
+        .logo-card.on-dark {
+            background: var(--navy);
+            border: 1px solid rgba(255,255,255,0.06);
+        }
+        .logo-card-label {
+            position: absolute;
+            top: 1rem;
+            left: 1.25rem;
+            font-size: 0.6rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.12em;
+            opacity: 0.4;
+        }
+        .logo-card.on-light .logo-card-label { color: var(--navy); }
+        .logo-card.on-dark .logo-card-label { color: var(--white); }
+
+        /* Lockups row */
+        .lockups {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+            margin-bottom: 2.5rem;
+        }
+        .lockup-card {
+            border-radius: 16px;
+            padding: 2rem;
+            background: rgba(255,255,255,0.03);
+            border: 1px solid var(--border);
+        }
+        .lockup-label {
+            font-size: 0.6rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.12em;
+            color: var(--gold);
+            margin-bottom: 1.25rem;
+        }
+        .lockup-item {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+        .lockup-item svg {
+            flex-shrink: 0;
+        }
+        .lockup-text {
+            font-weight: 700;
+            font-size: 1rem;
+            color: var(--white);
+            letter-spacing: -0.01em;
+        }
+        .lockup-text small {
+            display: block;
+            font-size: 0.65rem;
+            font-weight: 500;
+            color: var(--gray);
+            letter-spacing: 0.04em;
+            margin-top: 1px;
+        }
+
+        /* Small sizes row */
+        .sizes-row {
+            display: flex;
+            align-items: flex-end;
+            gap: 2rem;
+            padding: 2rem;
+            background: rgba(255,255,255,0.03);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+        }
+        .size-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        .size-label {
+            font-size: 0.6rem;
+            font-weight: 500;
+            color: var(--gray);
+        }
+
+        /* ---- RESPONSIVE ---- */
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 1.75rem; }
+            .logo-showcase { grid-template-columns: 1fr; }
+            .lockups { grid-template-columns: 1fr; }
+            .top-nav-links { display: none; }
+            .concept-name { font-size: 1.35rem; }
+            .sizes-row { flex-wrap: wrap; }
+        }
+
+        html { scroll-behavior: smooth; }
+    </style>
+</head>
+<body>
+    <!-- NAV -->
+    <nav class="top-nav">
+        <div class="top-nav-inner">
+            <div class="top-nav-title">NSP Logo Concepts</div>
+            <ul class="top-nav-links">
+                <li><a href="#concept-1">01 Compass</a></li>
+                <li><a href="#concept-2">02 Shield</a></li>
+                <li><a href="#concept-3">03 Bridge</a></li>
+                <li><a href="#concept-4">04 Monogram</a></li>
+                <li><a href="#concept-5">05 Craftsman</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- HERO -->
+    <section class="hero">
+        <h1>Logo <span>Concepts</span></h1>
+        <p>Five distinct directions for the North Shore Projects brand mark. Each designed to work at every size — from a 32px favicon to a van wrap.</p>
+    </section>
+
+    <!-- ============================================ -->
+    <!-- CONCEPT 1: THE COMPASS -->
+    <!-- ============================================ -->
+    <section class="concept" id="concept-1">
+        <div class="concept-header">
+            <span class="concept-number">Concept 01</span>
+            <h2 class="concept-name">The Compass</h2>
+        </div>
+        <p class="concept-desc">A stylised north arrow integrated with a roofline. The upward-pointing form says "North" while the angled base reads as a house roof. Directional, purposeful, premium. The arrow motif suggests progress and precision — pointing the way forward.</p>
+
+        <div class="logo-showcase">
+            <div class="logo-card on-light">
+                <span class="logo-card-label">On Light</span>
+                <svg width="200" height="200" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="200" height="200" rx="32" fill="#1A1A2E"/>
+                    <!-- North arrow with roof base -->
+                    <path d="M100 35 L140 95 L125 95 L125 135 L155 135 L100 165 L45 135 L75 135 L75 95 L60 95 Z" fill="#C19A6B"/>
+                    <!-- Inner cutout for depth -->
+                    <path d="M100 60 L120 95 L112 95 L112 130 L100 137 L88 130 L88 95 L80 95 Z" fill="#1A1A2E"/>
+                    <!-- Small diamond accent at top -->
+                    <rect x="95" y="42" width="10" height="10" rx="1" transform="rotate(45 100 47)" fill="white"/>
+                </svg>
+            </div>
+            <div class="logo-card on-dark">
+                <span class="logo-card-label">On Dark</span>
+                <svg width="200" height="200" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="200" height="200" rx="32" fill="#1A1A2E" stroke="rgba(255,255,255,0.1)" stroke-width="1"/>
+                    <path d="M100 35 L140 95 L125 95 L125 135 L155 135 L100 165 L45 135 L75 135 L75 95 L60 95 Z" fill="#C19A6B"/>
+                    <path d="M100 60 L120 95 L112 95 L112 130 L100 137 L88 130 L88 95 L80 95 Z" fill="#1A1A2E"/>
+                    <rect x="95" y="42" width="10" height="10" rx="1" transform="rotate(45 100 47)" fill="white"/>
+                </svg>
+            </div>
+        </div>
+
+        <div class="lockups">
+            <div class="lockup-card">
+                <div class="lockup-label">Parent Brand</div>
+                <div class="lockup-item">
+                    <svg width="40" height="40" viewBox="0 0 200 200" fill="none">
+                        <rect width="200" height="200" rx="32" fill="#1A1A2E"/>
+                        <path d="M100 35 L140 95 L125 95 L125 135 L155 135 L100 165 L45 135 L75 135 L75 95 L60 95 Z" fill="#C19A6B"/>
+                        <path d="M100 60 L120 95 L112 95 L112 130 L100 137 L88 130 L88 95 L80 95 Z" fill="#1A1A2E"/>
+                        <rect x="95" y="42" width="10" height="10" rx="1" transform="rotate(45 100 47)" fill="white"/>
+                    </svg>
+                    <span class="lockup-text">North Shore Projects</span>
+                </div>
+            </div>
+            <div class="lockup-card">
+                <div class="lockup-label">Sub-brand Example</div>
+                <div class="lockup-item">
+                    <svg width="40" height="40" viewBox="0 0 200 200" fill="none">
+                        <rect width="200" height="200" rx="32" fill="#1A1A2E"/>
+                        <path d="M100 35 L140 95 L125 95 L125 135 L155 135 L100 165 L45 135 L75 135 L75 95 L60 95 Z" fill="#C19A6B"/>
+                        <path d="M100 60 L120 95 L112 95 L112 130 L100 137 L88 130 L88 95 L80 95 Z" fill="#1A1A2E"/>
+                        <rect x="95" y="42" width="10" height="10" rx="1" transform="rotate(45 100 47)" fill="white"/>
+                    </svg>
+                    <span class="lockup-text">North Shore Tiling<small>Premium Tiling Services</small></span>
+                </div>
+            </div>
+        </div>
+
+        <div class="sizes-row">
+            <div class="size-item">
+                <svg width="64" height="64" viewBox="0 0 200 200" fill="none">
+                    <rect width="200" height="200" rx="32" fill="#1A1A2E"/>
+                    <path d="M100 35 L140 95 L125 95 L125 135 L155 135 L100 165 L45 135 L75 135 L75 95 L60 95 Z" fill="#C19A6B"/>
+                    <path d="M100 60 L120 95 L112 95 L112 130 L100 137 L88 130 L88 95 L80 95 Z" fill="#1A1A2E"/>
+                    <rect x="95" y="42" width="10" height="10" rx="1" transform="rotate(45 100 47)" fill="white"/>
+                </svg>
+                <span class="size-label">64px</span>
+            </div>
+            <div class="size-item">
+                <svg width="48" height="48" viewBox="0 0 200 200" fill="none">
+                    <rect width="200" height="200" rx="32" fill="#1A1A2E"/>
+                    <path d="M100 35 L140 95 L125 95 L125 135 L155 135 L100 165 L45 135 L75 135 L75 95 L60 95 Z" fill="#C19A6B"/>
+                    <path d="M100 60 L120 95 L112 95 L112 130 L100 137 L88 130 L88 95 L80 95 Z" fill="#1A1A2E"/>
+                    <rect x="95" y="42" width="10" height="10" rx="1" transform="rotate(45 100 47)" fill="white"/>
+                </svg>
+                <span class="size-label">48px</span>
+            </div>
+            <div class="size-item">
+                <svg width="32" height="32" viewBox="0 0 200 200" fill="none">
+                    <rect width="200" height="200" rx="32" fill="#1A1A2E"/>
+                    <path d="M100 35 L140 95 L125 95 L125 135 L155 135 L100 165 L45 135 L75 135 L75 95 L60 95 Z" fill="#C19A6B"/>
+                    <path d="M100 60 L120 95 L112 95 L112 130 L100 137 L88 130 L88 95 L80 95 Z" fill="#1A1A2E"/>
+                    <rect x="95" y="42" width="10" height="10" rx="1" transform="rotate(45 100 47)" fill="white"/>
+                </svg>
+                <span class="size-label">32px</span>
+            </div>
+            <div class="size-item">
+                <svg width="20" height="20" viewBox="0 0 200 200" fill="none">
+                    <rect width="200" height="200" rx="32" fill="#1A1A2E"/>
+                    <path d="M100 35 L140 95 L125 95 L125 135 L155 135 L100 165 L45 135 L75 135 L75 95 L60 95 Z" fill="#C19A6B"/>
+                    <path d="M100 60 L120 95 L112 95 L112 130 L100 137 L88 130 L88 95 L80 95 Z" fill="#1A1A2E"/>
+                    <rect x="95" y="42" width="10" height="10" rx="1" transform="rotate(45 100 47)" fill="white"/>
+                </svg>
+                <span class="size-label">20px</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!-- CONCEPT 2: THE SHIELD -->
+    <!-- ============================================ -->
+    <section class="concept" id="concept-2">
+        <div class="concept-header">
+            <span class="concept-number">Concept 02</span>
+            <h2 class="concept-name">The Shield</h2>
+        </div>
+        <p class="concept-desc">A shield silhouette with a geometric grid pattern inside — referencing tile work, precision, and the structural grid of construction. The shield shape communicates trust, protection, and a quality guarantee. Bold and authoritative without being aggressive.</p>
+
+        <div class="logo-showcase">
+            <div class="logo-card on-light">
+                <span class="logo-card-label">On Light</span>
+                <svg width="200" height="200" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="200" height="200" rx="32" fill="#1A1A2E"/>
+                    <!-- Shield outline -->
+                    <path d="M100 30 L160 55 L160 110 C160 140 135 162 100 175 C65 162 40 140 40 110 L40 55 Z" fill="#C19A6B"/>
+                    <!-- Inner shield -->
+                    <path d="M100 42 L150 63 L150 108 C150 133 129 152 100 163 C71 152 50 133 50 108 L50 63 Z" fill="#1A1A2E"/>
+                    <!-- Geometric cross/grid inside -->
+                    <line x1="100" y1="60" x2="100" y2="150" stroke="#C19A6B" stroke-width="3"/>
+                    <line x1="60" y1="90" x2="140" y2="90" stroke="#C19A6B" stroke-width="3"/>
+                    <line x1="62" y1="115" x2="138" y2="115" stroke="#C19A6B" stroke-width="3"/>
+                    <!-- Small diamond at center -->
+                    <rect x="93" y="83" width="14" height="14" rx="2" transform="rotate(45 100 90)" fill="white"/>
+                </svg>
+            </div>
+            <div class="logo-card on-dark">
+                <span class="logo-card-label">On Dark</span>
+                <svg width="200" height="200" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="200" height="200" rx="32" fill="#1A1A2E" stroke="rgba(255,255,255,0.1)" stroke-width="1"/>
+                    <path d="M100 30 L160 55 L160 110 C160 140 135 162 100 175 C65 162 40 140 40 110 L40 55 Z" fill="#C19A6B"/>
+                    <path d="M100 42 L150 63 L150 108 C150 133 129 152 100 163 C71 152 50 133 50 108 L50 63 Z" fill="#1A1A2E"/>
+                    <line x1="100" y1="60" x2="100" y2="150" stroke="#C19A6B" stroke-width="3"/>
+                    <line x1="60" y1="90" x2="140" y2="90" stroke="#C19A6B" stroke-width="3"/>
+                    <line x1="62" y1="115" x2="138" y2="115" stroke="#C19A6B" stroke-width="3"/>
+                    <rect x="93" y="83" width="14" height="14" rx="2" transform="rotate(45 100 90)" fill="white"/>
+                </svg>
+            </div>
+        </div>
+
+        <div class="lockups">
+            <div class="lockup-card">
+                <div class="lockup-label">Parent Brand</div>
+                <div class="lockup-item">
+                    <svg width="40" height="40" viewBox="0 0 200 200" fill="none">
+                        <rect width="200" height="200" rx="32" fill="#1A1A2E"/>
+                        <path d="M100 30 L160 55 L160 110 C160 140 135 162 100 175 C65 162 40 140 40 110 L40 55 Z" fill="#C19A6B"/>
+                        <path d="M100 42 L150 63 L150 108 C150 133 129 152 100 163 C71 152 50 133 50 108 L50 63 Z" fill="#1A1A2E"/>
+                        <line x1="100" y1="60" x2="100" y2="150" stroke="#C19A6B" stroke-width="3"/>
+                        <line x1="60" y1="90" x2="140" y2="90" stroke="#C19A6B" stroke-width="3"/>
+                        <line x1="62" y1="115" x2="138" y2="115" stroke="#C19A6B" stroke-width="3"/>
+                        <rect x="93" y="83" width="14" height="14" rx="2" transform="rotate(45 100 90)" fill="white"/>
+                    </svg>
+                    <span class="lockup-text">North Shore Projects</span>
+                </div>
+            </div>
+            <div class="lockup-card">
+                <div class="lockup-label">Sub-brand Example</div>
+                <div class="lockup-item">
+                    <svg width="40" height="40" viewBox="0 0 200 200" fill="none">
+                        <rect width="200" height="200" rx="32" fill="#1A1A2E"/>
+                        <path d="M100 30 L160 55 L160 110 C160 140 135 162 100 175 C65 162 40 140 40 110 L40 55 Z" fill="#C19A6B"/>
+                        <path d="M100 42 L150 63 L150 108 C150 133 129 152 100 163 C71 152 50 133 50 108 L50 63 Z" fill="#1A1A2E"/>
+                        <line x1="100" y1="60" x2="100" y2="150" stroke="#C19A6B" stroke-width="3"/>
+                        <line x1="60" y1="90" x2="140" y2="90" stroke="#C19A6B" stroke-width="3"/>
+                        <line x1="62" y1="115" x2="138" y2="115" stroke="#C19A6B" stroke-width="3"/>
+                        <rect x="93" y="83" width="14" height="14" rx="2" transform="rotate(45 100 90)" fill="white"/>
+                    </svg>
+                    <span class="lockup-text">North Shore Tiling<small>Premium Tiling Services</small></span>
+                </div>
+            </div>
+        </div>
+
+        <div class="sizes-row">
+            <div class="size-item">
+                <svg width="64" height="64" viewBox="0 0 200 200" fill="none">
+                    <rect width="200" height="200" rx="32" fill="#1A1A2E"/>
+                    <path d="M100 30 L160 55 L160 110 C160 140 135 162 100 175 C65 162 40 140 40 110 L40 55 Z" fill="#C19A6B"/>
+                    <path d="M100 42 L150 63 L150 108 C150 133 129 152 100 163 C71 152 50 133 50 108 L50 63 Z" fill="#1A1A2E"/>
+                    <line x1="100" y1="60" x2="100" y2="150" stroke="#C19A6B" stroke-width="3"/>
+                    <line x1="60" y1="90" x2="140" y2="90" stroke="#C19A6B" stroke-width="3"/>
+                    <line x1="62" y1="115" x2="138" y2="115" stroke="#C19A6B" stroke-width="3"/>
+                    <rect x="93" y="83" width="14" height="14" rx="2" transform="rotate(45 100 90)" fill="white"/>
+                </svg>
+                <span class="size-label">64px</span>
+            </div>
+            <div class="size-item">
+                <svg width="48" height="48" viewBox="0 0 200 200" fill="none">
+                    <rect width="200" height="200" rx="32" fill="#1A1A2E"/>
+                    <path d="M100 30 L160 55 L160 110 C160 140 135 162 100 175 C65 162 40 140 40 110 L40 55 Z" fill="#C19A6B"/>
+                    <path d="M100 42 L150 63 L150 108 C150 133 129 152 100 163 C71 152 50 133 50 108 L50 63 Z" fill="#1A1A2E"/>
+                    <line x1="100" y1="60" x2="100" y2="150" stroke="#C19A6B" stroke-width="3"/>
+                    <line x1="60" y1="90" x2="140" y2="90" stroke="#C19A6B" stroke-width="3"/>
+                    <line x1="62" y1="115" x2="138" y2="115" stroke="#C19A6B" stroke-width="3"/>
+                    <rect x="93" y="83" width="14" height="14" rx="2" transform="rotate(45 100 90)" fill="white"/>
+                </svg>
+                <span class="size-label">48px</span>
+            </div>
+            <div class="size-item">
+                <svg width="32" height="32" viewBox="0 0 200 200" fill="none">
+                    <rect width="200" height="200" rx="32" fill="#1A1A2E"/>
+                    <path d="M100 30 L160 55 L160 110 C160 140 135 162 100 175 C65 162 40 140 40 110 L40 55 Z" fill="#C19A6B"/>
+                    <path d="M100 42 L150 63 L150 108 C150 133 129 152 100 163 C71 152 50 133 50 108 L50 63 Z" fill="#1A1A2E"/>
+                    <line x1="100" y1="60" x2="100" y2="150" stroke="#C19A6B" stroke-width="3"/>
+                    <line x1="60" y1="90" x2="140" y2="90" stroke="#C19A6B" stroke-width="3"/>
+                    <line x1="62" y1="115" x2="138" y2="115" stroke="#C19A6B" stroke-width="3"/>
+                    <rect x="93" y="83" width="14" height="14" rx="2" transform="rotate(45 100 90)" fill="white"/>
+                </svg>
+                <span class="size-label">32px</span>
+            </div>
+            <div class="size-item">
+                <svg width="20" height="20" viewBox="0 0 200 200" fill="none">
+                    <rect width="200" height="200" rx="32" fill="#1A1A2E"/>
+                    <path d="M100 30 L160 55 L160 110 C160 140 135 162 100 175 C65 162 40 140 40 110 L40 55 Z" fill="#C19A6B"/>
+                    <path d="M100 42 L150 63 L150 108 C150 133 129 152 100 163 C71 152 50 133 50 108 L50 63 Z" fill="#1A1A2E"/>
+                    <rect x="93" y="83" width="14" height="14" rx="2" transform="rotate(45 100 90)" fill="white"/>
+                </svg>
+                <span class="size-label">20px</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!-- CONCEPT 3: THE BRIDGE -->
+    <!-- ============================================ -->
+    <section class="concept" id="concept-3">
+        <div class="concept-header">
+            <span class="concept-number">Concept 03</span>
+            <h2 class="concept-name">The Bridge</h2>
+        </div>
+        <p class="concept-desc">An abstract arch inspired by the Sydney Harbour Bridge — clean geometric lines forming a bold, modern silhouette. The arch represents building, connection, and strength. The pillars beneath ground it. Architectural and unmistakably Sydney.</p>
+
+        <div class="logo-showcase">
+            <div class="logo-card on-light">
+                <span class="logo-card-label">On Light</span>
+                <svg width="200" height="200" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="200" height="200" rx="32" fill="#1A1A2E"/>
+                    <!-- Bridge arch -->
+                    <path d="M30 140 L30 120 C30 65 65 40 100 40 C135 40 170 65 170 120 L170 140" stroke="#C19A6B" stroke-width="8" fill="none" stroke-linecap="round"/>
+                    <!-- Left pillar -->
+                    <rect x="26" y="115" width="8" height="45" rx="2" fill="#C19A6B"/>
+                    <!-- Right pillar -->
+                    <rect x="166" y="115" width="8" height="45" rx="2" fill="#C19A6B"/>
+                    <!-- Horizontal road deck -->
+                    <rect x="26" y="130" width="148" height="6" rx="2" fill="white"/>
+                    <!-- Vertical suspension lines -->
+                    <line x1="65" y1="68" x2="65" y2="130" stroke="#C19A6B" stroke-width="3" stroke-linecap="round"/>
+                    <line x1="100" y1="44" x2="100" y2="130" stroke="#C19A6B" stroke-width="3" stroke-linecap="round"/>
+                    <line x1="135" y1="68" x2="135" y2="130" stroke="#C19A6B" stroke-width="3" stroke-linecap="round"/>
+                </svg>
+            </div>
+            <div class="logo-card on-dark">
+                <span class="logo-card-label">On Dark</span>
+                <svg width="200" height="200" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="200" height="200" rx="32" fill="#1A1A2E" stroke="rgba(255,255,255,0.1)" stroke-width="1"/>
+                    <path d="M30 140 L30 120 C30 65 65 40 100 40 C135 40 170 65 170 120 L170 140" stroke="#C19A6B" stroke-width="8" fill="none" stroke-linecap="round"/>
+                    <rect x="26" y="115" width="8" height="45" rx="2" fill="#C19A6B"/>
+                    <rect x="166" y="115" width="8" height="45" rx="2" fill="#C19A6B"/>
+                    <rect x="26" y="130" width="148" height="6" rx="2" fill="white"/>
+                    <line x1="65" y1="68" x2="65" y2="130" stroke="#C19A6B" stroke-width="3" stroke-linecap="round"/>
+                    <line x1="100" y1="44" x2="100" y2="130" stroke="#C19A6B" stroke-width="3" stroke-linecap="round"/>
+                    <line x1="135" y1="68" x2="135" y2="130" stroke="#C19A6B" stroke-width="3" stroke-linecap="round"/>
+                </svg>
+            </div>
+        </div>
+
+        <div class="lockups">
+            <div class="lockup-card">
+                <div class="lockup-label">Parent Brand</div>
+                <div class="lockup-item">
+                    <svg width="40" height="40" viewBox="0 0 200 200" fill="none">
+                        <rect width="200" height="200" rx="32" fill="#1A1A2E"/>
+                        <path d="M30 140 L30 120 C30 65 65 40 100 40 C135 40 170 65 170 120 L170 140" stroke="#C19A6B" stroke-width="8" fill="none" stroke-linecap="round"/>
+                        <rect x="26" y="115" width="8" height="45" rx="2" fill="#C19A6B"/>
+                        <rect x="166" y="115" width="8" height="45" rx="2" fill="#C19A6B"/>
+                        <rect x="26" y="130" width="148" height="6" rx="2" fill="white"/>
+                        <line x1="65" y1="68" x2="65" y2="130" stroke="#C19A6B" stroke-width="3" stroke-linecap="round"/>
+                        <line x1="100" y1="44" x2="100" y2="130" stroke="#C19A6B" stroke-width="3" stroke-linecap="round"/>
+                        <line x1="135" y1="68" x2="135" y2="130" stroke="#C19A6B" stroke-width="3" stroke-linecap="round"/>
+                    </svg>
+                    <span class="lockup-text">North Shore Projects</span>
+                </div>
+            </div>
+            <div class="lockup-card">
+                <div class="lockup-label">Sub-brand Example</div>
+                <div class="lockup-item">
+                    <svg width="40" height="40" viewBox="0 0 200 200" fill="none">
+                        <rect width="200" height="200" rx="32" fill="#1A1A2E"/>
+                        <path d="M30 140 L30 120 C30 65 65 40 100 40 C135 40 170 65 170 120 L170 140" stroke="#C19A6B" stroke-width="8" fill="none" stroke-linecap="round"/>
+                        <rect x="26" y="115" width="8" height="45" rx="2" fill="#C19A6B"/>
+                        <rect x="166" y="115" width="8" height="45" rx="2" fill="#C19A6B"/>
+                        <rect x="26" y="130" width="148" height="6" rx="2" fill="white"/>
+                        <line x1="65" y1="68" x2="65" y2="130" stroke="#C19A6B" stroke-width="3" stroke-linecap="round"/>
+                        <line x1="100" y1="44" x2="100" y2="130" stroke="#C19A6B" stroke-width="3" stroke-linecap="round"/>
+                        <line x1="135" y1="68" x2="135" y2="130" stroke="#C19A6B" stroke-width="3" stroke-linecap="round"/>
+                    </svg>
+                    <span class="lockup-text">North Shore Painting<small>Interior & Exterior Specialists</small></span>
+                </div>
+            </div>
+        </div>
+
+        <div class="sizes-row">
+            <div class="size-item">
+                <svg width="64" height="64" viewBox="0 0 200 200" fill="none">
+                    <rect width="200" height="200" rx="32" fill="#1A1A2E"/>
+                    <path d="M30 140 L30 120 C30 65 65 40 100 40 C135 40 170 65 170 120 L170 140" stroke="#C19A6B" stroke-width="8" fill="none" stroke-linecap="round"/>
+                    <rect x="26" y="115" width="8" height="45" rx="2" fill="#C19A6B"/>
+                    <rect x="166" y="115" width="8" height="45" rx="2" fill="#C19A6B"/>
+                    <rect x="26" y="130" width="148" height="6" rx="2" fill="white"/>
+                    <line x1="65" y1="68" x2="65" y2="130" stroke="#C19A6B" stroke-width="3" stroke-linecap="round"/>
+                    <line x1="100" y1="44" x2="100" y2="130" stroke="#C19A6B" stroke-width="3" stroke-linecap="round"/>
+                    <line x1="135" y1="68" x2="135" y2="130" stroke="#C19A6B" stroke-width="3" stroke-linecap="round"/>
+                </svg>
+                <span class="size-label">64px</span>
+            </div>
+            <div class="size-item">
+                <svg width="48" height="48" viewBox="0 0 200 200" fill="none">
+                    <rect width="200" height="200" rx="32" fill="#1A1A2E"/>
+                    <path d="M30 140 L30 120 C30 65 65 40 100 40 C135 40 170 65 170 120 L170 140" stroke="#C19A6B" stroke-width="8" fill="none" stroke-linecap="round"/>
+                    <rect x="26" y="115" width="8" height="45" rx="2" fill="#C19A6B"/>
+                    <rect x="166" y="115" width="8" height="45" rx="2" fill="#C19A6B"/>
+                    <rect x="26" y="130" width="148" height="6" rx="2" fill="white"/>
+                    <line x1="65" y1="68" x2="65" y2="130" stroke="#C19A6B" stroke-width="3" stroke-linecap="round"/>
+                    <line x1="100" y1="44" x2="100" y2="130" stroke="#C19A6B" stroke-width="3" stroke-linecap="round"/>
+                    <line x1="135" y1="68" x2="135" y2="130" stroke="#C19A6B" stroke-width="3" stroke-linecap="round"/>
+                </svg>
+                <span class="size-label">48px</span>
+            </div>
+            <div class="size-item">
+                <svg width="32" height="32" viewBox="0 0 200 200" fill="none">
+                    <rect width="200" height="200" rx="32" fill="#1A1A2E"/>
+                    <path d="M30 140 L30 120 C30 65 65 40 100 40 C135 40 170 65 170 120 L170 140" stroke="#C19A6B" stroke-width="8" fill="none" stroke-linecap="round"/>
+                    <rect x="26" y="130" width="148" height="6" rx="2" fill="white"/>
+                    <line x1="100" y1="44" x2="100" y2="130" stroke="#C19A6B" stroke-width="3" stroke-linecap="round"/>
+                </svg>
+                <span class="size-label">32px</span>
+            </div>
+            <div class="size-item">
+                <svg width="20" height="20" viewBox="0 0 200 200" fill="none">
+                    <rect width="200" height="200" rx="32" fill="#1A1A2E"/>
+                    <path d="M30 140 L30 120 C30 65 65 40 100 40 C135 40 170 65 170 120 L170 140" stroke="#C19A6B" stroke-width="10" fill="none" stroke-linecap="round"/>
+                    <rect x="26" y="130" width="148" height="8" rx="2" fill="white"/>
+                </svg>
+                <span class="size-label">20px</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!-- CONCEPT 4: THE MONOGRAM -->
+    <!-- ============================================ -->
+    <section class="concept" id="concept-4">
+        <div class="concept-header">
+            <span class="concept-number">Concept 04</span>
+            <h2 class="concept-name">The Monogram</h2>
+        </div>
+        <p class="concept-desc">An interlocking "N" and "S" in a bold geometric style — the strokes overlap and interweave like construction beams. Luxury brand energy meets trades confidence. The letters form a memorable shape that works as a standalone icon. Housed in the signature rounded square.</p>
+
+        <div class="logo-showcase">
+            <div class="logo-card on-light">
+                <span class="logo-card-label">On Light</span>
+                <svg width="200" height="200" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="200" height="200" rx="32" fill="#1A1A2E"/>
+                    <!-- N letter -->
+                    <path d="M50 150 L50 50 L55 50 L120 130 L120 50 L130 50 L130 150 L125 150 L60 70 L60 150 Z" fill="#C19A6B"/>
+                    <!-- S letter overlaid, offset right and slightly down -->
+                    <path d="M90 62 C90 62 130 55 140 70 C150 85 125 95 110 100 C95 105 80 108 80 108 C80 108 68 115 75 128 C82 141 105 145 130 138" stroke="white" stroke-width="8" stroke-linecap="round" fill="none"/>
+                </svg>
+            </div>
+            <div class="logo-card on-dark">
+                <span class="logo-card-label">On Dark</span>
+                <svg width="200" height="200" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="200" height="200" rx="32" fill="#1A1A2E" stroke="rgba(255,255,255,0.1)" stroke-width="1"/>
+                    <path d="M50 150 L50 50 L55 50 L120 130 L120 50 L130 50 L130 150 L125 150 L60 70 L60 150 Z" fill="#C19A6B"/>
+                    <path d="M90 62 C90 62 130 55 140 70 C150 85 125 95 110 100 C95 105 80 108 80 108 C80 108 68 115 75 128 C82 141 105 145 130 138" stroke="white" stroke-width="8" stroke-linecap="round" fill="none"/>
+                </svg>
+            </div>
+        </div>
+
+        <div class="lockups">
+            <div class="lockup-card">
+                <div class="lockup-label">Parent Brand</div>
+                <div class="lockup-item">
+                    <svg width="40" height="40" viewBox="0 0 200 200" fill="none">
+                        <rect width="200" height="200" rx="32" fill="#1A1A2E"/>
+                        <path d="M50 150 L50 50 L55 50 L120 130 L120 50 L130 50 L130 150 L125 150 L60 70 L60 150 Z" fill="#C19A6B"/>
+                        <path d="M90 62 C90 62 130 55 140 70 C150 85 125 95 110 100 C95 105 80 108 80 108 C80 108 68 115 75 128 C82 141 105 145 130 138" stroke="white" stroke-width="8" stroke-linecap="round" fill="none"/>
+                    </svg>
+                    <span class="lockup-text">North Shore Projects</span>
+                </div>
+            </div>
+            <div class="lockup-card">
+                <div class="lockup-label">Sub-brand Example</div>
+                <div class="lockup-item">
+                    <svg width="40" height="40" viewBox="0 0 200 200" fill="none">
+                        <rect width="200" height="200" rx="32" fill="#1A1A2E"/>
+                        <path d="M50 150 L50 50 L55 50 L120 130 L120 50 L130 50 L130 150 L125 150 L60 70 L60 150 Z" fill="#C19A6B"/>
+                        <path d="M90 62 C90 62 130 55 140 70 C150 85 125 95 110 100 C95 105 80 108 80 108 C80 108 68 115 75 128 C82 141 105 145 130 138" stroke="white" stroke-width="8" stroke-linecap="round" fill="none"/>
+                    </svg>
+                    <span class="lockup-text">North Shore Cleaning<small>Residential & Commercial</small></span>
+                </div>
+            </div>
+        </div>
+
+        <div class="sizes-row">
+            <div class="size-item">
+                <svg width="64" height="64" viewBox="0 0 200 200" fill="none">
+                    <rect width="200" height="200" rx="32" fill="#1A1A2E"/>
+                    <path d="M50 150 L50 50 L55 50 L120 130 L120 50 L130 50 L130 150 L125 150 L60 70 L60 150 Z" fill="#C19A6B"/>
+                    <path d="M90 62 C90 62 130 55 140 70 C150 85 125 95 110 100 C95 105 80 108 80 108 C80 108 68 115 75 128 C82 141 105 145 130 138" stroke="white" stroke-width="8" stroke-linecap="round" fill="none"/>
+                </svg>
+                <span class="size-label">64px</span>
+            </div>
+            <div class="size-item">
+                <svg width="48" height="48" viewBox="0 0 200 200" fill="none">
+                    <rect width="200" height="200" rx="32" fill="#1A1A2E"/>
+                    <path d="M50 150 L50 50 L55 50 L120 130 L120 50 L130 50 L130 150 L125 150 L60 70 L60 150 Z" fill="#C19A6B"/>
+                    <path d="M90 62 C90 62 130 55 140 70 C150 85 125 95 110 100 C95 105 80 108 80 108 C80 108 68 115 75 128 C82 141 105 145 130 138" stroke="white" stroke-width="8" stroke-linecap="round" fill="none"/>
+                </svg>
+                <span class="size-label">48px</span>
+            </div>
+            <div class="size-item">
+                <svg width="32" height="32" viewBox="0 0 200 200" fill="none">
+                    <rect width="200" height="200" rx="32" fill="#1A1A2E"/>
+                    <path d="M50 150 L50 50 L55 50 L120 130 L120 50 L130 50 L130 150 L125 150 L60 70 L60 150 Z" fill="#C19A6B"/>
+                    <path d="M90 62 C90 62 130 55 140 70 C150 85 125 95 110 100 C95 105 80 108 80 108 C80 108 68 115 75 128 C82 141 105 145 130 138" stroke="white" stroke-width="10" stroke-linecap="round" fill="none"/>
+                </svg>
+                <span class="size-label">32px</span>
+            </div>
+            <div class="size-item">
+                <svg width="20" height="20" viewBox="0 0 200 200" fill="none">
+                    <rect width="200" height="200" rx="32" fill="#1A1A2E"/>
+                    <path d="M50 150 L50 50 L55 50 L120 130 L120 50 L130 50 L130 150 L125 150 L60 70 L60 150 Z" fill="#C19A6B"/>
+                    <path d="M90 62 C90 62 130 55 140 70 C150 85 125 95 110 100 C95 105 80 108 80 108 C80 108 68 115 75 128 C82 141 105 145 130 138" stroke="white" stroke-width="12" stroke-linecap="round" fill="none"/>
+                </svg>
+                <span class="size-label">20px</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!-- CONCEPT 5: THE CRAFTSMAN'S MARK -->
+    <!-- ============================================ -->
+    <section class="concept" id="concept-5">
+        <div class="concept-header">
+            <span class="concept-number">Concept 05</span>
+            <h2 class="concept-name">The Craftsman's Mark</h2>
+        </div>
+        <p class="concept-desc">A hexagonal badge with "NSP" at its centre — like a quality stamp or hallmark pressed into finished work. The hexagon is a universal symbol of precision (think nuts, bolts, honeycomb strength). The outer ring and inner text feel like a seal of approval. Something you'd be proud to see stamped on your project.</p>
+
+        <div class="logo-showcase">
+            <div class="logo-card on-light">
+                <span class="logo-card-label">On Light</span>
+                <svg width="200" height="200" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="200" height="200" rx="32" fill="#1A1A2E"/>
+                    <!-- Outer hexagon -->
+                    <polygon points="100,25 168,62 168,138 100,175 32,138 32,62" fill="none" stroke="#C19A6B" stroke-width="6"/>
+                    <!-- Inner hexagon -->
+                    <polygon points="100,45 152,72 152,128 100,155 48,128 48,72" fill="none" stroke="#C19A6B" stroke-width="2.5"/>
+                    <!-- NSP text -->
+                    <text x="100" y="108" text-anchor="middle" font-family="Montserrat, sans-serif" font-weight="800" font-size="42" fill="white" letter-spacing="4">NSP</text>
+                    <!-- Small decorative lines top and bottom -->
+                    <line x1="75" y1="57" x2="125" y2="57" stroke="#C19A6B" stroke-width="2" stroke-linecap="round"/>
+                    <line x1="75" y1="143" x2="125" y2="143" stroke="#C19A6B" stroke-width="2" stroke-linecap="round"/>
+                    <!-- Tiny dots at hex vertices -->
+                    <circle cx="100" cy="25" r="3" fill="#C19A6B"/>
+                    <circle cx="168" cy="62" r="3" fill="#C19A6B"/>
+                    <circle cx="168" cy="138" r="3" fill="#C19A6B"/>
+                    <circle cx="100" cy="175" r="3" fill="#C19A6B"/>
+                    <circle cx="32" cy="138" r="3" fill="#C19A6B"/>
+                    <circle cx="32" cy="62" r="3" fill="#C19A6B"/>
+                </svg>
+            </div>
+            <div class="logo-card on-dark">
+                <span class="logo-card-label">On Dark</span>
+                <svg width="200" height="200" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="200" height="200" rx="32" fill="#1A1A2E" stroke="rgba(255,255,255,0.1)" stroke-width="1"/>
+                    <polygon points="100,25 168,62 168,138 100,175 32,138 32,62" fill="none" stroke="#C19A6B" stroke-width="6"/>
+                    <polygon points="100,45 152,72 152,128 100,155 48,128 48,72" fill="none" stroke="#C19A6B" stroke-width="2.5"/>
+                    <text x="100" y="108" text-anchor="middle" font-family="Montserrat, sans-serif" font-weight="800" font-size="42" fill="white" letter-spacing="4">NSP</text>
+                    <line x1="75" y1="57" x2="125" y2="57" stroke="#C19A6B" stroke-width="2" stroke-linecap="round"/>
+                    <line x1="75" y1="143" x2="125" y2="143" stroke="#C19A6B" stroke-width="2" stroke-linecap="round"/>
+                    <circle cx="100" cy="25" r="3" fill="#C19A6B"/>
+                    <circle cx="168" cy="62" r="3" fill="#C19A6B"/>
+                    <circle cx="168" cy="138" r="3" fill="#C19A6B"/>
+                    <circle cx="100" cy="175" r="3" fill="#C19A6B"/>
+                    <circle cx="32" cy="138" r="3" fill="#C19A6B"/>
+                    <circle cx="32" cy="62" r="3" fill="#C19A6B"/>
+                </svg>
+            </div>
+        </div>
+
+        <div class="lockups">
+            <div class="lockup-card">
+                <div class="lockup-label">Parent Brand</div>
+                <div class="lockup-item">
+                    <svg width="40" height="40" viewBox="0 0 200 200" fill="none">
+                        <rect width="200" height="200" rx="32" fill="#1A1A2E"/>
+                        <polygon points="100,25 168,62 168,138 100,175 32,138 32,62" fill="none" stroke="#C19A6B" stroke-width="6"/>
+                        <polygon points="100,45 152,72 152,128 100,155 48,128 48,72" fill="none" stroke="#C19A6B" stroke-width="2.5"/>
+                        <text x="100" y="108" text-anchor="middle" font-family="Montserrat, sans-serif" font-weight="800" font-size="42" fill="white" letter-spacing="4">NSP</text>
+                        <line x1="75" y1="57" x2="125" y2="57" stroke="#C19A6B" stroke-width="2" stroke-linecap="round"/>
+                        <line x1="75" y1="143" x2="125" y2="143" stroke="#C19A6B" stroke-width="2" stroke-linecap="round"/>
+                    </svg>
+                    <span class="lockup-text">North Shore Projects</span>
+                </div>
+            </div>
+            <div class="lockup-card">
+                <div class="lockup-label">Sub-brand Example</div>
+                <div class="lockup-item">
+                    <svg width="40" height="40" viewBox="0 0 200 200" fill="none">
+                        <rect width="200" height="200" rx="32" fill="#1A1A2E"/>
+                        <polygon points="100,25 168,62 168,138 100,175 32,138 32,62" fill="none" stroke="#C19A6B" stroke-width="6"/>
+                        <polygon points="100,45 152,72 152,128 100,155 48,128 48,72" fill="none" stroke="#C19A6B" stroke-width="2.5"/>
+                        <text x="100" y="108" text-anchor="middle" font-family="Montserrat, sans-serif" font-weight="800" font-size="42" fill="white" letter-spacing="4">NSP</text>
+                        <line x1="75" y1="57" x2="125" y2="57" stroke="#C19A6B" stroke-width="2" stroke-linecap="round"/>
+                        <line x1="75" y1="143" x2="125" y2="143" stroke="#C19A6B" stroke-width="2" stroke-linecap="round"/>
+                    </svg>
+                    <span class="lockup-text">North Shore Removals<small>Sydney's North Shore Specialists</small></span>
+                </div>
+            </div>
+        </div>
+
+        <div class="sizes-row">
+            <div class="size-item">
+                <svg width="64" height="64" viewBox="0 0 200 200" fill="none">
+                    <rect width="200" height="200" rx="32" fill="#1A1A2E"/>
+                    <polygon points="100,25 168,62 168,138 100,175 32,138 32,62" fill="none" stroke="#C19A6B" stroke-width="6"/>
+                    <polygon points="100,45 152,72 152,128 100,155 48,128 48,72" fill="none" stroke="#C19A6B" stroke-width="2.5"/>
+                    <text x="100" y="108" text-anchor="middle" font-family="Montserrat, sans-serif" font-weight="800" font-size="42" fill="white" letter-spacing="4">NSP</text>
+                    <line x1="75" y1="57" x2="125" y2="57" stroke="#C19A6B" stroke-width="2" stroke-linecap="round"/>
+                    <line x1="75" y1="143" x2="125" y2="143" stroke="#C19A6B" stroke-width="2" stroke-linecap="round"/>
+                </svg>
+                <span class="size-label">64px</span>
+            </div>
+            <div class="size-item">
+                <svg width="48" height="48" viewBox="0 0 200 200" fill="none">
+                    <rect width="200" height="200" rx="32" fill="#1A1A2E"/>
+                    <polygon points="100,25 168,62 168,138 100,175 32,138 32,62" fill="none" stroke="#C19A6B" stroke-width="8"/>
+                    <text x="100" y="110" text-anchor="middle" font-family="Montserrat, sans-serif" font-weight="800" font-size="48" fill="white" letter-spacing="4">NSP</text>
+                </svg>
+                <span class="size-label">48px</span>
+            </div>
+            <div class="size-item">
+                <svg width="32" height="32" viewBox="0 0 200 200" fill="none">
+                    <rect width="200" height="200" rx="32" fill="#1A1A2E"/>
+                    <polygon points="100,25 168,62 168,138 100,175 32,138 32,62" fill="none" stroke="#C19A6B" stroke-width="10"/>
+                    <text x="100" y="112" text-anchor="middle" font-family="Montserrat, sans-serif" font-weight="800" font-size="52" fill="white" letter-spacing="3">NSP</text>
+                </svg>
+                <span class="size-label">32px</span>
+            </div>
+            <div class="size-item">
+                <svg width="20" height="20" viewBox="0 0 200 200" fill="none">
+                    <rect width="200" height="200" rx="32" fill="#1A1A2E"/>
+                    <polygon points="100,25 168,62 168,138 100,175 32,138 32,62" fill="none" stroke="#C19A6B" stroke-width="14"/>
+                    <text x="100" y="115" text-anchor="middle" font-family="Montserrat, sans-serif" font-weight="800" font-size="60" fill="white" letter-spacing="2">NSP</text>
+                </svg>
+                <span class="size-label">20px</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- ---- FOOTER ---- -->
+    <footer style="text-align:center; padding:3rem 2rem 4rem; border-top:1px solid rgba(255,255,255,0.06);">
+        <p style="font-size:0.75rem; color:var(--gray); margin-bottom:0.5rem;">North Shore Projects — Logo Concepts</p>
+        <p style="font-size:0.65rem; color:rgba(255,255,255,0.2);">Internal use only. Not for distribution.</p>
+    </footer>
+
+    <script>
+        // Active nav link on scroll
+        const sections = document.querySelectorAll('.concept');
+        const navLinks = document.querySelectorAll('.top-nav-links a');
+        window.addEventListener('scroll', () => {
+            let current = '';
+            sections.forEach(s => {
+                if (window.scrollY >= s.offsetTop - 200) current = s.id;
+            });
+            navLinks.forEach(a => {
+                a.classList.remove('active');
+                if (a.getAttribute('href') === '#' + current) a.classList.add('active');
+            });
+        });
+    </script>
+</body>
+</html>
