@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 260 150" fill="none">
+    <svg x="90" y="0" width="80" height="80" viewBox="0 0 200 200">
+        <rect width="200" height="200" rx="36" fill="#1A1A2E"/>
+        <rect x="90" y="38" width="20" height="80" rx="2" fill="#C19A6B"/>
+        <polygon points="100,28 130,68 70,68" fill="#C19A6B"/>
+        <polygon points="35,140 100,105 165,140" fill="#C19A6B"/>
+        <polygon points="55,140 100,115 145,140" fill="#1A1A2E"/>
+        <line x1="100" y1="32" x2="100" y2="42" stroke="white" stroke-width="3" stroke-linecap="round"/>
+    </svg>
+    <text x="130" y="107" font-family="'Montserrat', sans-serif" font-size="16" fill="#1A1A2E" text-anchor="middle">
+        <tspan font-weight="300">North Shore </tspan><tspan font-weight="600">Projects</tspan>
+    </text>
+    <text x="130" y="127" font-family="'Montserrat', sans-serif" font-size="10" font-weight="300" font-style="italic" fill="#1A1A2E" text-anchor="middle" opacity="0.6">Building with precision</text>
+</svg>

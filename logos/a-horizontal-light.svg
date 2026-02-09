@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 50" fill="none">
+    <svg x="0" y="0" width="50" height="50" viewBox="0 0 200 200">
+        <rect width="200" height="200" rx="36" fill="#1A1A2E"/>
+        <rect x="90" y="38" width="20" height="80" rx="2" fill="#FFFFFF"/>
+        <polygon points="100,28 130,68 70,68" fill="#FFFFFF"/>
+        <polygon points="35,140 100,105 165,140" fill="#FFFFFF"/>
+        <polygon points="55,140 100,115 145,140" fill="#1A1A2E"/>
+        <line x1="100" y1="32" x2="100" y2="42" stroke="#C19A6B" stroke-width="3" stroke-linecap="round"/>
+    </svg>
+    <text x="66" y="31" font-family="'Montserrat', sans-serif" font-size="18" fill="#FFFFFF">
+        <tspan font-weight="300">North Shore </tspan><tspan font-weight="600">Projects</tspan>
+    </text>
+</svg>
