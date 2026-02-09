@@ -1,906 +1,921 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>North Shore Projects — Logo Package</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-  <style>
-    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>North Shore Projects — Logo B: The Monoline Compass</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        *, *::before, *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-    body {
-      background: #0D0D1A;
-      color: #FAFAFA;
-      font-family: 'Montserrat', sans-serif;
-      -webkit-font-smoothing: antialiased;
-      -moz-osx-font-smoothing: grayscale;
-      line-height: 1.6;
-    }
+        body {
+            background: #0D0D1A;
+            color: #FAFAFA;
+            font-family: 'Montserrat', sans-serif;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
 
-    /* ── Sticky Nav ── */
-    .sticky-nav {
-      position: sticky;
-      top: 0;
-      z-index: 100;
-      background: rgba(13, 13, 26, 0.85);
-      backdrop-filter: blur(16px);
-      -webkit-backdrop-filter: blur(16px);
-      border-bottom: 1px solid rgba(255,255,255,0.06);
-      padding: 0 2rem;
-    }
-    .sticky-nav__inner {
-      max-width: 1200px;
-      margin: 0 auto;
-      display: flex;
-      align-items: center;
-      gap: 2rem;
-      height: 52px;
-      overflow-x: auto;
-    }
-    .sticky-nav a {
-      font-size: 0.6rem;
-      font-weight: 600;
-      text-transform: uppercase;
-      letter-spacing: 0.15em;
-      color: rgba(250,250,250,0.45);
-      text-decoration: none;
-      white-space: nowrap;
-      transition: color 0.25s;
-    }
-    .sticky-nav a:hover {
-      color: #C19A6B;
-    }
+        /* ── NAV ────────────────────────────────────────── */
+        .sticky-nav {
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            background: rgba(13, 13, 26, 0.85);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border-bottom: 1px solid rgba(255,255,255,0.06);
+        }
 
-    /* ── Hero ── */
-    .hero {
-      padding: 6rem 2rem 4rem;
-      text-align: center;
-    }
-    .hero h1 {
-      font-size: 2.6rem;
-      font-weight: 300;
-      letter-spacing: -0.02em;
-      margin-bottom: 1rem;
-    }
-    .hero h1 span {
-      color: #C19A6B;
-      font-weight: 600;
-    }
-    .hero p {
-      font-size: 0.9rem;
-      color: #6B7280;
-      max-width: 520px;
-      margin: 0 auto;
-      line-height: 1.8;
-    }
+        .nav-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0.85rem 2rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+        }
 
-    /* ── Sections ── */
-    .section {
-      padding: 4rem 2rem;
-      max-width: 1200px;
-      margin: 0 auto;
-      border-top: 1px solid rgba(255,255,255,0.06);
-    }
+        .sticky-nav a {
+            font-size: 0.6rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            color: rgba(255,255,255,0.45);
+            text-decoration: none;
+            transition: color 0.25s;
+            white-space: nowrap;
+        }
 
-    h2 {
-      font-size: 0.65rem;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 0.2em;
-      color: #C19A6B;
-      margin-bottom: 0.5rem;
-    }
+        .sticky-nav a:hover {
+            color: #C19A6B;
+        }
 
-    .section-desc {
-      font-size: 0.85rem;
-      color: #6B7280;
-      max-width: 600px;
-      line-height: 1.7;
-      margin-bottom: 2.5rem;
-    }
+        /* ── LAYOUT ─────────────────────────────────────── */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
 
-    .row-label {
-      font-size: 0.55rem;
-      font-weight: 600;
-      text-transform: uppercase;
-      letter-spacing: 0.15em;
-      color: rgba(250,250,250,0.3);
-      margin-bottom: 0.75rem;
-      margin-top: 2.5rem;
-    }
-    .row-label:first-of-type {
-      margin-top: 0;
-    }
+        section {
+            padding: 5rem 0;
+            border-top: 1px solid rgba(255,255,255,0.06);
+        }
 
-    /* ── Cards ── */
-    .card-light {
-      background: #FFFFFF;
-      border-radius: 14px;
-      padding: 2rem;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-direction: column;
-      gap: 1rem;
-      position: relative;
-    }
-    .card-dark {
-      background: #1A1A2E;
-      border-radius: 14px;
-      padding: 2rem;
-      border: 1px solid rgba(255,255,255,0.06);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-direction: column;
-      gap: 1rem;
-      position: relative;
-    }
+        h2 {
+            font-size: 0.65rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.2em;
+            color: #C19A6B;
+            margin-bottom: 0.75rem;
+        }
 
-    .label {
-      font-size: 0.55rem;
-      font-weight: 600;
-      text-transform: uppercase;
-      letter-spacing: 0.1em;
-      opacity: 0.4;
-    }
-    .card-light .label { color: #1A1A2E; }
-    .card-dark .label { color: #FAFAFA; }
+        .section-desc {
+            font-size: 0.85rem;
+            color: #6B7280;
+            max-width: 600px;
+            line-height: 1.7;
+            margin-bottom: 2.5rem;
+        }
 
-    /* ── Grids ── */
-    .grid-3 {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 1rem;
-      margin-bottom: 1rem;
-    }
-    .grid-2 {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 1rem;
-      margin-bottom: 1rem;
-    }
-    .grid-4 {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 1rem;
-      margin-bottom: 1rem;
-    }
+        .row-label {
+            font-size: 0.55rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.12em;
+            color: rgba(255,255,255,0.3);
+            margin-bottom: 1rem;
+            margin-top: 2.5rem;
+        }
 
-    /* ── Size Test ── */
-    .size-strip {
-      display: flex;
-      align-items: flex-end;
-      gap: 2rem;
-      padding: 2rem;
-      border-radius: 14px;
-      margin-bottom: 1rem;
-      flex-wrap: wrap;
-    }
-    .size-strip.light { background: #FFFFFF; }
-    .size-strip.dark {
-      background: #1A1A2E;
-      border: 1px solid rgba(255,255,255,0.06);
-    }
-    .size-item {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 0.5rem;
-    }
-    .size-item .label {
-      order: 2;
-    }
-    .size-item img {
-      order: 1;
-    }
+        .row-label:first-of-type {
+            margin-top: 0;
+        }
 
-    /* ── Mockups ── */
-    .mockup-wrapper {
-      margin-bottom: 2rem;
-    }
+        /* ── CARDS ──────────────────────────────────────── */
+        .card-light {
+            background: #FFFFFF;
+            border-radius: 14px;
+            padding: 2rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 1rem;
+        }
 
-    /* Navbar mockup */
-    .navbar-mock {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      background: #FFFFFF;
-      border-radius: 50px;
-      padding: 0.75rem 1.5rem;
-      box-shadow: 0 4px 24px rgba(0,0,0,0.12);
-      margin-bottom: 1rem;
-      max-width: 700px;
-    }
-    .navbar-mock img {
-      flex-shrink: 0;
-    }
-    .navbar-mock__links {
-      display: flex;
-      align-items: center;
-      gap: 1.5rem;
-    }
-    .navbar-mock__links span {
-      font-size: 0.7rem;
-      font-weight: 500;
-      color: #3A3A4A;
-      white-space: nowrap;
-    }
-    .navbar-mock__cta {
-      background: #C19A6B;
-      color: #FFFFFF;
-      font-size: 0.65rem;
-      font-weight: 600;
-      padding: 0.5rem 1rem;
-      border-radius: 50px;
-      white-space: nowrap;
-    }
+        .card-dark {
+            background: #1A1A2E;
+            border-radius: 14px;
+            padding: 2rem;
+            border: 1px solid rgba(255,255,255,0.06);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 1rem;
+        }
 
-    /* Business card mockup */
-    .biz-card {
-      width: 350px;
-      height: 200px;
-      background: #FFFFFF;
-      border-radius: 14px;
-      box-shadow: 0 8px 32px rgba(0,0,0,0.18);
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      gap: 0.6rem;
-      padding: 1.5rem;
-      margin-bottom: 1rem;
-    }
-    .biz-card__name {
-      font-size: 16px;
-      font-weight: 600;
-      color: #1A1A2E;
-      margin-top: 0.5rem;
-    }
-    .biz-card__role {
-      font-size: 12px;
-      color: #9CA3AF;
-      font-weight: 400;
-    }
-    .biz-card__contact {
-      font-size: 10px;
-      color: #9CA3AF;
-      font-weight: 400;
-    }
+        .label {
+            font-size: 0.55rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            opacity: 0.4;
+        }
 
-    /* Social avatar mockup */
-    .avatar-row {
-      display: flex;
-      gap: 1.5rem;
-      align-items: center;
-      flex-wrap: wrap;
-      margin-bottom: 1rem;
-    }
-    .avatar-group {
-      display: flex;
-      gap: 1rem;
-      align-items: center;
-    }
-    .avatar-frame {
-      width: 120px;
-      height: 120px;
-      border-radius: 50%;
-      overflow: hidden;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-shrink: 0;
-    }
-    .avatar-frame.light { background: #FFFFFF; }
-    .avatar-frame.dark {
-      background: #1A1A2E;
-      border: 1px solid rgba(255,255,255,0.06);
-    }
-    .avatar-frame img {
-      width: 70%;
-      height: 70%;
-      object-fit: contain;
-    }
+        .card-light .label {
+            color: #1A1A2E;
+        }
 
-    /* ── Sub-brand section ── */
-    .sub-heading {
-      font-size: 0.6rem;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 0.18em;
-      color: rgba(250,250,250,0.5);
-      margin-top: 3rem;
-      margin-bottom: 1.5rem;
-      padding-bottom: 0.5rem;
-      border-bottom: 1px solid rgba(255,255,255,0.06);
-    }
-    .sub-heading:first-of-type {
-      margin-top: 0;
-    }
+        .card-dark .label {
+            color: #FAFAFA;
+        }
 
-    .service-label {
-      font-size: 0.55rem;
-      font-weight: 600;
-      text-transform: uppercase;
-      letter-spacing: 0.12em;
-      color: rgba(250,250,250,0.25);
-      margin-bottom: 0.5rem;
-      margin-top: 1.5rem;
-    }
+        /* ── GRIDS ──────────────────────────────────────── */
+        .grid-2 {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1.5rem;
+            margin-bottom: 1rem;
+        }
 
-    /* ── Mockup sub-labels ── */
-    .mockup-label {
-      font-size: 0.6rem;
-      font-weight: 600;
-      text-transform: uppercase;
-      letter-spacing: 0.12em;
-      color: rgba(250,250,250,0.3);
-      margin-bottom: 0.75rem;
-      margin-top: 2rem;
-    }
+        .grid-3 {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.5rem;
+            margin-bottom: 1rem;
+        }
 
-    .mockup-pair {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 2rem;
-      margin-bottom: 2rem;
-    }
-    .mockup-col {
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start;
-    }
-    .mockup-col-label {
-      font-size: 0.5rem;
-      font-weight: 600;
-      text-transform: uppercase;
-      letter-spacing: 0.1em;
-      color: rgba(250,250,250,0.25);
-      margin-bottom: 0.75rem;
-    }
+        .grid-4 {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1.5rem;
+            margin-bottom: 1rem;
+        }
 
-    /* ── Footer ── */
-    .footer {
-      text-align: center;
-      padding: 4rem 2rem;
-      border-top: 1px solid rgba(255,255,255,0.06);
-      font-size: 0.65rem;
-      font-weight: 500;
-      color: rgba(250,250,250,0.2);
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-    }
+        /* ── HERO ───────────────────────────────────────── */
+        .hero {
+            padding: 8rem 0 5rem;
+            text-align: center;
+            border-top: none;
+        }
 
-    /* ── Responsive ── */
-    @media (max-width: 768px) {
-      .hero h1 { font-size: 1.8rem; }
-      .grid-3 { grid-template-columns: 1fr; }
-      .grid-2 { grid-template-columns: 1fr; }
-      .grid-4 { grid-template-columns: repeat(2, 1fr); }
-      .mockup-pair { grid-template-columns: 1fr; }
-      .navbar-mock {
-        border-radius: 14px;
-        flex-direction: column;
-        gap: 0.75rem;
-        padding: 1rem;
-        max-width: 100%;
-      }
-      .navbar-mock__links { gap: 0.75rem; flex-wrap: wrap; justify-content: center; }
-      .biz-card { width: 100%; max-width: 350px; }
-      .size-strip { gap: 1rem; }
-      .sticky-nav__inner { gap: 1.25rem; }
-    }
+        .hero-label {
+            font-size: 0.55rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.25em;
+            color: rgba(255,255,255,0.3);
+            margin-bottom: 2rem;
+        }
 
-    @media (max-width: 480px) {
-      .section { padding: 3rem 1.25rem; }
-      .hero { padding: 4rem 1.25rem 3rem; }
-      .grid-4 { grid-template-columns: 1fr 1fr; }
-    }
-  </style>
+        .hero h1 {
+            font-size: 3rem;
+            font-weight: 300;
+            letter-spacing: -0.02em;
+            line-height: 1.2;
+            margin-bottom: 1.25rem;
+        }
+
+        .hero h1 span {
+            color: #C19A6B;
+            font-weight: 500;
+        }
+
+        .hero p {
+            font-size: 1rem;
+            color: #6B7280;
+            font-weight: 400;
+            max-width: 500px;
+            margin: 0 auto;
+            line-height: 1.7;
+        }
+
+        /* ── SWATCHES ───────────────────────────────────── */
+        .swatch {
+            display: inline-block;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            flex-shrink: 0;
+        }
+
+        .label-with-swatch {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.4rem;
+        }
+
+        /* ── SIZE TEST ──────────────────────────────────── */
+        .size-strip {
+            display: flex;
+            align-items: flex-end;
+            justify-content: center;
+            gap: 2rem;
+            padding: 2rem 2rem 1.5rem;
+            flex-wrap: wrap;
+        }
+
+        .size-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .size-item .label {
+            white-space: nowrap;
+        }
+
+        /* ── SUB-BRAND ROWS ─────────────────────────────── */
+        .subbrand-row {
+            margin-bottom: 2rem;
+        }
+
+        .subbrand-row-label {
+            font-size: 0.6rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.12em;
+            color: rgba(255,255,255,0.5);
+            margin-bottom: 0.75rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        /* ── MOCKUPS ────────────────────────────────────── */
+        .mockup-label {
+            font-size: 0.55rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.12em;
+            color: rgba(255,255,255,0.3);
+            margin-bottom: 1rem;
+            margin-top: 3rem;
+        }
+
+        .mockup-label:first-of-type {
+            margin-top: 0;
+        }
+
+        /* Website Header */
+        .mock-navbar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0.75rem 1.75rem;
+            border-radius: 9999px;
+            max-width: 700px;
+            margin: 0 auto 1.25rem;
+        }
+
+        .mock-navbar-light {
+            background: #FFFFFF;
+            box-shadow: 0 2px 20px rgba(0,0,0,0.08);
+        }
+
+        .mock-navbar-dark {
+            background: #1A1A2E;
+            border: 1px solid rgba(255,255,255,0.06);
+        }
+
+        .mock-nav-links {
+            display: flex;
+            align-items: center;
+            gap: 1.25rem;
+        }
+
+        .mock-nav-links span {
+            font-size: 0.65rem;
+            font-weight: 500;
+        }
+
+        .mock-navbar-light .mock-nav-links span {
+            color: #1A1A2E;
+        }
+
+        .mock-navbar-dark .mock-nav-links span {
+            color: rgba(255,255,255,0.7);
+        }
+
+        .mock-cta {
+            display: inline-block;
+            padding: 0.4rem 1rem;
+            border-radius: 9999px;
+            background: #C19A6B;
+            color: #FFFFFF;
+            font-size: 0.6rem;
+            font-weight: 600;
+            text-decoration: none;
+            letter-spacing: 0.05em;
+        }
+
+        /* Business Card */
+        .mock-business-card {
+            width: 350px;
+            height: 200px;
+            background: #FFFFFF;
+            border-radius: 12px;
+            box-shadow: 0 4px 24px rgba(0,0,0,0.12);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 0.4rem;
+            margin: 0 auto;
+        }
+
+        .mock-business-card .bc-name {
+            font-size: 16px;
+            font-weight: 600;
+            color: #1A1A2E;
+            margin-top: 0.5rem;
+        }
+
+        .mock-business-card .bc-title {
+            font-size: 12px;
+            font-weight: 400;
+            color: #9CA3AF;
+        }
+
+        .mock-business-card .bc-contact {
+            font-size: 10px;
+            font-weight: 400;
+            color: #9CA3AF;
+            margin-top: 0.25rem;
+        }
+
+        /* Social Avatars */
+        .mock-avatars {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 2rem;
+        }
+
+        .mock-avatar {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+
+        .mock-avatar-light {
+            background: #FFFFFF;
+            box-shadow: 0 2px 16px rgba(0,0,0,0.1);
+        }
+
+        .mock-avatar-dark {
+            background: #1A1A2E;
+            border: 1px solid rgba(255,255,255,0.06);
+        }
+
+        .mock-avatar img {
+            width: 70px;
+            height: 70px;
+        }
+
+        /* Vehicle / Signage */
+        .mock-vehicle {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 10px;
+            max-width: 600px;
+            height: 100px;
+            margin: 0 auto 1.25rem;
+        }
+
+        .mock-vehicle-dark {
+            background: #1A1A2E;
+        }
+
+        .mock-vehicle-light {
+            background: #FFFFFF;
+            box-shadow: 0 2px 16px rgba(0,0,0,0.06);
+        }
+
+        /* ── FOOTER ─────────────────────────────────────── */
+        .footer {
+            padding: 3rem 0;
+            border-top: 1px solid rgba(255,255,255,0.06);
+            text-align: center;
+        }
+
+        .footer p {
+            font-size: 0.55rem;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            color: rgba(255,255,255,0.2);
+        }
+
+        /* ── RESPONSIVE ─────────────────────────────────── */
+        @media (max-width: 1024px) {
+            .grid-4 {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .hero {
+                padding: 5rem 0 3rem;
+            }
+
+            section {
+                padding: 3.5rem 0;
+            }
+
+            .container {
+                padding: 0 1.25rem;
+            }
+
+            .grid-2,
+            .grid-3 {
+                grid-template-columns: 1fr;
+            }
+
+            .grid-4 {
+                grid-template-columns: 1fr;
+            }
+
+            .nav-inner {
+                gap: 1rem;
+                padding: 0.75rem 1rem;
+            }
+
+            .mock-navbar {
+                flex-direction: column;
+                border-radius: 14px;
+                gap: 0.75rem;
+                padding: 1rem;
+            }
+
+            .mock-business-card {
+                width: 100%;
+                max-width: 350px;
+            }
+
+            .mock-vehicle {
+                width: 100%;
+                height: 80px;
+            }
+
+            .mock-avatars {
+                flex-wrap: wrap;
+            }
+
+            .size-strip {
+                gap: 1.25rem;
+            }
+        }
+    </style>
 </head>
 <body>
 
-  <!-- Sticky Nav -->
-  <nav class="sticky-nav">
-    <div class="sticky-nav__inner">
-      <a href="#logo-a">Logo A</a>
-      <a href="#logo-b">Logo B</a>
-      <a href="#sub-brands">Sub-brands</a>
-      <a href="#size-test">Size Test</a>
-      <a href="#mockups">Mockups</a>
-    </div>
-  </nav>
-
-  <!-- Hero -->
-  <header class="hero">
-    <h1>Logo <span>Package</span></h1>
-    <p>Two directions for the North Shore Projects brand mark. Compare every variation.</p>
-  </header>
-
-  <!-- ══════════════════════════════════════════════════
-       SECTION 1: Logo A — "The Bold Compass"
-       ══════════════════════════════════════════════════ -->
-  <section class="section" id="logo-a">
-    <h2>Logo A &mdash; "The Bold Compass"</h2>
-    <p class="section-desc">A stylised north arrow integrated with a roofline. The upward-pointing form says "North" while the angled base reads as a house roof. Filled gold mark on dark navy rounded square. Solid, confident, premium.</p>
-
-    <!-- Row 1: Icons -->
-    <div class="row-label">Icons</div>
-    <div class="grid-3">
-      <div class="card-light">
-        <img src="logos/a-icon-dark.svg" width="120" height="120" alt="Logo A icon dark">
-        <span class="label">Dark</span>
-      </div>
-      <div class="card-dark">
-        <img src="logos/a-icon-light.svg" width="120" height="120" alt="Logo A icon light">
-        <span class="label">Light</span>
-      </div>
-      <div class="card-dark">
-        <img src="logos/a-icon-gold.svg" width="120" height="120" alt="Logo A icon gold">
-        <span class="label">Gold</span>
-      </div>
-    </div>
-
-    <!-- Row 2: Horizontal Lockups -->
-    <div class="row-label">Horizontal Lockups</div>
-    <div class="grid-2">
-      <div class="card-light">
-        <img src="logos/a-horizontal-dark.svg" height="50" alt="Logo A horizontal dark">
-        <span class="label">Dark</span>
-      </div>
-      <div class="card-dark">
-        <img src="logos/a-horizontal-light.svg" height="50" alt="Logo A horizontal light">
-        <span class="label">Light</span>
-      </div>
-    </div>
-
-    <!-- Row 3: Horizontal + Slogan -->
-    <div class="row-label">Horizontal + Slogan</div>
-    <div class="grid-2">
-      <div class="card-light">
-        <img src="logos/a-horizontal-slogan-dark.svg" height="60" alt="Logo A horizontal slogan dark">
-        <span class="label">Dark</span>
-      </div>
-      <div class="card-dark">
-        <img src="logos/a-horizontal-slogan-light.svg" height="60" alt="Logo A horizontal slogan light">
-        <span class="label">Light</span>
-      </div>
-    </div>
-
-    <!-- Row 4: Stacked Lockups -->
-    <div class="row-label">Stacked Lockups</div>
-    <div class="grid-2">
-      <div class="card-light">
-        <img src="logos/a-stacked-dark.svg" height="130" alt="Logo A stacked dark">
-        <span class="label">Dark</span>
-      </div>
-      <div class="card-dark">
-        <img src="logos/a-stacked-light.svg" height="130" alt="Logo A stacked light">
-        <span class="label">Light</span>
-      </div>
-    </div>
-
-    <!-- Row 5: Stacked + Slogan -->
-    <div class="row-label">Stacked + Slogan</div>
-    <div class="grid-2">
-      <div class="card-light">
-        <img src="logos/a-stacked-slogan-dark.svg" height="150" alt="Logo A stacked slogan dark">
-        <span class="label">Dark</span>
-      </div>
-      <div class="card-dark">
-        <img src="logos/a-stacked-slogan-light.svg" height="150" alt="Logo A stacked slogan light">
-        <span class="label">Light</span>
-      </div>
-    </div>
-  </section>
-
-  <!-- ══════════════════════════════════════════════════
-       SECTION 2: Logo B — "The Monoline Compass"
-       ══════════════════════════════════════════════════ -->
-  <section class="section" id="logo-b">
-    <h2>Logo B &mdash; "The Monoline Compass"</h2>
-    <p class="section-desc">The same compass-roof form rendered in thin monoline strokes inside a gold outlined rounded square. White lines for the arrow/shaft/crossbar, gold line for the roof chevron. Minimal, elegant, architectural.</p>
-
-    <!-- Row 1: Icons -->
-    <div class="row-label">Icons</div>
-    <div class="grid-3">
-      <div class="card-light">
-        <img src="logos/b-icon-dark.svg" width="120" height="120" alt="Logo B icon dark">
-        <span class="label">Dark</span>
-      </div>
-      <div class="card-dark">
-        <img src="logos/b-icon-light.svg" width="120" height="120" alt="Logo B icon light">
-        <span class="label">Light</span>
-      </div>
-      <div class="card-dark">
-        <img src="logos/b-icon-gold.svg" width="120" height="120" alt="Logo B icon gold">
-        <span class="label">Gold</span>
-      </div>
-    </div>
-
-    <!-- Row 2: Horizontal Lockups -->
-    <div class="row-label">Horizontal Lockups</div>
-    <div class="grid-2">
-      <div class="card-light">
-        <img src="logos/b-horizontal-dark.svg" height="50" alt="Logo B horizontal dark">
-        <span class="label">Dark</span>
-      </div>
-      <div class="card-dark">
-        <img src="logos/b-horizontal-light.svg" height="50" alt="Logo B horizontal light">
-        <span class="label">Light</span>
-      </div>
-    </div>
-
-    <!-- Row 3: Horizontal + Slogan -->
-    <div class="row-label">Horizontal + Slogan</div>
-    <div class="grid-2">
-      <div class="card-light">
-        <img src="logos/b-horizontal-slogan-dark.svg" height="60" alt="Logo B horizontal slogan dark">
-        <span class="label">Dark</span>
-      </div>
-      <div class="card-dark">
-        <img src="logos/b-horizontal-slogan-light.svg" height="60" alt="Logo B horizontal slogan light">
-        <span class="label">Light</span>
-      </div>
-    </div>
-
-    <!-- Row 4: Stacked Lockups -->
-    <div class="row-label">Stacked Lockups</div>
-    <div class="grid-2">
-      <div class="card-light">
-        <img src="logos/b-stacked-dark.svg" height="130" alt="Logo B stacked dark">
-        <span class="label">Dark</span>
-      </div>
-      <div class="card-dark">
-        <img src="logos/b-stacked-light.svg" height="130" alt="Logo B stacked light">
-        <span class="label">Light</span>
-      </div>
-    </div>
-
-    <!-- Row 5: Stacked + Slogan -->
-    <div class="row-label">Stacked + Slogan</div>
-    <div class="grid-2">
-      <div class="card-light">
-        <img src="logos/b-stacked-slogan-dark.svg" height="150" alt="Logo B stacked slogan dark">
-        <span class="label">Dark</span>
-      </div>
-      <div class="card-dark">
-        <img src="logos/b-stacked-slogan-light.svg" height="150" alt="Logo B stacked slogan light">
-        <span class="label">Light</span>
-      </div>
-    </div>
-  </section>
-
-  <!-- ══════════════════════════════════════════════════
-       SECTION 3: Sub-brands Side by Side
-       ══════════════════════════════════════════════════ -->
-  <section class="section" id="sub-brands">
-    <h2>Sub-brands</h2>
-    <p class="section-desc">Each service line rendered under both logo directions. Compare legibility and brand cohesion across the suite.</p>
-
-    <!-- Logo A Sub-brands -->
-    <div class="sub-heading">Logo A Sub-brands</div>
-
-    <div class="service-label">Tiling</div>
-    <div class="grid-2">
-      <div class="card-light">
-        <img src="logos/a-tiling-dark.svg" height="50" alt="Logo A tiling dark">
-        <span class="label">Dark</span>
-      </div>
-      <div class="card-dark">
-        <img src="logos/a-tiling-light.svg" height="50" alt="Logo A tiling light">
-        <span class="label">Light</span>
-      </div>
-    </div>
-
-    <div class="service-label">Painting</div>
-    <div class="grid-2">
-      <div class="card-light">
-        <img src="logos/a-painting-dark.svg" height="50" alt="Logo A painting dark">
-        <span class="label">Dark</span>
-      </div>
-      <div class="card-dark">
-        <img src="logos/a-painting-light.svg" height="50" alt="Logo A painting light">
-        <span class="label">Light</span>
-      </div>
-    </div>
-
-    <div class="service-label">Cleaning</div>
-    <div class="grid-2">
-      <div class="card-light">
-        <img src="logos/a-cleaning-dark.svg" height="50" alt="Logo A cleaning dark">
-        <span class="label">Dark</span>
-      </div>
-      <div class="card-dark">
-        <img src="logos/a-cleaning-light.svg" height="50" alt="Logo A cleaning light">
-        <span class="label">Light</span>
-      </div>
-    </div>
-
-    <div class="service-label">Removals</div>
-    <div class="grid-2">
-      <div class="card-light">
-        <img src="logos/a-removals-dark.svg" height="50" alt="Logo A removals dark">
-        <span class="label">Dark</span>
-      </div>
-      <div class="card-dark">
-        <img src="logos/a-removals-light.svg" height="50" alt="Logo A removals light">
-        <span class="label">Light</span>
-      </div>
-    </div>
-
-    <!-- Logo B Sub-brands -->
-    <div class="sub-heading">Logo B Sub-brands</div>
-
-    <div class="service-label">Tiling</div>
-    <div class="grid-2">
-      <div class="card-light">
-        <img src="logos/b-tiling-dark.svg" height="50" alt="Logo B tiling dark">
-        <span class="label">Dark</span>
-      </div>
-      <div class="card-dark">
-        <img src="logos/b-tiling-light.svg" height="50" alt="Logo B tiling light">
-        <span class="label">Light</span>
-      </div>
-    </div>
-
-    <div class="service-label">Painting</div>
-    <div class="grid-2">
-      <div class="card-light">
-        <img src="logos/b-painting-dark.svg" height="50" alt="Logo B painting dark">
-        <span class="label">Dark</span>
-      </div>
-      <div class="card-dark">
-        <img src="logos/b-painting-light.svg" height="50" alt="Logo B painting light">
-        <span class="label">Light</span>
-      </div>
-    </div>
-
-    <div class="service-label">Cleaning</div>
-    <div class="grid-2">
-      <div class="card-light">
-        <img src="logos/b-cleaning-dark.svg" height="50" alt="Logo B cleaning dark">
-        <span class="label">Dark</span>
-      </div>
-      <div class="card-dark">
-        <img src="logos/b-cleaning-light.svg" height="50" alt="Logo B cleaning light">
-        <span class="label">Light</span>
-      </div>
-    </div>
-
-    <div class="service-label">Removals</div>
-    <div class="grid-2">
-      <div class="card-light">
-        <img src="logos/b-removals-dark.svg" height="50" alt="Logo B removals dark">
-        <span class="label">Dark</span>
-      </div>
-      <div class="card-dark">
-        <img src="logos/b-removals-light.svg" height="50" alt="Logo B removals light">
-        <span class="label">Light</span>
-      </div>
-    </div>
-  </section>
-
-  <!-- ══════════════════════════════════════════════════
-       SECTION 4: Size Test
-       ══════════════════════════════════════════════════ -->
-  <section class="section" id="size-test">
-    <h2>Size Test</h2>
-    <p class="section-desc">How each icon holds up from hero-size down to favicon. Check detail retention and legibility at every scale.</p>
-
-    <!-- Logo A on light -->
-    <div class="row-label">Logo A on Light</div>
-    <div class="size-strip light">
-      <div class="size-item">
-        <img src="logos/a-icon-dark.svg" width="200" height="200" alt="200px">
-        <span class="label" style="color:#1A1A2E;">200px</span>
-      </div>
-      <div class="size-item">
-        <img src="logos/a-icon-dark.svg" width="100" height="100" alt="100px">
-        <span class="label" style="color:#1A1A2E;">100px</span>
-      </div>
-      <div class="size-item">
-        <img src="logos/a-icon-dark.svg" width="64" height="64" alt="64px">
-        <span class="label" style="color:#1A1A2E;">64px</span>
-      </div>
-      <div class="size-item">
-        <img src="logos/a-icon-dark.svg" width="48" height="48" alt="48px">
-        <span class="label" style="color:#1A1A2E;">48px</span>
-      </div>
-      <div class="size-item">
-        <img src="logos/a-icon-dark.svg" width="32" height="32" alt="32px">
-        <span class="label" style="color:#1A1A2E;">32px</span>
-      </div>
-      <div class="size-item">
-        <img src="logos/a-icon-dark.svg" width="16" height="16" alt="16px">
-        <span class="label" style="color:#1A1A2E;">16px</span>
-      </div>
-    </div>
-
-    <!-- Logo B on light -->
-    <div class="row-label">Logo B on Light</div>
-    <div class="size-strip light">
-      <div class="size-item">
-        <img src="logos/b-icon-dark.svg" width="200" height="200" alt="200px">
-        <span class="label" style="color:#1A1A2E;">200px</span>
-      </div>
-      <div class="size-item">
-        <img src="logos/b-icon-dark.svg" width="100" height="100" alt="100px">
-        <span class="label" style="color:#1A1A2E;">100px</span>
-      </div>
-      <div class="size-item">
-        <img src="logos/b-icon-dark.svg" width="64" height="64" alt="64px">
-        <span class="label" style="color:#1A1A2E;">64px</span>
-      </div>
-      <div class="size-item">
-        <img src="logos/b-icon-dark.svg" width="48" height="48" alt="48px">
-        <span class="label" style="color:#1A1A2E;">48px</span>
-      </div>
-      <div class="size-item">
-        <img src="logos/b-icon-dark.svg" width="32" height="32" alt="32px">
-        <span class="label" style="color:#1A1A2E;">32px</span>
-      </div>
-      <div class="size-item">
-        <img src="logos/b-icon-dark.svg" width="16" height="16" alt="16px">
-        <span class="label" style="color:#1A1A2E;">16px</span>
-      </div>
-    </div>
-
-    <!-- Logo A on dark -->
-    <div class="row-label">Logo A on Dark</div>
-    <div class="size-strip dark">
-      <div class="size-item">
-        <img src="logos/a-icon-light.svg" width="200" height="200" alt="200px">
-        <span class="label">200px</span>
-      </div>
-      <div class="size-item">
-        <img src="logos/a-icon-light.svg" width="100" height="100" alt="100px">
-        <span class="label">100px</span>
-      </div>
-      <div class="size-item">
-        <img src="logos/a-icon-light.svg" width="64" height="64" alt="64px">
-        <span class="label">64px</span>
-      </div>
-      <div class="size-item">
-        <img src="logos/a-icon-light.svg" width="48" height="48" alt="48px">
-        <span class="label">48px</span>
-      </div>
-      <div class="size-item">
-        <img src="logos/a-icon-light.svg" width="32" height="32" alt="32px">
-        <span class="label">32px</span>
-      </div>
-      <div class="size-item">
-        <img src="logos/a-icon-light.svg" width="16" height="16" alt="16px">
-        <span class="label">16px</span>
-      </div>
-    </div>
-
-    <!-- Logo B on dark -->
-    <div class="row-label">Logo B on Dark</div>
-    <div class="size-strip dark">
-      <div class="size-item">
-        <img src="logos/b-icon-light.svg" width="200" height="200" alt="200px">
-        <span class="label">200px</span>
-      </div>
-      <div class="size-item">
-        <img src="logos/b-icon-light.svg" width="100" height="100" alt="100px">
-        <span class="label">100px</span>
-      </div>
-      <div class="size-item">
-        <img src="logos/b-icon-light.svg" width="64" height="64" alt="64px">
-        <span class="label">64px</span>
-      </div>
-      <div class="size-item">
-        <img src="logos/b-icon-light.svg" width="48" height="48" alt="48px">
-        <span class="label">48px</span>
-      </div>
-      <div class="size-item">
-        <img src="logos/b-icon-light.svg" width="32" height="32" alt="32px">
-        <span class="label">32px</span>
-      </div>
-      <div class="size-item">
-        <img src="logos/b-icon-light.svg" width="16" height="16" alt="16px">
-        <span class="label">16px</span>
-      </div>
-    </div>
-  </section>
-
-  <!-- ══════════════════════════════════════════════════
-       SECTION 5: Usage Mockups
-       ══════════════════════════════════════════════════ -->
-  <section class="section" id="mockups">
-    <h2>Usage Mockups</h2>
-    <p class="section-desc">Contextual placements showing how each logo direction performs in real-world applications.</p>
-
-    <!-- 1. Website Header Mockup -->
-    <div class="mockup-label">Website Header</div>
-
-    <div class="mockup-pair">
-      <div class="mockup-col">
-        <div class="mockup-col-label">Logo A</div>
-        <div class="navbar-mock">
-          <img src="logos/a-horizontal-dark.svg" height="35" alt="Logo A navbar">
-          <div class="navbar-mock__links">
-            <span>Services</span>
-            <span>About</span>
-            <span>Contact</span>
-            <span class="navbar-mock__cta">Get a Quote</span>
-          </div>
+    <!-- ═══════════════════════════════════════════════════
+         NAV
+         ═══════════════════════════════════════════════════ -->
+    <nav class="sticky-nav">
+        <div class="nav-inner">
+            <a href="#mark">Mark</a>
+            <a href="#colorways">Colorways</a>
+            <a href="#horizontal">Horizontal</a>
+            <a href="#stacked">Stacked</a>
+            <a href="#subbrands">Sub-brands</a>
+            <a href="#sizes">Sizes</a>
+            <a href="#mockups">Mockups</a>
         </div>
-      </div>
-      <div class="mockup-col">
-        <div class="mockup-col-label">Logo B</div>
-        <div class="navbar-mock">
-          <img src="logos/b-horizontal-dark.svg" height="35" alt="Logo B navbar">
-          <div class="navbar-mock__links">
-            <span>Services</span>
-            <span>About</span>
-            <span>Contact</span>
-            <span class="navbar-mock__cta">Get a Quote</span>
-          </div>
-        </div>
-      </div>
-    </div>
+    </nav>
 
-    <!-- 2. Business Card Mockup -->
-    <div class="mockup-label">Business Card</div>
-
-    <div class="mockup-pair">
-      <div class="mockup-col">
-        <div class="mockup-col-label">Logo A</div>
-        <div class="biz-card">
-          <img src="logos/a-stacked-dark.svg" height="90" alt="Logo A business card">
-          <div class="biz-card__name">John Smith</div>
-          <div class="biz-card__role">Project Manager</div>
-          <div class="biz-card__contact">0412 345 678 | john@northshoreprojects.com.au</div>
+    <!-- ═══════════════════════════════════════════════════
+         HERO
+         ═══════════════════════════════════════════════════ -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-label">Logo B &mdash; Final Direction</div>
+            <h1>The Monoline <span>Compass</span></h1>
+            <p>The chosen direction for the North Shore Projects brand mark.</p>
         </div>
-      </div>
-      <div class="mockup-col">
-        <div class="mockup-col-label">Logo B</div>
-        <div class="biz-card">
-          <img src="logos/b-stacked-dark.svg" height="90" alt="Logo B business card">
-          <div class="biz-card__name">John Smith</div>
-          <div class="biz-card__role">Project Manager</div>
-          <div class="biz-card__contact">0412 345 678 | john@northshoreprojects.com.au</div>
-        </div>
-      </div>
-    </div>
+    </section>
 
-    <!-- 3. Social Media Avatar Mockup -->
-    <div class="mockup-label">Social Media Avatar</div>
-
-    <div class="mockup-pair">
-      <div class="mockup-col">
-        <div class="mockup-col-label">Logo A</div>
-        <div class="avatar-group">
-          <div class="avatar-frame light">
-            <img src="logos/a-icon-dark.svg" alt="Logo A avatar light">
-          </div>
-          <div class="avatar-frame dark">
-            <img src="logos/a-icon-light.svg" alt="Logo A avatar dark">
-          </div>
+    <!-- ═══════════════════════════════════════════════════
+         SECTION 1: THE MARK
+         ═══════════════════════════════════════════════════ -->
+    <section id="mark">
+        <div class="container">
+            <h2>The Mark</h2>
+            <p class="section-desc">A stylised north arrow integrated with a roofline, rendered in thin monoline strokes. Gold outlined rounded square frame. Minimal, elegant, architectural.</p>
+            <div class="grid-3">
+                <div class="card-light">
+                    <img src="logos/b-icon-dark.svg" width="160" height="160" alt="Logo B — Standard Dark">
+                    <span class="label">Standard (Dark)</span>
+                </div>
+                <div class="card-dark">
+                    <img src="logos/b-icon-light.svg" width="160" height="160" alt="Logo B — Standard Light">
+                    <span class="label">Standard (Light)</span>
+                </div>
+                <div class="card-dark">
+                    <img src="logos/b-icon-gold.svg" width="160" height="160" alt="Logo B — Gold Monochrome">
+                    <span class="label">Gold Monochrome</span>
+                </div>
+            </div>
         </div>
-      </div>
-      <div class="mockup-col">
-        <div class="mockup-col-label">Logo B</div>
-        <div class="avatar-group">
-          <div class="avatar-frame light">
-            <img src="logos/b-icon-dark.svg" alt="Logo B avatar light">
-          </div>
-          <div class="avatar-frame dark">
-            <img src="logos/b-icon-light.svg" alt="Logo B avatar dark">
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Footer -->
-  <footer class="footer">
-    North Shore Projects &mdash; Logo Package for Team Review
-  </footer>
+    <!-- ═══════════════════════════════════════════════════
+         SECTION 2: COLORWAYS
+         ═══════════════════════════════════════════════════ -->
+    <section id="colorways">
+        <div class="container">
+            <h2>Colorways</h2>
+            <p class="section-desc">Service accent colorways and monochrome treatments for different contexts and applications.</p>
+
+            <!-- Row 1: Service Accents on Light -->
+            <div class="row-label">Service Accents &mdash; Light Backgrounds</div>
+            <div class="grid-4">
+                <div class="card-light">
+                    <img src="logos/b-icon-tiling-dark.svg" width="100" height="100" alt="Tiling accent — dark">
+                    <span class="label label-with-swatch"><span class="swatch" style="background:#2D5A3D;"></span> Tiling</span>
+                </div>
+                <div class="card-light">
+                    <img src="logos/b-icon-painting-dark.svg" width="100" height="100" alt="Painting accent — dark">
+                    <span class="label label-with-swatch"><span class="swatch" style="background:#4A6FA5;"></span> Painting</span>
+                </div>
+                <div class="card-light">
+                    <img src="logos/b-icon-cleaning-dark.svg" width="100" height="100" alt="Cleaning accent — dark">
+                    <span class="label label-with-swatch"><span class="swatch" style="background:#5BA88C;"></span> Cleaning</span>
+                </div>
+                <div class="card-light">
+                    <img src="logos/b-icon-removals-dark.svg" width="100" height="100" alt="Removals accent — dark">
+                    <span class="label label-with-swatch"><span class="swatch" style="background:#D4763A;"></span> Removals</span>
+                </div>
+            </div>
+
+            <!-- Row 2: Service Accents on Dark -->
+            <div class="row-label">Service Accents &mdash; Dark Backgrounds</div>
+            <div class="grid-4">
+                <div class="card-dark">
+                    <img src="logos/b-icon-tiling-light.svg" width="100" height="100" alt="Tiling accent — light">
+                    <span class="label label-with-swatch"><span class="swatch" style="background:#2D5A3D;"></span> Tiling</span>
+                </div>
+                <div class="card-dark">
+                    <img src="logos/b-icon-painting-light.svg" width="100" height="100" alt="Painting accent — light">
+                    <span class="label label-with-swatch"><span class="swatch" style="background:#4A6FA5;"></span> Painting</span>
+                </div>
+                <div class="card-dark">
+                    <img src="logos/b-icon-cleaning-light.svg" width="100" height="100" alt="Cleaning accent — light">
+                    <span class="label label-with-swatch"><span class="swatch" style="background:#5BA88C;"></span> Cleaning</span>
+                </div>
+                <div class="card-dark">
+                    <img src="logos/b-icon-removals-light.svg" width="100" height="100" alt="Removals accent — light">
+                    <span class="label label-with-swatch"><span class="swatch" style="background:#D4763A;"></span> Removals</span>
+                </div>
+            </div>
+
+            <!-- Row 3: Monochrome -->
+            <div class="row-label">Monochrome</div>
+            <div class="grid-2">
+                <div class="card-light">
+                    <img src="logos/b-icon-navy.svg" width="100" height="100" alt="Navy monochrome">
+                    <span class="label">Navy Monochrome</span>
+                </div>
+                <div class="card-dark">
+                    <img src="logos/b-icon-white.svg" width="100" height="100" alt="White monochrome">
+                    <span class="label">White Monochrome</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════
+         SECTION 3: HORIZONTAL LOCKUPS
+         ═══════════════════════════════════════════════════ -->
+    <section id="horizontal">
+        <div class="container">
+            <h2>Horizontal Lockups</h2>
+            <p class="section-desc">Primary horizontal lockups for headers, signage, and wide-format applications.</p>
+
+            <!-- Without slogan -->
+            <div class="row-label">Without Slogan</div>
+            <div class="grid-2">
+                <div class="card-light">
+                    <img src="logos/b-horizontal-dark.svg" height="50" alt="Horizontal lockup — dark">
+                    <span class="label">Dark on Light</span>
+                </div>
+                <div class="card-dark">
+                    <img src="logos/b-horizontal-light.svg" height="50" alt="Horizontal lockup — light">
+                    <span class="label">Light on Dark</span>
+                </div>
+            </div>
+
+            <!-- With slogan -->
+            <div class="row-label">With Slogan</div>
+            <div class="grid-2">
+                <div class="card-light">
+                    <img src="logos/b-horizontal-slogan-dark.svg" height="65" alt="Horizontal lockup with slogan — dark">
+                    <span class="label">Dark on Light</span>
+                </div>
+                <div class="card-dark">
+                    <img src="logos/b-horizontal-slogan-light.svg" height="65" alt="Horizontal lockup with slogan — light">
+                    <span class="label">Light on Dark</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════
+         SECTION 4: STACKED LOCKUPS
+         ═══════════════════════════════════════════════════ -->
+    <section id="stacked">
+        <div class="container">
+            <h2>Stacked Lockups</h2>
+            <p class="section-desc">Stacked lockups for square and vertical format applications, social media, and print.</p>
+
+            <!-- Without slogan -->
+            <div class="row-label">Without Slogan</div>
+            <div class="grid-2">
+                <div class="card-light">
+                    <img src="logos/b-stacked-dark.svg" height="130" alt="Stacked lockup — dark">
+                    <span class="label">Dark on Light</span>
+                </div>
+                <div class="card-dark">
+                    <img src="logos/b-stacked-light.svg" height="130" alt="Stacked lockup — light">
+                    <span class="label">Light on Dark</span>
+                </div>
+            </div>
+
+            <!-- With slogan -->
+            <div class="row-label">With Slogan</div>
+            <div class="grid-2">
+                <div class="card-light">
+                    <img src="logos/b-stacked-slogan-dark.svg" height="150" alt="Stacked lockup with slogan — dark">
+                    <span class="label">Dark on Light</span>
+                </div>
+                <div class="card-dark">
+                    <img src="logos/b-stacked-slogan-light.svg" height="150" alt="Stacked lockup with slogan — light">
+                    <span class="label">Light on Dark</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════
+         SECTION 5: SUB-BRANDS
+         ═══════════════════════════════════════════════════ -->
+    <section id="subbrands">
+        <div class="container">
+            <h2>Sub-brands</h2>
+            <p class="section-desc">Service-specific lockups for each division, maintaining brand consistency with distinct color identities.</p>
+
+            <!-- Tiling -->
+            <div class="subbrand-row">
+                <div class="subbrand-row-label"><span class="swatch" style="background:#2D5A3D;"></span> Tiling</div>
+                <div class="grid-2">
+                    <div class="card-light">
+                        <img src="logos/b-tiling-dark.svg" height="50" alt="Tiling sub-brand — dark">
+                        <span class="label">Dark on Light</span>
+                    </div>
+                    <div class="card-dark">
+                        <img src="logos/b-tiling-light.svg" height="50" alt="Tiling sub-brand — light">
+                        <span class="label">Light on Dark</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Painting -->
+            <div class="subbrand-row">
+                <div class="subbrand-row-label"><span class="swatch" style="background:#4A6FA5;"></span> Painting</div>
+                <div class="grid-2">
+                    <div class="card-light">
+                        <img src="logos/b-painting-dark.svg" height="50" alt="Painting sub-brand — dark">
+                        <span class="label">Dark on Light</span>
+                    </div>
+                    <div class="card-dark">
+                        <img src="logos/b-painting-light.svg" height="50" alt="Painting sub-brand — light">
+                        <span class="label">Light on Dark</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Cleaning -->
+            <div class="subbrand-row">
+                <div class="subbrand-row-label"><span class="swatch" style="background:#5BA88C;"></span> Cleaning</div>
+                <div class="grid-2">
+                    <div class="card-light">
+                        <img src="logos/b-cleaning-dark.svg" height="50" alt="Cleaning sub-brand — dark">
+                        <span class="label">Dark on Light</span>
+                    </div>
+                    <div class="card-dark">
+                        <img src="logos/b-cleaning-light.svg" height="50" alt="Cleaning sub-brand — light">
+                        <span class="label">Light on Dark</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Removals -->
+            <div class="subbrand-row">
+                <div class="subbrand-row-label"><span class="swatch" style="background:#D4763A;"></span> Removals</div>
+                <div class="grid-2">
+                    <div class="card-light">
+                        <img src="logos/b-removals-dark.svg" height="50" alt="Removals sub-brand — dark">
+                        <span class="label">Dark on Light</span>
+                    </div>
+                    <div class="card-dark">
+                        <img src="logos/b-removals-light.svg" height="50" alt="Removals sub-brand — light">
+                        <span class="label">Light on Dark</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════
+         SECTION 6: SIZE TEST
+         ═══════════════════════════════════════════════════ -->
+    <section id="sizes">
+        <div class="container">
+            <h2>Size Test</h2>
+            <p class="section-desc">Evaluating legibility and integrity across a range of reproduction sizes, from hero placement down to favicon scale.</p>
+
+            <!-- Light strip -->
+            <div class="row-label">On Light Background</div>
+            <div class="card-light" style="padding: 1.5rem;">
+                <div class="size-strip">
+                    <div class="size-item">
+                        <img src="logos/b-icon-dark.svg" width="200" height="200" alt="200px">
+                        <span class="label" style="color:#1A1A2E;">200px</span>
+                    </div>
+                    <div class="size-item">
+                        <img src="logos/b-icon-dark.svg" width="120" height="120" alt="120px">
+                        <span class="label" style="color:#1A1A2E;">120px</span>
+                    </div>
+                    <div class="size-item">
+                        <img src="logos/b-icon-dark.svg" width="80" height="80" alt="80px">
+                        <span class="label" style="color:#1A1A2E;">80px</span>
+                    </div>
+                    <div class="size-item">
+                        <img src="logos/b-icon-dark.svg" width="64" height="64" alt="64px">
+                        <span class="label" style="color:#1A1A2E;">64px</span>
+                    </div>
+                    <div class="size-item">
+                        <img src="logos/b-icon-dark.svg" width="48" height="48" alt="48px">
+                        <span class="label" style="color:#1A1A2E;">48px</span>
+                    </div>
+                    <div class="size-item">
+                        <img src="logos/b-icon-dark.svg" width="32" height="32" alt="32px">
+                        <span class="label" style="color:#1A1A2E;">32px</span>
+                    </div>
+                    <div class="size-item">
+                        <img src="logos/b-icon-dark.svg" width="24" height="24" alt="24px">
+                        <span class="label" style="color:#1A1A2E;">24px</span>
+                    </div>
+                    <div class="size-item">
+                        <img src="logos/b-icon-dark.svg" width="16" height="16" alt="16px">
+                        <span class="label" style="color:#1A1A2E;">16px</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Dark strip -->
+            <div class="row-label">On Dark Background</div>
+            <div class="card-dark" style="padding: 1.5rem;">
+                <div class="size-strip">
+                    <div class="size-item">
+                        <img src="logos/b-icon-light.svg" width="200" height="200" alt="200px">
+                        <span class="label">200px</span>
+                    </div>
+                    <div class="size-item">
+                        <img src="logos/b-icon-light.svg" width="120" height="120" alt="120px">
+                        <span class="label">120px</span>
+                    </div>
+                    <div class="size-item">
+                        <img src="logos/b-icon-light.svg" width="80" height="80" alt="80px">
+                        <span class="label">80px</span>
+                    </div>
+                    <div class="size-item">
+                        <img src="logos/b-icon-light.svg" width="64" height="64" alt="64px">
+                        <span class="label">64px</span>
+                    </div>
+                    <div class="size-item">
+                        <img src="logos/b-icon-light.svg" width="48" height="48" alt="48px">
+                        <span class="label">48px</span>
+                    </div>
+                    <div class="size-item">
+                        <img src="logos/b-icon-light.svg" width="32" height="32" alt="32px">
+                        <span class="label">32px</span>
+                    </div>
+                    <div class="size-item">
+                        <img src="logos/b-icon-light.svg" width="24" height="24" alt="24px">
+                        <span class="label">24px</span>
+                    </div>
+                    <div class="size-item">
+                        <img src="logos/b-icon-light.svg" width="16" height="16" alt="16px">
+                        <span class="label">16px</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════
+         SECTION 7: USAGE MOCKUPS
+         ═══════════════════════════════════════════════════ -->
+    <section id="mockups">
+        <div class="container">
+            <h2>Usage Mockups</h2>
+            <p class="section-desc">Contextual previews showing how the mark and lockups perform in real-world applications.</p>
+
+            <!-- 1. Website Header -->
+            <div class="mockup-label">1. Website Header</div>
+
+            <div class="mock-navbar mock-navbar-light">
+                <img src="logos/b-horizontal-dark.svg" height="35" alt="Nav logo — dark">
+                <div class="mock-nav-links">
+                    <span>Services</span>
+                    <span>About</span>
+                    <span>Contact</span>
+                    <a href="#" class="mock-cta">Get a Quote</a>
+                </div>
+            </div>
+
+            <div class="mock-navbar mock-navbar-dark">
+                <img src="logos/b-horizontal-light.svg" height="35" alt="Nav logo — light">
+                <div class="mock-nav-links">
+                    <span>Services</span>
+                    <span>About</span>
+                    <span>Contact</span>
+                    <a href="#" class="mock-cta">Get a Quote</a>
+                </div>
+            </div>
+
+            <!-- 2. Business Card -->
+            <div class="mockup-label">2. Business Card</div>
+
+            <div class="mock-business-card">
+                <img src="logos/b-stacked-dark.svg" height="90" alt="Stacked logo on business card">
+                <div class="bc-name">John Smith</div>
+                <div class="bc-title">Project Manager</div>
+                <div class="bc-contact">0412 345 678 &nbsp;|&nbsp; john@northshoreprojects.com.au</div>
+            </div>
+
+            <!-- 3. Social Media Avatar -->
+            <div class="mockup-label">3. Social Media Avatar</div>
+
+            <div class="mock-avatars">
+                <div class="mock-avatar mock-avatar-light">
+                    <img src="logos/b-icon-dark.svg" width="70" height="70" alt="Avatar — dark icon">
+                </div>
+                <div class="mock-avatar mock-avatar-dark">
+                    <img src="logos/b-icon-light.svg" width="70" height="70" alt="Avatar — light icon">
+                </div>
+                <div class="mock-avatar mock-avatar-dark">
+                    <img src="logos/b-icon-gold.svg" width="70" height="70" alt="Avatar — gold icon">
+                </div>
+            </div>
+
+            <!-- 4. Vehicle / Signage Strip -->
+            <div class="mockup-label">4. Vehicle / Signage Strip</div>
+
+            <div class="mock-vehicle mock-vehicle-dark">
+                <img src="logos/b-horizontal-light.svg" height="45" alt="Vehicle signage — light lockup on dark panel">
+            </div>
+
+            <div class="mock-vehicle mock-vehicle-light">
+                <img src="logos/b-horizontal-dark.svg" height="45" alt="Vehicle signage — dark lockup on light panel">
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════
+         FOOTER
+         ═══════════════════════════════════════════════════ -->
+    <footer class="footer">
+        <div class="container">
+            <p>North Shore Projects &mdash; Logo B: The Monoline Compass &mdash; Final Presentation</p>
+        </div>
+    </footer>
 
 </body>
 </html>
