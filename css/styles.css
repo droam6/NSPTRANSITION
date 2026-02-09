@@ -685,6 +685,7 @@ p {
 /* ==================== HERO SLIDESHOW ==================== */
 .hero-slideshow {
     position: relative;
+    z-index: 1;
     height: 100vh;
     overflow: hidden;
     background: var(--dark);
@@ -1634,6 +1635,7 @@ p {
     inset: 0;
     background: linear-gradient(180deg, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0.8) 100%);
     z-index: 1;
+    pointer-events: none;
 }
 
 .service-hero-bg {
