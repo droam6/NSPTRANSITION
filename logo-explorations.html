@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>North Shore Projects — Compass Explorations</title>
+    <title>North Shore Projects — Logo Explorations Round 2</title>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -22,7 +22,6 @@
         }
         html { scroll-behavior: smooth; }
 
-        /* NAV */
         .nav {
             position: fixed; top: 0; left: 0; right: 0; z-index: 100;
             background: rgba(13,13,26,0.92);
@@ -37,28 +36,37 @@
         .nav-links { display: flex; gap: 0.125rem; list-style: none; }
         .nav-links a { padding: 0.3rem 0.6rem; font-size: 0.6rem; font-weight: 500; color: var(--gray); text-decoration: none; border-radius: 5px; transition: all 150ms; }
         .nav-links a:hover { color: var(--white); background: rgba(255,255,255,0.06); }
+        .nav-sep { color: rgba(255,255,255,0.15); font-size: 0.6rem; padding: 0 0.25rem; }
 
-        /* HERO */
         .hero { padding: 7rem 2rem 3rem; text-align: center; max-width: 700px; margin: 0 auto; }
         .hero h1 { font-size: 2rem; font-weight: 300; letter-spacing: -0.01em; margin-bottom: 0.75rem; }
         .hero h1 span { color: var(--gold); }
         .hero p { font-size: 0.85rem; color: var(--gray); line-height: 1.7; }
 
-        /* VARIATION SECTION */
+        .style-divider {
+            max-width: 1200px; margin: 0 auto;
+            padding: 3rem 2rem 1rem;
+            border-top: 1px solid rgba(255,255,255,0.06);
+        }
+        .style-divider h2 {
+            font-size: 0.65rem; font-weight: 700; text-transform: uppercase;
+            letter-spacing: 0.2em; color: var(--gold);
+        }
+        .style-divider p { font-size: 0.75rem; color: var(--gray); margin-top: 0.35rem; }
+
         .variation {
             max-width: 1200px; margin: 0 auto;
-            padding: 3.5rem 2rem 4.5rem;
-            border-top: 1px solid rgba(255,255,255,0.06);
+            padding: 2.5rem 2rem 4rem;
+            border-top: 1px solid rgba(255,255,255,0.04);
         }
         .var-header { display: flex; align-items: baseline; gap: 0.75rem; margin-bottom: 0.4rem; }
         .var-num { font-size: 0.6rem; font-weight: 700; color: var(--gold); text-transform: uppercase; letter-spacing: 0.15em; }
         .var-name { font-size: 1.25rem; font-weight: 600; letter-spacing: -0.01em; }
-        .var-desc { font-size: 0.8rem; color: var(--gray); max-width: 600px; line-height: 1.6; margin-bottom: 2.5rem; }
+        .var-desc { font-size: 0.8rem; color: var(--gray); max-width: 600px; line-height: 1.6; margin-bottom: 2rem; }
 
-        /* Display grid: light + dark side by side */
         .var-display {
             display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem;
-            margin-bottom: 1.5rem;
+            margin-bottom: 1.25rem;
         }
         .var-card {
             border-radius: 14px; padding: 2.5rem 1.5rem;
@@ -75,7 +83,6 @@
         .var-card.light .var-card-label { color: var(--navy); }
         .var-card.dark .var-card-label { color: white; }
 
-        /* Sizes + lockup row */
         .var-bottom {
             display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem;
         }
@@ -106,61 +113,68 @@
 
 <nav class="nav">
     <div class="nav-inner">
-        <div class="nav-title">Compass Explorations</div>
+        <div class="nav-title">Round 2</div>
         <ul class="nav-links">
-            <li><a href="#v1">01 Roof</a></li>
-            <li><a href="#v2">02 Home</a></li>
-            <li><a href="#v3">03 Star</a></li>
-            <li><a href="#v4">04 Frame</a></li>
-            <li><a href="#v5">05 Arrow</a></li>
-            <li><a href="#v6">06 Builder</a></li>
+            <li><a href="#a1">A1</a></li>
+            <li><a href="#a2">A2</a></li>
+            <li><a href="#a3">A3</a></li>
+            <li><a href="#a4">A4</a></li>
+            <li><span class="nav-sep">|</span></li>
+            <li><a href="#b1">B1</a></li>
+            <li><a href="#b2">B2</a></li>
+            <li><a href="#b3">B3</a></li>
+            <li><a href="#b4">B4</a></li>
         </ul>
     </div>
 </nav>
 
 <section class="hero">
-    <h1>Compass + <span>House</span></h1>
-    <p>Six ways to integrate a visible building element with the compass/north concept. All monoline, all minimal, all designed to read at 32px.</p>
+    <h1>Two Styles, <span>Eight Marks</span></h1>
+    <p>Style A: bold filled arrow with roof base. Style B: thin monoline compass. Four variations of each — pick the one that feels right.</p>
 </section>
 
 
-<!-- ================================================ -->
-<!-- V1: COMPASS ROOF -->
-<!-- ================================================ -->
-<section class="variation" id="v1">
+<!-- ========== STYLE A DIVIDER ========== -->
+<div class="style-divider">
+    <h2>Style A — Bold Filled Arrow</h2>
+    <p>Gold filled on dark. The north arrow is the roof. Solid, confident, premium.</p>
+</div>
+
+
+<!-- A1 -->
+<section class="variation" id="a1">
     <div class="var-header">
-        <span class="var-num">01</span>
-        <h2 class="var-name">Compass Roof</h2>
+        <span class="var-num">A1</span>
+        <h2 class="var-name">Wide Roof</h2>
     </div>
-    <p class="var-desc">The north arrow IS the peaked roof. A compass circle sits below as the house body. One shape, two readings — a compass pointing north and a house with a peaked roof. The arrowhead and roofline are the same stroke.</p>
+    <p class="var-desc">The roof base is wider and more pronounced — clearly reads as a house roofline. The arrow shaft is thinner, making the roof the dominant element. The proportions say "building" first, "north" second.</p>
 
     <div class="var-display">
         <div class="var-card light">
             <span class="var-card-label">On light</span>
             <svg width="200" height="200" viewBox="0 0 200 200" fill="none">
-                <!-- Compass circle = house body -->
-                <circle cx="100" cy="115" r="48" stroke="#1A1A2E" stroke-width="2.5"/>
-                <!-- Peaked roof / north arrow -->
-                <polyline points="52,92 100,32 148,92" stroke="#1A1A2E" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
-                <!-- Vertical shaft from roof peak down through circle -->
-                <line x1="100" y1="32" x2="100" y2="163" stroke="#1A1A2E" stroke-width="2" stroke-linecap="round"/>
-                <!-- Horizontal compass line -->
-                <line x1="52" y1="115" x2="148" y2="115" stroke="#1A1A2E" stroke-width="2" stroke-linecap="round"/>
-                <!-- Small diamond at peak = north indicator -->
-                <rect x="96" y="28" width="8" height="8" rx="1" transform="rotate(45 100 32)" fill="#C19A6B"/>
-                <!-- Door / south indicator -->
-                <line x1="100" y1="140" x2="100" y2="163" stroke="#C19A6B" stroke-width="2.5" stroke-linecap="round"/>
+                <rect width="200" height="200" rx="36" fill="#1A1A2E"/>
+                <!-- Thin shaft -->
+                <rect x="90" y="38" width="20" height="80" rx="2" fill="#C19A6B"/>
+                <!-- Arrow head -->
+                <polygon points="100,28 130,68 70,68" fill="#C19A6B"/>
+                <!-- Wide roof base -->
+                <polygon points="35,140 100,105 165,140" fill="#C19A6B"/>
+                <!-- Cutout: inner triangle to create roof outline feel -->
+                <polygon points="55,140 100,115 145,140" fill="#1A1A2E"/>
+                <!-- Small white accent line at peak -->
+                <line x1="100" y1="32" x2="100" y2="42" stroke="white" stroke-width="3" stroke-linecap="round"/>
             </svg>
         </div>
         <div class="var-card dark">
             <span class="var-card-label">On dark</span>
             <svg width="200" height="200" viewBox="0 0 200 200" fill="none">
-                <circle cx="100" cy="115" r="48" stroke="white" stroke-width="2.5"/>
-                <polyline points="52,92 100,32 148,92" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
-                <line x1="100" y1="32" x2="100" y2="163" stroke="white" stroke-width="2" stroke-linecap="round"/>
-                <line x1="52" y1="115" x2="148" y2="115" stroke="white" stroke-width="2" stroke-linecap="round"/>
-                <rect x="96" y="28" width="8" height="8" rx="1" transform="rotate(45 100 32)" fill="#C19A6B"/>
-                <line x1="100" y1="140" x2="100" y2="163" stroke="#C19A6B" stroke-width="2.5" stroke-linecap="round"/>
+                <rect width="200" height="200" rx="36" fill="#1A1A2E" stroke="rgba(255,255,255,0.08)" stroke-width="1"/>
+                <rect x="90" y="38" width="20" height="80" rx="2" fill="#C19A6B"/>
+                <polygon points="100,28 130,68 70,68" fill="#C19A6B"/>
+                <polygon points="35,140 100,105 165,140" fill="#C19A6B"/>
+                <polygon points="55,140 100,115 145,140" fill="#1A1A2E"/>
+                <line x1="100" y1="32" x2="100" y2="42" stroke="white" stroke-width="3" stroke-linecap="round"/>
             </svg>
         </div>
     </div>
@@ -168,21 +182,22 @@
         <div class="var-sizes">
             <div class="size-item">
                 <svg width="64" height="64" viewBox="0 0 200 200" fill="none">
-                    <circle cx="100" cy="115" r="48" stroke="white" stroke-width="4"/>
-                    <polyline points="52,92 100,32 148,92" stroke="white" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
-                    <line x1="100" y1="32" x2="100" y2="163" stroke="white" stroke-width="3.5" stroke-linecap="round"/>
-                    <line x1="52" y1="115" x2="148" y2="115" stroke="white" stroke-width="3.5" stroke-linecap="round"/>
-                    <rect x="95" y="27" width="10" height="10" rx="1.5" transform="rotate(45 100 32)" fill="#C19A6B"/>
+                    <rect width="200" height="200" rx="36" fill="#1A1A2E"/>
+                    <rect x="90" y="38" width="20" height="80" rx="2" fill="#C19A6B"/>
+                    <polygon points="100,28 130,68 70,68" fill="#C19A6B"/>
+                    <polygon points="35,140 100,105 165,140" fill="#C19A6B"/>
+                    <polygon points="55,140 100,115 145,140" fill="#1A1A2E"/>
+                    <line x1="100" y1="32" x2="100" y2="42" stroke="white" stroke-width="4" stroke-linecap="round"/>
                 </svg>
                 <span class="size-label">64px</span>
             </div>
             <div class="size-item">
                 <svg width="32" height="32" viewBox="0 0 200 200" fill="none">
-                    <circle cx="100" cy="115" r="48" stroke="white" stroke-width="7"/>
-                    <polyline points="52,92 100,32 148,92" stroke="white" stroke-width="7" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
-                    <line x1="100" y1="32" x2="100" y2="163" stroke="white" stroke-width="6" stroke-linecap="round"/>
-                    <line x1="52" y1="115" x2="148" y2="115" stroke="white" stroke-width="6" stroke-linecap="round"/>
-                    <rect x="93" y="25" width="14" height="14" rx="2" transform="rotate(45 100 32)" fill="#C19A6B"/>
+                    <rect width="200" height="200" rx="36" fill="#1A1A2E"/>
+                    <rect x="88" y="38" width="24" height="80" rx="3" fill="#C19A6B"/>
+                    <polygon points="100,25 135,70 65,70" fill="#C19A6B"/>
+                    <polygon points="30,142 100,102 170,142" fill="#C19A6B"/>
+                    <polygon points="52,142 100,113 148,142" fill="#1A1A2E"/>
                 </svg>
                 <span class="size-label">32px</span>
             </div>
@@ -190,11 +205,11 @@
         <div class="var-lockup-card">
             <div class="lockup">
                 <svg width="32" height="32" viewBox="0 0 200 200" fill="none">
-                    <circle cx="100" cy="115" r="48" stroke="white" stroke-width="5"/>
-                    <polyline points="52,92 100,32 148,92" stroke="white" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
-                    <line x1="100" y1="32" x2="100" y2="163" stroke="white" stroke-width="4" stroke-linecap="round"/>
-                    <line x1="52" y1="115" x2="148" y2="115" stroke="white" stroke-width="4" stroke-linecap="round"/>
-                    <rect x="94" y="26" width="12" height="12" rx="1.5" transform="rotate(45 100 32)" fill="#C19A6B"/>
+                    <rect width="200" height="200" rx="36" fill="#1A1A2E"/>
+                    <rect x="88" y="38" width="24" height="80" rx="3" fill="#C19A6B"/>
+                    <polygon points="100,25 135,70 65,70" fill="#C19A6B"/>
+                    <polygon points="30,142 100,102 170,142" fill="#C19A6B"/>
+                    <polygon points="52,142 100,113 148,142" fill="#1A1A2E"/>
                 </svg>
                 <span class="lockup-text">North Shore Projects</span>
             </div>
@@ -203,44 +218,39 @@
 </section>
 
 
-<!-- ================================================ -->
-<!-- V2: HOME NORTH -->
-<!-- ================================================ -->
-<section class="variation" id="v2">
+<!-- A2 -->
+<section class="variation" id="a2">
     <div class="var-header">
-        <span class="var-num">02</span>
-        <h2 class="var-name">Home North</h2>
+        <span class="var-num">A2</span>
+        <h2 class="var-name">Chimney Detail</h2>
     </div>
-    <p class="var-desc">A clear house outline — peaked roof, walls, base. The chimney extends upward and terminates in a compass arrow tip, pointing north. The house is the primary read; the compass is a clever accent detail.</p>
+    <p class="var-desc">The core arrow + roof shape, but with a small chimney element on the right side of the roof. Asymmetric but balanced — unmistakably a house. The chimney is a simple rectangle, nothing fussy.</p>
 
     <div class="var-display">
         <div class="var-card light">
             <span class="var-card-label">On light</span>
             <svg width="200" height="200" viewBox="0 0 200 200" fill="none">
-                <!-- House body -->
-                <rect x="60" y="95" width="80" height="65" rx="2" stroke="#1A1A2E" stroke-width="2.5" fill="none"/>
-                <!-- Roof -->
-                <polyline points="50,98 100,48 150,98" stroke="#1A1A2E" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
-                <!-- Chimney extending up to north arrow -->
-                <line x1="125" y1="72" x2="125" y2="25" stroke="#1A1A2E" stroke-width="2.5" stroke-linecap="round"/>
-                <!-- Arrow tip on chimney -->
-                <polyline points="118,35 125,22 132,35" stroke="#C19A6B" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
-                <!-- Door -->
-                <rect x="88" y="125" width="24" height="35" rx="1.5" stroke="#1A1A2E" stroke-width="2" fill="none"/>
-                <!-- Window left -->
-                <rect x="68" y="108" width="16" height="14" rx="1.5" stroke="#C19A6B" stroke-width="2" fill="none"/>
-                <!-- Window right — removed, chimney is on this side -->
+                <rect width="200" height="200" rx="36" fill="#1A1A2E"/>
+                <!-- Main arrow body -->
+                <polygon points="100,30 125,70 112,70 112,118 88,118 88,70 75,70" fill="#C19A6B"/>
+                <!-- Roof base -->
+                <polygon points="45,148 100,110 155,148" fill="#C19A6B"/>
+                <polygon points="60,148 100,120 140,148" fill="#1A1A2E"/>
+                <!-- Chimney — small rectangle on right -->
+                <rect x="130" y="108" width="12" height="28" rx="2" fill="#C19A6B"/>
+                <!-- White peak accent -->
+                <circle cx="100" cy="35" r="3.5" fill="white"/>
             </svg>
         </div>
         <div class="var-card dark">
             <span class="var-card-label">On dark</span>
             <svg width="200" height="200" viewBox="0 0 200 200" fill="none">
-                <rect x="60" y="95" width="80" height="65" rx="2" stroke="white" stroke-width="2.5" fill="none"/>
-                <polyline points="50,98 100,48 150,98" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
-                <line x1="125" y1="72" x2="125" y2="25" stroke="white" stroke-width="2.5" stroke-linecap="round"/>
-                <polyline points="118,35 125,22 132,35" stroke="#C19A6B" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
-                <rect x="88" y="125" width="24" height="35" rx="1.5" stroke="white" stroke-width="2" fill="none"/>
-                <rect x="68" y="108" width="16" height="14" rx="1.5" stroke="#C19A6B" stroke-width="2" fill="none"/>
+                <rect width="200" height="200" rx="36" fill="#1A1A2E" stroke="rgba(255,255,255,0.08)" stroke-width="1"/>
+                <polygon points="100,30 125,70 112,70 112,118 88,118 88,70 75,70" fill="#C19A6B"/>
+                <polygon points="45,148 100,110 155,148" fill="#C19A6B"/>
+                <polygon points="60,148 100,120 140,148" fill="#1A1A2E"/>
+                <rect x="130" y="108" width="12" height="28" rx="2" fill="#C19A6B"/>
+                <circle cx="100" cy="35" r="3.5" fill="white"/>
             </svg>
         </div>
     </div>
@@ -248,20 +258,22 @@
         <div class="var-sizes">
             <div class="size-item">
                 <svg width="64" height="64" viewBox="0 0 200 200" fill="none">
-                    <rect x="60" y="95" width="80" height="65" rx="2" stroke="white" stroke-width="4" fill="none"/>
-                    <polyline points="50,98 100,48 150,98" stroke="white" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
-                    <line x1="125" y1="72" x2="125" y2="25" stroke="white" stroke-width="4" stroke-linecap="round"/>
-                    <polyline points="118,35 125,22 132,35" stroke="#C19A6B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
-                    <rect x="88" y="125" width="24" height="35" rx="2" stroke="white" stroke-width="3.5" fill="none"/>
+                    <rect width="200" height="200" rx="36" fill="#1A1A2E"/>
+                    <polygon points="100,30 125,70 112,70 112,118 88,118 88,70 75,70" fill="#C19A6B"/>
+                    <polygon points="45,148 100,110 155,148" fill="#C19A6B"/>
+                    <polygon points="60,148 100,120 140,148" fill="#1A1A2E"/>
+                    <rect x="130" y="108" width="12" height="28" rx="2" fill="#C19A6B"/>
+                    <circle cx="100" cy="35" r="4" fill="white"/>
                 </svg>
                 <span class="size-label">64px</span>
             </div>
             <div class="size-item">
                 <svg width="32" height="32" viewBox="0 0 200 200" fill="none">
-                    <rect x="60" y="95" width="80" height="65" rx="3" stroke="white" stroke-width="7" fill="none"/>
-                    <polyline points="50,98 100,48 150,98" stroke="white" stroke-width="7" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
-                    <line x1="125" y1="72" x2="125" y2="25" stroke="white" stroke-width="7" stroke-linecap="round"/>
-                    <polyline points="116,38 125,22 134,38" stroke="#C19A6B" stroke-width="7" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+                    <rect width="200" height="200" rx="36" fill="#1A1A2E"/>
+                    <polygon points="100,28 128,72 114,72 114,118 86,118 86,72 72,72" fill="#C19A6B"/>
+                    <polygon points="42,150 100,108 158,150" fill="#C19A6B"/>
+                    <polygon points="58,150 100,120 142,150" fill="#1A1A2E"/>
+                    <rect x="128" y="106" width="15" height="32" rx="3" fill="#C19A6B"/>
                 </svg>
                 <span class="size-label">32px</span>
             </div>
@@ -269,10 +281,11 @@
         <div class="var-lockup-card">
             <div class="lockup">
                 <svg width="32" height="32" viewBox="0 0 200 200" fill="none">
-                    <rect x="60" y="95" width="80" height="65" rx="3" stroke="white" stroke-width="6" fill="none"/>
-                    <polyline points="50,98 100,48 150,98" stroke="white" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
-                    <line x1="125" y1="72" x2="125" y2="25" stroke="white" stroke-width="6" stroke-linecap="round"/>
-                    <polyline points="117,36 125,22 133,36" stroke="#C19A6B" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+                    <rect width="200" height="200" rx="36" fill="#1A1A2E"/>
+                    <polygon points="100,28 128,72 114,72 114,118 86,118 86,72 72,72" fill="#C19A6B"/>
+                    <polygon points="42,150 100,108 158,150" fill="#C19A6B"/>
+                    <polygon points="58,150 100,120 142,150" fill="#1A1A2E"/>
+                    <rect x="128" y="106" width="15" height="32" rx="3" fill="#C19A6B"/>
                 </svg>
                 <span class="lockup-text">North Shore Projects</span>
             </div>
@@ -281,50 +294,34 @@
 </section>
 
 
-<!-- ================================================ -->
-<!-- V3: NORTH STAR HOUSE -->
-<!-- ================================================ -->
-<section class="variation" id="v3">
+<!-- A3 -->
+<section class="variation" id="a3">
     <div class="var-header">
-        <span class="var-num">03</span>
-        <h2 class="var-name">North Star House</h2>
+        <span class="var-num">A3</span>
+        <h2 class="var-name">Door Cutout</h2>
     </div>
-    <p class="var-desc">A house outline with a four-point compass star centred inside. The star's north point pushes past the roofline — breaking the boundary, reaching upward. Geometric, balanced, and architectural.</p>
+    <p class="var-desc">One clean filled shape — arrow + roof — with a door-shaped rectangle cut from the lower shaft using negative space. The dark background shows through as the "door". Zero extra elements, maximum clarity.</p>
 
     <div class="var-display">
         <div class="var-card light">
             <span class="var-card-label">On light</span>
             <svg width="200" height="200" viewBox="0 0 200 200" fill="none">
-                <!-- House walls -->
-                <rect x="55" y="95" width="90" height="70" rx="2" stroke="#1A1A2E" stroke-width="2.5" fill="none"/>
-                <!-- Roof -->
-                <polyline points="45,98 100,42 155,98" stroke="#1A1A2E" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
-                <!-- Four-point compass star — north extends past roof -->
-                <!-- North point (extends past roofline) -->
-                <line x1="100" y1="30" x2="100" y2="100" stroke="#C19A6B" stroke-width="2" stroke-linecap="round"/>
-                <!-- South point -->
-                <line x1="100" y1="130" x2="100" y2="165" stroke="#C19A6B" stroke-width="2" stroke-linecap="round"/>
-                <!-- East point -->
-                <line x1="100" y1="115" x2="145" y2="115" stroke="#C19A6B" stroke-width="2" stroke-linecap="round"/>
-                <!-- West point -->
-                <line x1="55" y1="115" x2="100" y2="115" stroke="#C19A6B" stroke-width="2" stroke-linecap="round"/>
-                <!-- Centre diamond -->
-                <rect x="94" y="109" width="12" height="12" rx="1" transform="rotate(45 100 115)" fill="none" stroke="#C19A6B" stroke-width="2"/>
-                <!-- North arrow tip -->
-                <polyline points="94,40 100,27 106,40" stroke="#C19A6B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+                <rect width="200" height="200" rx="36" fill="#1A1A2E"/>
+                <!-- Single unified shape: arrow + roof -->
+                <polygon points="100,28 130,72 115,72 115,148 150,148 100,112 50,148 85,148 85,72 70,72" fill="#C19A6B"/>
+                <!-- Door cutout -->
+                <rect x="93" y="118" width="14" height="30" rx="2" fill="#1A1A2E"/>
+                <!-- Window cutout — small square -->
+                <rect x="93" y="80" width="14" height="12" rx="2" fill="#1A1A2E"/>
             </svg>
         </div>
         <div class="var-card dark">
             <span class="var-card-label">On dark</span>
             <svg width="200" height="200" viewBox="0 0 200 200" fill="none">
-                <rect x="55" y="95" width="90" height="70" rx="2" stroke="white" stroke-width="2.5" fill="none"/>
-                <polyline points="45,98 100,42 155,98" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
-                <line x1="100" y1="30" x2="100" y2="100" stroke="#C19A6B" stroke-width="2" stroke-linecap="round"/>
-                <line x1="100" y1="130" x2="100" y2="165" stroke="#C19A6B" stroke-width="2" stroke-linecap="round"/>
-                <line x1="100" y1="115" x2="145" y2="115" stroke="#C19A6B" stroke-width="2" stroke-linecap="round"/>
-                <line x1="55" y1="115" x2="100" y2="115" stroke="#C19A6B" stroke-width="2" stroke-linecap="round"/>
-                <rect x="94" y="109" width="12" height="12" rx="1" transform="rotate(45 100 115)" fill="none" stroke="#C19A6B" stroke-width="2"/>
-                <polyline points="94,40 100,27 106,40" stroke="#C19A6B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+                <rect width="200" height="200" rx="36" fill="#1A1A2E" stroke="rgba(255,255,255,0.08)" stroke-width="1"/>
+                <polygon points="100,28 130,72 115,72 115,148 150,148 100,112 50,148 85,148 85,72 70,72" fill="#C19A6B"/>
+                <rect x="93" y="118" width="14" height="30" rx="2" fill="#1A1A2E"/>
+                <rect x="93" y="80" width="14" height="12" rx="2" fill="#1A1A2E"/>
             </svg>
         </div>
     </div>
@@ -332,22 +329,18 @@
         <div class="var-sizes">
             <div class="size-item">
                 <svg width="64" height="64" viewBox="0 0 200 200" fill="none">
-                    <rect x="55" y="95" width="90" height="70" rx="2" stroke="white" stroke-width="4" fill="none"/>
-                    <polyline points="45,98 100,42 155,98" stroke="white" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
-                    <line x1="100" y1="30" x2="100" y2="165" stroke="#C19A6B" stroke-width="3.5" stroke-linecap="round"/>
-                    <line x1="55" y1="115" x2="145" y2="115" stroke="#C19A6B" stroke-width="3.5" stroke-linecap="round"/>
-                    <rect x="93" y="108" width="14" height="14" rx="1.5" transform="rotate(45 100 115)" fill="none" stroke="#C19A6B" stroke-width="3"/>
-                    <polyline points="93,40 100,25 107,40" stroke="#C19A6B" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+                    <rect width="200" height="200" rx="36" fill="#1A1A2E"/>
+                    <polygon points="100,28 130,72 115,72 115,148 150,148 100,112 50,148 85,148 85,72 70,72" fill="#C19A6B"/>
+                    <rect x="92" y="116" width="16" height="32" rx="3" fill="#1A1A2E"/>
+                    <rect x="92" y="78" width="16" height="14" rx="3" fill="#1A1A2E"/>
                 </svg>
                 <span class="size-label">64px</span>
             </div>
             <div class="size-item">
                 <svg width="32" height="32" viewBox="0 0 200 200" fill="none">
-                    <rect x="55" y="95" width="90" height="70" rx="3" stroke="white" stroke-width="7" fill="none"/>
-                    <polyline points="45,98 100,42 155,98" stroke="white" stroke-width="7" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
-                    <line x1="100" y1="30" x2="100" y2="165" stroke="#C19A6B" stroke-width="6" stroke-linecap="round"/>
-                    <line x1="55" y1="115" x2="145" y2="115" stroke="#C19A6B" stroke-width="6" stroke-linecap="round"/>
-                    <polyline points="91,42 100,24 109,42" stroke="#C19A6B" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+                    <rect width="200" height="200" rx="36" fill="#1A1A2E"/>
+                    <polygon points="100,25 133,74 117,74 117,150 155,150 100,110 45,150 83,150 83,74 67,74" fill="#C19A6B"/>
+                    <rect x="90" y="112" width="20" height="38" rx="4" fill="#1A1A2E"/>
                 </svg>
                 <span class="size-label">32px</span>
             </div>
@@ -355,11 +348,9 @@
         <div class="var-lockup-card">
             <div class="lockup">
                 <svg width="32" height="32" viewBox="0 0 200 200" fill="none">
-                    <rect x="55" y="95" width="90" height="70" rx="3" stroke="white" stroke-width="6" fill="none"/>
-                    <polyline points="45,98 100,42 155,98" stroke="white" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
-                    <line x1="100" y1="30" x2="100" y2="165" stroke="#C19A6B" stroke-width="5" stroke-linecap="round"/>
-                    <line x1="55" y1="115" x2="145" y2="115" stroke="#C19A6B" stroke-width="5" stroke-linecap="round"/>
-                    <polyline points="92,42 100,25 108,42" stroke="#C19A6B" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+                    <rect width="200" height="200" rx="36" fill="#1A1A2E"/>
+                    <polygon points="100,25 133,74 117,74 117,150 155,150 100,110 45,150 83,150 83,74 67,74" fill="#C19A6B"/>
+                    <rect x="90" y="112" width="20" height="38" rx="4" fill="#1A1A2E"/>
                 </svg>
                 <span class="lockup-text">North Shore Projects</span>
             </div>
@@ -368,60 +359,31 @@
 </section>
 
 
-<!-- ================================================ -->
-<!-- V4: COMPASS FRAME -->
-<!-- ================================================ -->
-<section class="variation" id="v4">
+<!-- A4 -->
+<section class="variation" id="a4">
     <div class="var-header">
-        <span class="var-num">04</span>
-        <h2 class="var-name">Compass Frame</h2>
+        <span class="var-num">A4</span>
+        <h2 class="var-name">Layered Arrows</h2>
     </div>
-    <p class="var-desc">A full compass circle with cardinal tick marks. Instead of a needle, a small house silhouette sits at the centre — its roof pointing north. The house IS the compass indicator. The frame gives it gravitas.</p>
+    <p class="var-desc">Two overlapping arrows — a gold filled arrow behind, a dark outlined arrow in front, offset slightly. The overlap zone creates the roof. Layered, premium, dimensional. Like two cards stacked.</p>
 
     <div class="var-display">
         <div class="var-card light">
             <span class="var-card-label">On light</span>
             <svg width="200" height="200" viewBox="0 0 200 200" fill="none">
-                <!-- Outer compass circle -->
-                <circle cx="100" cy="100" r="80" stroke="#1A1A2E" stroke-width="2"/>
-                <!-- Cardinal ticks -->
-                <!-- N -->
-                <line x1="100" y1="20" x2="100" y2="35" stroke="#C19A6B" stroke-width="2.5" stroke-linecap="round"/>
-                <!-- S -->
-                <line x1="100" y1="165" x2="100" y2="180" stroke="#1A1A2E" stroke-width="1.5" stroke-linecap="round"/>
-                <!-- E -->
-                <line x1="165" y1="100" x2="180" y2="100" stroke="#1A1A2E" stroke-width="1.5" stroke-linecap="round"/>
-                <!-- W -->
-                <line x1="20" y1="100" x2="35" y2="100" stroke="#1A1A2E" stroke-width="1.5" stroke-linecap="round"/>
-                <!-- Minor ticks (intercardinals) -->
-                <line x1="156" y1="44" x2="150" y2="50" stroke="#1A1A2E" stroke-width="1" stroke-linecap="round"/>
-                <line x1="156" y1="156" x2="150" y2="150" stroke="#1A1A2E" stroke-width="1" stroke-linecap="round"/>
-                <line x1="44" y1="156" x2="50" y2="150" stroke="#1A1A2E" stroke-width="1" stroke-linecap="round"/>
-                <line x1="44" y1="44" x2="50" y2="50" stroke="#1A1A2E" stroke-width="1" stroke-linecap="round"/>
-                <!-- Centre house — roof points north -->
-                <!-- Roof -->
-                <polyline points="72,100 100,65 128,100" stroke="#1A1A2E" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
-                <!-- Walls -->
-                <rect x="78" y="100" width="44" height="35" rx="1.5" stroke="#1A1A2E" stroke-width="2.5" fill="none"/>
-                <!-- Door -->
-                <rect x="93" y="115" width="14" height="20" rx="1" stroke="#C19A6B" stroke-width="2" fill="none"/>
+                <rect width="200" height="200" rx="36" fill="#1A1A2E"/>
+                <!-- Back arrow — gold filled, offset left and up -->
+                <polygon points="90,30 118,72 108,72 108,130 140,130 90,100 40,130 72,130 72,72 62,72" fill="#C19A6B"/>
+                <!-- Front arrow — outlined, offset right and down -->
+                <polygon points="110,48 138,88 128,88 128,150 160,150 110,118 60,150 92,150 92,88 82,88" fill="none" stroke="white" stroke-width="2.5"/>
             </svg>
         </div>
         <div class="var-card dark">
             <span class="var-card-label">On dark</span>
             <svg width="200" height="200" viewBox="0 0 200 200" fill="none">
-                <circle cx="100" cy="100" r="80" stroke="white" stroke-width="2"/>
-                <line x1="100" y1="20" x2="100" y2="35" stroke="#C19A6B" stroke-width="2.5" stroke-linecap="round"/>
-                <line x1="100" y1="165" x2="100" y2="180" stroke="white" stroke-width="1.5" stroke-linecap="round"/>
-                <line x1="165" y1="100" x2="180" y2="100" stroke="white" stroke-width="1.5" stroke-linecap="round"/>
-                <line x1="20" y1="100" x2="35" y2="100" stroke="white" stroke-width="1.5" stroke-linecap="round"/>
-                <line x1="156" y1="44" x2="150" y2="50" stroke="white" stroke-width="1" stroke-linecap="round"/>
-                <line x1="156" y1="156" x2="150" y2="150" stroke="white" stroke-width="1" stroke-linecap="round"/>
-                <line x1="44" y1="156" x2="50" y2="150" stroke="white" stroke-width="1" stroke-linecap="round"/>
-                <line x1="44" y1="44" x2="50" y2="50" stroke="white" stroke-width="1" stroke-linecap="round"/>
-                <polyline points="72,100 100,65 128,100" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
-                <rect x="78" y="100" width="44" height="35" rx="1.5" stroke="white" stroke-width="2.5" fill="none"/>
-                <rect x="93" y="115" width="14" height="20" rx="1" stroke="#C19A6B" stroke-width="2" fill="none"/>
+                <rect width="200" height="200" rx="36" fill="#1A1A2E" stroke="rgba(255,255,255,0.08)" stroke-width="1"/>
+                <polygon points="90,30 118,72 108,72 108,130 140,130 90,100 40,130 72,130 72,72 62,72" fill="#C19A6B"/>
+                <polygon points="110,48 138,88 128,88 128,150 160,150 110,118 60,150 92,150 92,88 82,88" fill="none" stroke="white" stroke-width="2.5"/>
             </svg>
         </div>
     </div>
@@ -429,22 +391,17 @@
         <div class="var-sizes">
             <div class="size-item">
                 <svg width="64" height="64" viewBox="0 0 200 200" fill="none">
-                    <circle cx="100" cy="100" r="80" stroke="white" stroke-width="3.5"/>
-                    <line x1="100" y1="20" x2="100" y2="38" stroke="#C19A6B" stroke-width="4" stroke-linecap="round"/>
-                    <line x1="100" y1="162" x2="100" y2="180" stroke="white" stroke-width="3" stroke-linecap="round"/>
-                    <line x1="162" y1="100" x2="180" y2="100" stroke="white" stroke-width="3" stroke-linecap="round"/>
-                    <line x1="20" y1="100" x2="38" y2="100" stroke="white" stroke-width="3" stroke-linecap="round"/>
-                    <polyline points="72,100 100,65 128,100" stroke="white" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
-                    <rect x="78" y="100" width="44" height="35" rx="2" stroke="white" stroke-width="4" fill="none"/>
+                    <rect width="200" height="200" rx="36" fill="#1A1A2E"/>
+                    <polygon points="90,30 118,72 108,72 108,130 140,130 90,100 40,130 72,130 72,72 62,72" fill="#C19A6B"/>
+                    <polygon points="110,48 138,88 128,88 128,150 160,150 110,118 60,150 92,150 92,88 82,88" fill="none" stroke="white" stroke-width="3.5"/>
                 </svg>
                 <span class="size-label">64px</span>
             </div>
             <div class="size-item">
                 <svg width="32" height="32" viewBox="0 0 200 200" fill="none">
-                    <circle cx="100" cy="100" r="78" stroke="white" stroke-width="6"/>
-                    <line x1="100" y1="22" x2="100" y2="42" stroke="#C19A6B" stroke-width="7" stroke-linecap="round"/>
-                    <polyline points="70,102 100,62 130,102" stroke="white" stroke-width="7" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
-                    <rect x="76" y="100" width="48" height="38" rx="3" stroke="white" stroke-width="7" fill="none"/>
+                    <rect width="200" height="200" rx="36" fill="#1A1A2E"/>
+                    <polygon points="88,28 120,74 110,74 110,132 145,132 88,98 35,132 70,132 70,74 60,74" fill="#C19A6B"/>
+                    <polygon points="112,46 142,90 130,90 130,152 165,152 112,116 58,152 90,152 90,90 80,90" fill="none" stroke="white" stroke-width="5"/>
                 </svg>
                 <span class="size-label">32px</span>
             </div>
@@ -452,10 +409,9 @@
         <div class="var-lockup-card">
             <div class="lockup">
                 <svg width="32" height="32" viewBox="0 0 200 200" fill="none">
-                    <circle cx="100" cy="100" r="78" stroke="white" stroke-width="5"/>
-                    <line x1="100" y1="22" x2="100" y2="40" stroke="#C19A6B" stroke-width="6" stroke-linecap="round"/>
-                    <polyline points="72,100 100,65 128,100" stroke="white" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
-                    <rect x="78" y="100" width="44" height="35" rx="2" stroke="white" stroke-width="5" fill="none"/>
+                    <rect width="200" height="200" rx="36" fill="#1A1A2E"/>
+                    <polygon points="88,28 120,74 110,74 110,132 145,132 88,98 35,132 70,132 70,74 60,74" fill="#C19A6B"/>
+                    <polygon points="112,46 142,90 130,90 130,152 165,152 112,116 58,152 90,152 90,90 80,90" fill="none" stroke="white" stroke-width="5"/>
                 </svg>
                 <span class="lockup-text">North Shore Projects</span>
             </div>
@@ -464,40 +420,48 @@
 </section>
 
 
-<!-- ================================================ -->
-<!-- V5: ARROW HOUSE -->
-<!-- ================================================ -->
-<section class="variation" id="v5">
+<!-- ========== STYLE B DIVIDER ========== -->
+<div class="style-divider" style="margin-top:1rem;">
+    <h2>Style B — Thin Monoline Compass</h2>
+    <p>Minimal strokes, precise geometry. The compass needle meets the roofline. Elegant and architectural.</p>
+</div>
+
+
+<!-- B1 -->
+<section class="variation" id="b1">
     <div class="var-header">
-        <span class="var-num">05</span>
-        <h2 class="var-name">Arrow House</h2>
+        <span class="var-num">B1</span>
+        <h2 class="var-name">Floor Line</h2>
     </div>
-    <p class="var-desc">Maximum minimalism. An upward arrow where the arrowhead is a roof shape. The shaft widens at the base to suggest a building. Five strokes total. Could be drawn on a napkin, recognised from across a street.</p>
+    <p class="var-desc">The compass needle/roof mark with a horizontal line across the middle creating a "floor". Above the line: roof/attic. Below: the body of the house. Splits the shape into two zones. Still monoline, still minimal.</p>
 
     <div class="var-display">
         <div class="var-card light">
             <span class="var-card-label">On light</span>
             <svg width="200" height="200" viewBox="0 0 200 200" fill="none">
-                <!-- Arrow/roof head -->
-                <polyline points="55,95 100,35 145,95" stroke="#1A1A2E" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
-                <!-- Left wall -->
-                <line x1="70" y1="95" x2="70" y2="165" stroke="#1A1A2E" stroke-width="2.5" stroke-linecap="round"/>
-                <!-- Right wall -->
-                <line x1="130" y1="95" x2="130" y2="165" stroke="#1A1A2E" stroke-width="2.5" stroke-linecap="round"/>
-                <!-- Base -->
-                <line x1="70" y1="165" x2="130" y2="165" stroke="#1A1A2E" stroke-width="2.5" stroke-linecap="round"/>
-                <!-- Gold accent: vertical centre line rising through roof = north indicator -->
-                <line x1="100" y1="165" x2="100" y2="35" stroke="#C19A6B" stroke-width="1.5" stroke-linecap="round" stroke-dasharray="4 6"/>
+                <!-- Rounded square frame -->
+                <rect x="5" y="5" width="190" height="190" rx="38" stroke="#1A1A2E" stroke-width="1.5" fill="none"/>
+                <!-- Vertical shaft -->
+                <line x1="100" y1="38" x2="100" y2="162" stroke="#1A1A2E" stroke-width="1.5" stroke-linecap="round"/>
+                <!-- Arrow head / roof -->
+                <polyline points="68,72 100,38 132,72" stroke="#1A1A2E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+                <!-- Roof base / wide chevron -->
+                <polyline points="48,155 100,125 152,155" stroke="#C19A6B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+                <!-- Floor line — horizontal through the middle -->
+                <line x1="62" y1="105" x2="138" y2="105" stroke="#1A1A2E" stroke-width="1.5" stroke-linecap="round"/>
+                <!-- Compass crossbar -->
+                <line x1="82" y1="85" x2="118" y2="85" stroke="#1A1A2E" stroke-width="1.5" stroke-linecap="round"/>
             </svg>
         </div>
         <div class="var-card dark">
             <span class="var-card-label">On dark</span>
             <svg width="200" height="200" viewBox="0 0 200 200" fill="none">
-                <polyline points="55,95 100,35 145,95" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
-                <line x1="70" y1="95" x2="70" y2="165" stroke="white" stroke-width="2.5" stroke-linecap="round"/>
-                <line x1="130" y1="95" x2="130" y2="165" stroke="white" stroke-width="2.5" stroke-linecap="round"/>
-                <line x1="70" y1="165" x2="130" y2="165" stroke="white" stroke-width="2.5" stroke-linecap="round"/>
-                <line x1="100" y1="165" x2="100" y2="35" stroke="#C19A6B" stroke-width="1.5" stroke-linecap="round" stroke-dasharray="4 6"/>
+                <rect x="5" y="5" width="190" height="190" rx="38" stroke="white" stroke-width="1.5" fill="none"/>
+                <line x1="100" y1="38" x2="100" y2="162" stroke="white" stroke-width="1.5" stroke-linecap="round"/>
+                <polyline points="68,72 100,38 132,72" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+                <polyline points="48,155 100,125 152,155" stroke="#C19A6B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+                <line x1="62" y1="105" x2="138" y2="105" stroke="white" stroke-width="1.5" stroke-linecap="round"/>
+                <line x1="82" y1="85" x2="118" y2="85" stroke="white" stroke-width="1.5" stroke-linecap="round"/>
             </svg>
         </div>
     </div>
@@ -505,21 +469,22 @@
         <div class="var-sizes">
             <div class="size-item">
                 <svg width="64" height="64" viewBox="0 0 200 200" fill="none">
-                    <polyline points="55,95 100,35 145,95" stroke="white" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
-                    <line x1="70" y1="95" x2="70" y2="165" stroke="white" stroke-width="4.5" stroke-linecap="round"/>
-                    <line x1="130" y1="95" x2="130" y2="165" stroke="white" stroke-width="4.5" stroke-linecap="round"/>
-                    <line x1="70" y1="165" x2="130" y2="165" stroke="white" stroke-width="4.5" stroke-linecap="round"/>
-                    <line x1="100" y1="165" x2="100" y2="35" stroke="#C19A6B" stroke-width="3" stroke-linecap="round" stroke-dasharray="6 8"/>
+                    <rect x="5" y="5" width="190" height="190" rx="38" stroke="white" stroke-width="3" fill="none"/>
+                    <line x1="100" y1="38" x2="100" y2="162" stroke="white" stroke-width="3" stroke-linecap="round"/>
+                    <polyline points="68,72 100,38 132,72" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+                    <polyline points="48,155 100,125 152,155" stroke="#C19A6B" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+                    <line x1="62" y1="105" x2="138" y2="105" stroke="white" stroke-width="3" stroke-linecap="round"/>
+                    <line x1="82" y1="85" x2="118" y2="85" stroke="white" stroke-width="2.5" stroke-linecap="round"/>
                 </svg>
                 <span class="size-label">64px</span>
             </div>
             <div class="size-item">
                 <svg width="32" height="32" viewBox="0 0 200 200" fill="none">
-                    <polyline points="55,95 100,35 145,95" stroke="white" stroke-width="8" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
-                    <line x1="70" y1="95" x2="70" y2="165" stroke="white" stroke-width="8" stroke-linecap="round"/>
-                    <line x1="130" y1="95" x2="130" y2="165" stroke="white" stroke-width="8" stroke-linecap="round"/>
-                    <line x1="70" y1="165" x2="130" y2="165" stroke="white" stroke-width="8" stroke-linecap="round"/>
-                    <line x1="100" y1="160" x2="100" y2="40" stroke="#C19A6B" stroke-width="5" stroke-linecap="round"/>
+                    <rect x="5" y="5" width="190" height="190" rx="38" stroke="white" stroke-width="6" fill="none"/>
+                    <line x1="100" y1="38" x2="100" y2="162" stroke="white" stroke-width="6" stroke-linecap="round"/>
+                    <polyline points="66,74 100,36 134,74" stroke="white" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+                    <polyline points="46,157 100,123 154,157" stroke="#C19A6B" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+                    <line x1="60" y1="105" x2="140" y2="105" stroke="white" stroke-width="6" stroke-linecap="round"/>
                 </svg>
                 <span class="size-label">32px</span>
             </div>
@@ -527,11 +492,11 @@
         <div class="var-lockup-card">
             <div class="lockup">
                 <svg width="32" height="32" viewBox="0 0 200 200" fill="none">
-                    <polyline points="55,95 100,35 145,95" stroke="white" stroke-width="7" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
-                    <line x1="70" y1="95" x2="70" y2="165" stroke="white" stroke-width="7" stroke-linecap="round"/>
-                    <line x1="130" y1="95" x2="130" y2="165" stroke="white" stroke-width="7" stroke-linecap="round"/>
-                    <line x1="70" y1="165" x2="130" y2="165" stroke="white" stroke-width="7" stroke-linecap="round"/>
-                    <line x1="100" y1="160" x2="100" y2="40" stroke="#C19A6B" stroke-width="4.5" stroke-linecap="round"/>
+                    <rect x="5" y="5" width="190" height="190" rx="38" stroke="white" stroke-width="5" fill="none"/>
+                    <line x1="100" y1="38" x2="100" y2="162" stroke="white" stroke-width="5" stroke-linecap="round"/>
+                    <polyline points="66,74 100,36 134,74" stroke="white" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+                    <polyline points="46,157 100,123 154,157" stroke="#C19A6B" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+                    <line x1="60" y1="105" x2="140" y2="105" stroke="white" stroke-width="5" stroke-linecap="round"/>
                 </svg>
                 <span class="lockup-text">North Shore Projects</span>
             </div>
@@ -540,53 +505,41 @@
 </section>
 
 
-<!-- ================================================ -->
-<!-- V6: THE BUILDER'S COMPASS -->
-<!-- ================================================ -->
-<section class="variation" id="v6">
+<!-- B2 -->
+<section class="variation" id="b2">
     <div class="var-header">
-        <span class="var-num">06</span>
-        <h2 class="var-name">The Builder's Compass</h2>
+        <span class="var-num">B2</span>
+        <h2 class="var-name">Compass Circle</h2>
     </div>
-    <p class="var-desc">A compass rose with an exaggerated north point shaped like an A-frame roof. The other three cardinal points are thin and minimal. Asymmetric and distinctive — the heavy north point makes it immediately recognisable and directional.</p>
+    <p class="var-desc">The same monoline compass-roof mark, but enclosed in a thin circle instead of a rounded square. The circle reads clearly as a compass dial, reinforcing the "North" concept. The mark inside stays identical.</p>
 
     <div class="var-display">
         <div class="var-card light">
             <span class="var-card-label">On light</span>
             <svg width="200" height="200" viewBox="0 0 200 200" fill="none">
-                <!-- Inner circle -->
-                <circle cx="100" cy="110" r="12" stroke="#1A1A2E" stroke-width="2"/>
-                <!-- South point — thin line -->
-                <line x1="100" y1="122" x2="100" y2="175" stroke="#1A1A2E" stroke-width="1.5" stroke-linecap="round"/>
-                <!-- East point — thin line -->
-                <line x1="112" y1="110" x2="170" y2="110" stroke="#1A1A2E" stroke-width="1.5" stroke-linecap="round"/>
-                <!-- West point — thin line -->
-                <line x1="88" y1="110" x2="30" y2="110" stroke="#1A1A2E" stroke-width="1.5" stroke-linecap="round"/>
-                <!-- North point — exaggerated A-frame roof shape -->
-                <line x1="100" y1="98" x2="100" y2="25" stroke="#1A1A2E" stroke-width="2" stroke-linecap="round"/>
-                <!-- A-frame / roof wings -->
-                <polyline points="68,78 100,25 132,78" stroke="#C19A6B" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
-                <!-- Horizontal beam across A-frame -->
-                <line x1="78" y1="62" x2="122" y2="62" stroke="#C19A6B" stroke-width="2" stroke-linecap="round"/>
-                <!-- Small cardinal dots -->
-                <circle cx="100" cy="178" r="3" fill="#1A1A2E"/>
-                <circle cx="173" cy="110" r="3" fill="#1A1A2E"/>
-                <circle cx="27" cy="110" r="3" fill="#1A1A2E"/>
+                <!-- Circle frame -->
+                <circle cx="100" cy="100" r="92" stroke="#1A1A2E" stroke-width="1.5"/>
+                <!-- Vertical shaft -->
+                <line x1="100" y1="38" x2="100" y2="158" stroke="#1A1A2E" stroke-width="1.5" stroke-linecap="round"/>
+                <!-- Arrow head / roof -->
+                <polyline points="72,72 100,38 128,72" stroke="#1A1A2E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+                <!-- Roof base chevron -->
+                <polyline points="52,150 100,120 148,150" stroke="#C19A6B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+                <!-- Crossbar -->
+                <line x1="84" y1="88" x2="116" y2="88" stroke="#1A1A2E" stroke-width="1.5" stroke-linecap="round"/>
+                <!-- N tick at top of circle -->
+                <line x1="100" y1="8" x2="100" y2="18" stroke="#C19A6B" stroke-width="2" stroke-linecap="round"/>
             </svg>
         </div>
         <div class="var-card dark">
             <span class="var-card-label">On dark</span>
             <svg width="200" height="200" viewBox="0 0 200 200" fill="none">
-                <circle cx="100" cy="110" r="12" stroke="white" stroke-width="2"/>
-                <line x1="100" y1="122" x2="100" y2="175" stroke="white" stroke-width="1.5" stroke-linecap="round"/>
-                <line x1="112" y1="110" x2="170" y2="110" stroke="white" stroke-width="1.5" stroke-linecap="round"/>
-                <line x1="88" y1="110" x2="30" y2="110" stroke="white" stroke-width="1.5" stroke-linecap="round"/>
-                <line x1="100" y1="98" x2="100" y2="25" stroke="white" stroke-width="2" stroke-linecap="round"/>
-                <polyline points="68,78 100,25 132,78" stroke="#C19A6B" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
-                <line x1="78" y1="62" x2="122" y2="62" stroke="#C19A6B" stroke-width="2" stroke-linecap="round"/>
-                <circle cx="100" cy="178" r="3" fill="white"/>
-                <circle cx="173" cy="110" r="3" fill="white"/>
-                <circle cx="27" cy="110" r="3" fill="white"/>
+                <circle cx="100" cy="100" r="92" stroke="white" stroke-width="1.5"/>
+                <line x1="100" y1="38" x2="100" y2="158" stroke="white" stroke-width="1.5" stroke-linecap="round"/>
+                <polyline points="72,72 100,38 128,72" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+                <polyline points="52,150 100,120 148,150" stroke="#C19A6B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+                <line x1="84" y1="88" x2="116" y2="88" stroke="white" stroke-width="1.5" stroke-linecap="round"/>
+                <line x1="100" y1="8" x2="100" y2="18" stroke="#C19A6B" stroke-width="2" stroke-linecap="round"/>
             </svg>
         </div>
     </div>
@@ -594,24 +547,22 @@
         <div class="var-sizes">
             <div class="size-item">
                 <svg width="64" height="64" viewBox="0 0 200 200" fill="none">
-                    <circle cx="100" cy="110" r="12" stroke="white" stroke-width="3.5"/>
-                    <line x1="100" y1="122" x2="100" y2="175" stroke="white" stroke-width="3" stroke-linecap="round"/>
-                    <line x1="112" y1="110" x2="170" y2="110" stroke="white" stroke-width="3" stroke-linecap="round"/>
-                    <line x1="88" y1="110" x2="30" y2="110" stroke="white" stroke-width="3" stroke-linecap="round"/>
-                    <line x1="100" y1="98" x2="100" y2="25" stroke="white" stroke-width="3.5" stroke-linecap="round"/>
-                    <polyline points="68,78 100,25 132,78" stroke="#C19A6B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
-                    <line x1="78" y1="62" x2="122" y2="62" stroke="#C19A6B" stroke-width="3.5" stroke-linecap="round"/>
+                    <circle cx="100" cy="100" r="92" stroke="white" stroke-width="3"/>
+                    <line x1="100" y1="38" x2="100" y2="158" stroke="white" stroke-width="3" stroke-linecap="round"/>
+                    <polyline points="72,72 100,38 128,72" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+                    <polyline points="52,150 100,120 148,150" stroke="#C19A6B" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+                    <line x1="84" y1="88" x2="116" y2="88" stroke="white" stroke-width="2.5" stroke-linecap="round"/>
+                    <line x1="100" y1="8" x2="100" y2="20" stroke="#C19A6B" stroke-width="3.5" stroke-linecap="round"/>
                 </svg>
                 <span class="size-label">64px</span>
             </div>
             <div class="size-item">
                 <svg width="32" height="32" viewBox="0 0 200 200" fill="none">
-                    <circle cx="100" cy="112" r="14" stroke="white" stroke-width="6"/>
-                    <line x1="100" y1="126" x2="100" y2="175" stroke="white" stroke-width="6" stroke-linecap="round"/>
-                    <line x1="114" y1="112" x2="170" y2="112" stroke="white" stroke-width="6" stroke-linecap="round"/>
-                    <line x1="86" y1="112" x2="30" y2="112" stroke="white" stroke-width="6" stroke-linecap="round"/>
-                    <line x1="100" y1="98" x2="100" y2="25" stroke="white" stroke-width="6" stroke-linecap="round"/>
-                    <polyline points="65,80 100,25 135,80" stroke="#C19A6B" stroke-width="7" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+                    <circle cx="100" cy="100" r="90" stroke="white" stroke-width="6"/>
+                    <line x1="100" y1="40" x2="100" y2="156" stroke="white" stroke-width="6" stroke-linecap="round"/>
+                    <polyline points="70,74 100,36 130,74" stroke="white" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+                    <polyline points="50,152 100,118 150,152" stroke="#C19A6B" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+                    <line x1="100" y1="10" x2="100" y2="22" stroke="#C19A6B" stroke-width="6" stroke-linecap="round"/>
                 </svg>
                 <span class="size-label">32px</span>
             </div>
@@ -619,12 +570,169 @@
         <div class="var-lockup-card">
             <div class="lockup">
                 <svg width="32" height="32" viewBox="0 0 200 200" fill="none">
-                    <circle cx="100" cy="112" r="13" stroke="white" stroke-width="5"/>
-                    <line x1="100" y1="125" x2="100" y2="175" stroke="white" stroke-width="5" stroke-linecap="round"/>
-                    <line x1="113" y1="112" x2="170" y2="112" stroke="white" stroke-width="5" stroke-linecap="round"/>
-                    <line x1="87" y1="112" x2="30" y2="112" stroke="white" stroke-width="5" stroke-linecap="round"/>
-                    <line x1="100" y1="97" x2="100" y2="25" stroke="white" stroke-width="5" stroke-linecap="round"/>
-                    <polyline points="66,80 100,25 134,80" stroke="#C19A6B" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+                    <circle cx="100" cy="100" r="90" stroke="white" stroke-width="5"/>
+                    <line x1="100" y1="40" x2="100" y2="156" stroke="white" stroke-width="5" stroke-linecap="round"/>
+                    <polyline points="70,74 100,36 130,74" stroke="white" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+                    <polyline points="50,152 100,118 150,152" stroke="#C19A6B" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+                    <line x1="100" y1="10" x2="100" y2="22" stroke="#C19A6B" stroke-width="5" stroke-linecap="round"/>
+                </svg>
+                <span class="lockup-text">North Shore Projects</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- B3 -->
+<section class="variation" id="b3">
+    <div class="var-header">
+        <span class="var-num">B3</span>
+        <h2 class="var-name">Integrated N</h2>
+    </div>
+    <p class="var-desc">The monoline compass mark with a subtle "N" built into the arrow tip. The left and right strokes of the arrow head double as the outer strokes of the letter N, with a diagonal connecting them. North, spelled out in geometry.</p>
+
+    <div class="var-display">
+        <div class="var-card light">
+            <span class="var-card-label">On light</span>
+            <svg width="200" height="200" viewBox="0 0 200 200" fill="none">
+                <rect x="5" y="5" width="190" height="190" rx="38" stroke="#1A1A2E" stroke-width="1.5" fill="none"/>
+                <!-- Vertical shaft -->
+                <line x1="100" y1="80" x2="100" y2="158" stroke="#1A1A2E" stroke-width="1.5" stroke-linecap="round"/>
+                <!-- N-shaped arrow head: left vertical, diagonal, right vertical -->
+                <line x1="72" y1="72" x2="72" y2="32" stroke="#1A1A2E" stroke-width="1.5" stroke-linecap="round"/>
+                <line x1="72" y1="32" x2="128" y2="72" stroke="#1A1A2E" stroke-width="1.5" stroke-linecap="round"/>
+                <line x1="128" y1="72" x2="128" y2="32" stroke="#1A1A2E" stroke-width="1.5" stroke-linecap="round"/>
+                <!-- Roof base chevron -->
+                <polyline points="48,155 100,122 152,155" stroke="#C19A6B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+                <!-- Crossbar -->
+                <line x1="82" y1="90" x2="118" y2="90" stroke="#1A1A2E" stroke-width="1.5" stroke-linecap="round"/>
+            </svg>
+        </div>
+        <div class="var-card dark">
+            <span class="var-card-label">On dark</span>
+            <svg width="200" height="200" viewBox="0 0 200 200" fill="none">
+                <rect x="5" y="5" width="190" height="190" rx="38" stroke="white" stroke-width="1.5" fill="none"/>
+                <line x1="100" y1="80" x2="100" y2="158" stroke="white" stroke-width="1.5" stroke-linecap="round"/>
+                <line x1="72" y1="72" x2="72" y2="32" stroke="white" stroke-width="1.5" stroke-linecap="round"/>
+                <line x1="72" y1="32" x2="128" y2="72" stroke="white" stroke-width="1.5" stroke-linecap="round"/>
+                <line x1="128" y1="72" x2="128" y2="32" stroke="white" stroke-width="1.5" stroke-linecap="round"/>
+                <polyline points="48,155 100,122 152,155" stroke="#C19A6B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+                <line x1="82" y1="90" x2="118" y2="90" stroke="white" stroke-width="1.5" stroke-linecap="round"/>
+            </svg>
+        </div>
+    </div>
+    <div class="var-bottom">
+        <div class="var-sizes">
+            <div class="size-item">
+                <svg width="64" height="64" viewBox="0 0 200 200" fill="none">
+                    <rect x="5" y="5" width="190" height="190" rx="38" stroke="white" stroke-width="3" fill="none"/>
+                    <line x1="100" y1="80" x2="100" y2="158" stroke="white" stroke-width="3" stroke-linecap="round"/>
+                    <line x1="72" y1="72" x2="72" y2="32" stroke="white" stroke-width="3" stroke-linecap="round"/>
+                    <line x1="72" y1="32" x2="128" y2="72" stroke="white" stroke-width="3" stroke-linecap="round"/>
+                    <line x1="128" y1="72" x2="128" y2="32" stroke="white" stroke-width="3" stroke-linecap="round"/>
+                    <polyline points="48,155 100,122 152,155" stroke="#C19A6B" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+                    <line x1="82" y1="90" x2="118" y2="90" stroke="white" stroke-width="2.5" stroke-linecap="round"/>
+                </svg>
+                <span class="size-label">64px</span>
+            </div>
+            <div class="size-item">
+                <svg width="32" height="32" viewBox="0 0 200 200" fill="none">
+                    <rect x="5" y="5" width="190" height="190" rx="38" stroke="white" stroke-width="6" fill="none"/>
+                    <line x1="100" y1="80" x2="100" y2="158" stroke="white" stroke-width="6" stroke-linecap="round"/>
+                    <line x1="70" y1="74" x2="70" y2="30" stroke="white" stroke-width="6" stroke-linecap="round"/>
+                    <line x1="70" y1="30" x2="130" y2="74" stroke="white" stroke-width="6" stroke-linecap="round"/>
+                    <line x1="130" y1="74" x2="130" y2="30" stroke="white" stroke-width="6" stroke-linecap="round"/>
+                    <polyline points="46,157 100,120 154,157" stroke="#C19A6B" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+                </svg>
+                <span class="size-label">32px</span>
+            </div>
+        </div>
+        <div class="var-lockup-card">
+            <div class="lockup">
+                <svg width="32" height="32" viewBox="0 0 200 200" fill="none">
+                    <rect x="5" y="5" width="190" height="190" rx="38" stroke="white" stroke-width="5" fill="none"/>
+                    <line x1="100" y1="80" x2="100" y2="158" stroke="white" stroke-width="5" stroke-linecap="round"/>
+                    <line x1="70" y1="74" x2="70" y2="30" stroke="white" stroke-width="5" stroke-linecap="round"/>
+                    <line x1="70" y1="30" x2="130" y2="74" stroke="white" stroke-width="5" stroke-linecap="round"/>
+                    <line x1="130" y1="74" x2="130" y2="30" stroke="white" stroke-width="5" stroke-linecap="round"/>
+                    <polyline points="46,157 100,120 154,157" stroke="#C19A6B" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+                </svg>
+                <span class="lockup-text">North Shore Projects</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- B4 -->
+<section class="variation" id="b4">
+    <div class="var-header">
+        <span class="var-num">B4</span>
+        <h2 class="var-name">Tilted Compass</h2>
+    </div>
+    <p class="var-desc">The full monoline compass mark rotated ~18 degrees. The tilt breaks the static grid, adding dynamism and forward movement. Like a compass needle settling toward true north. Same geometry, more energy.</p>
+
+    <div class="var-display">
+        <div class="var-card light">
+            <span class="var-card-label">On light</span>
+            <svg width="200" height="200" viewBox="0 0 200 200" fill="none">
+                <rect x="5" y="5" width="190" height="190" rx="38" stroke="#1A1A2E" stroke-width="1.5" fill="none"/>
+                <g transform="rotate(-18 100 100)">
+                    <line x1="100" y1="35" x2="100" y2="160" stroke="#1A1A2E" stroke-width="1.5" stroke-linecap="round"/>
+                    <polyline points="70,70 100,35 130,70" stroke="#1A1A2E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+                    <polyline points="50,152 100,120 150,152" stroke="#C19A6B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+                    <line x1="83" y1="88" x2="117" y2="88" stroke="#1A1A2E" stroke-width="1.5" stroke-linecap="round"/>
+                </g>
+            </svg>
+        </div>
+        <div class="var-card dark">
+            <span class="var-card-label">On dark</span>
+            <svg width="200" height="200" viewBox="0 0 200 200" fill="none">
+                <rect x="5" y="5" width="190" height="190" rx="38" stroke="white" stroke-width="1.5" fill="none"/>
+                <g transform="rotate(-18 100 100)">
+                    <line x1="100" y1="35" x2="100" y2="160" stroke="white" stroke-width="1.5" stroke-linecap="round"/>
+                    <polyline points="70,70 100,35 130,70" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+                    <polyline points="50,152 100,120 150,152" stroke="#C19A6B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+                    <line x1="83" y1="88" x2="117" y2="88" stroke="white" stroke-width="1.5" stroke-linecap="round"/>
+                </g>
+            </svg>
+        </div>
+    </div>
+    <div class="var-bottom">
+        <div class="var-sizes">
+            <div class="size-item">
+                <svg width="64" height="64" viewBox="0 0 200 200" fill="none">
+                    <rect x="5" y="5" width="190" height="190" rx="38" stroke="white" stroke-width="3" fill="none"/>
+                    <g transform="rotate(-18 100 100)">
+                        <line x1="100" y1="35" x2="100" y2="160" stroke="white" stroke-width="3" stroke-linecap="round"/>
+                        <polyline points="70,70 100,35 130,70" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+                        <polyline points="50,152 100,120 150,152" stroke="#C19A6B" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+                        <line x1="83" y1="88" x2="117" y2="88" stroke="white" stroke-width="2.5" stroke-linecap="round"/>
+                    </g>
+                </svg>
+                <span class="size-label">64px</span>
+            </div>
+            <div class="size-item">
+                <svg width="32" height="32" viewBox="0 0 200 200" fill="none">
+                    <rect x="5" y="5" width="190" height="190" rx="38" stroke="white" stroke-width="6" fill="none"/>
+                    <g transform="rotate(-18 100 100)">
+                        <line x1="100" y1="35" x2="100" y2="160" stroke="white" stroke-width="6" stroke-linecap="round"/>
+                        <polyline points="68,72 100,33 132,72" stroke="white" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+                        <polyline points="48,154 100,118 152,154" stroke="#C19A6B" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+                    </g>
+                </svg>
+                <span class="size-label">32px</span>
+            </div>
+        </div>
+        <div class="var-lockup-card">
+            <div class="lockup">
+                <svg width="32" height="32" viewBox="0 0 200 200" fill="none">
+                    <rect x="5" y="5" width="190" height="190" rx="38" stroke="white" stroke-width="5" fill="none"/>
+                    <g transform="rotate(-18 100 100)">
+                        <line x1="100" y1="35" x2="100" y2="160" stroke="white" stroke-width="5" stroke-linecap="round"/>
+                        <polyline points="68,72 100,33 132,72" stroke="white" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+                        <polyline points="48,154 100,118 152,154" stroke="#C19A6B" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+                    </g>
                 </svg>
                 <span class="lockup-text">North Shore Projects</span>
             </div>
@@ -634,8 +742,8 @@
 
 
 <footer style="text-align:center; padding:3rem 2rem 4rem; border-top:1px solid rgba(255,255,255,0.06);">
-    <p style="font-size:0.7rem; color:var(--gray);">North Shore Projects — Compass Explorations</p>
-    <p style="font-size:0.6rem; color:rgba(255,255,255,0.2); margin-top:0.25rem;">Internal review. Pick a direction.</p>
+    <p style="font-size:0.7rem; color:var(--gray);">North Shore Projects — Round 2 Explorations</p>
+    <p style="font-size:0.6rem; color:rgba(255,255,255,0.2); margin-top:0.25rem;">A1-A4: Bold filled. B1-B4: Thin monoline. Pick one.</p>
 </footer>
 
 </body>
