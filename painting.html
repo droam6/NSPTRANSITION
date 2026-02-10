@@ -21,7 +21,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css">
     <link rel="stylesheet" href="css/styles.css">
 
     <!-- JSON-LD Structured Data -->
@@ -94,7 +94,7 @@
                 <a href="#enquiry" class="btn btn-primary btn-shimmer">Get a Quote</a>
             </div>
 
-            <button class="navbar-toggle" id="navbarToggle" aria-label="Toggle menu" onclick="var m=document.getElementById('mobileMenu');this.classList.toggle('active');m.classList.toggle('active');document.body.style.overflow=m.classList.contains('active')?'hidden':'';">
+            <button class="navbar-toggle" id="navbarToggle" aria-label="Toggle menu">
                 <span></span>
                 <span></span>
                 <span></span>
@@ -104,14 +104,29 @@
 
     <!-- MOBILE MENU -->
     <div class="mobile-menu" id="mobileMenu">
-        <ul class="mobile-menu-nav">
-            <li><a href="/">Home</a></li>
-            <li><a href="tiling.html">Tiling</a></li>
-            <li><a href="painting.html">Painting</a></li>
-            <li><a href="cleaning.html">Cleaning</a></li>
-            <li><a href="https://northshoreremovals.com/" target="_blank" rel="noopener noreferrer">Removals</a></li>
-            <li><a href="#enquiry" class="mobile-menu-cta">Get a Quote</a></li>
-        </ul>
+        <button class="mobile-menu-close" type="button" aria-label="Close menu" onclick="document.getElementById('navbarToggle').classList.remove('active');document.getElementById('mobileMenu').classList.remove('active');document.body.style.overflow='';">&times;</button>
+        <nav class="mobile-menu-nav">
+            <div class="mobile-menu-group">
+                <a href="/" class="mobile-menu-link">Home</a>
+            </div>
+            <div class="mobile-menu-group">
+                <span class="mobile-menu-label">Services</span>
+                <a href="tiling.html" class="mobile-menu-link">Tiling</a>
+                <a href="painting.html" class="mobile-menu-link">Painting</a>
+                <a href="cleaning.html" class="mobile-menu-link">Cleaning</a>
+                <a href="https://northshoreremovals.com/" target="_blank" rel="noopener noreferrer" class="mobile-menu-link">Removals</a>
+            </div>
+            <div class="mobile-menu-group">
+                <a href="index.html#process" class="mobile-menu-link">How It Works</a>
+                <a href="index.html#why-us" class="mobile-menu-link">Why Us</a>
+                <a href="index.html#faq" class="mobile-menu-link">FAQ</a>
+            </div>
+            <div class="mobile-menu-group">
+                <a href="tel:+61433333332" class="mobile-menu-link mobile-menu-phone">&#x1F4DE; 0433 333 332</a>
+                <a href="https://www.instagram.com/northshoretiling" target="_blank" rel="noopener noreferrer" class="mobile-menu-link"><i class="fab fa-instagram"></i> Instagram</a>
+            </div>
+            <a href="#enquiry" class="mobile-menu-cta-btn">Get a Quote</a>
+        </nav>
     </div>
 
     <!-- SERVICE HERO -->
@@ -423,9 +438,10 @@
     </a>
 
     <!-- SCRIPTS -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.min.js"></script>
     <script>
-        AOS.init({ duration: 600, easing: 'ease-out-cubic', once: true, offset: 50 });
+        try { AOS.init({ duration: 600, easing: 'ease-out-cubic', once: true, offset: 50 }); }
+        catch(e) { console.warn('AOS not loaded:', e.message); }
 
         // Mobile menu toggle
         const navbarToggle = document.getElementById('navbarToggle');
@@ -444,6 +460,7 @@
                 document.body.style.overflow = '';
             });
         });
+
 
         // Close mobile menu when tapping overlay background
         mobileMenu.addEventListener('click', (e) => {
