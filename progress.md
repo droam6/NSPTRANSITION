@@ -1,6 +1,6 @@
 # North Shore Projects — Progress Tracker
 
-> Last updated: 2026-02-08
+> Last updated: 2026-02-10
 
 ---
 
@@ -113,6 +113,23 @@ Chatswood, Killara, Gordon, Pymble, Turramurra, Lindfield, Roseville, St Ives, W
 | Loading spinner on submit | Done | Button disabled + spinner animation |
 | Script tag on all 59 pages with forms | Done | Root=`js/`, suburbs/landing=`../js/` |
 | Inline form handlers removed | Done | No duplicate submit handlers |
+
+---
+
+## Phase 9: Mobile UX Overhaul — COMPLETE
+
+| Item | Status | Notes |
+|------|--------|-------|
+| Mobile hero redesign (index.html) | Done | 65vh height, flex-end layout, left-aligned text, stacked CTAs (320px max-width), hidden arrows/indicators |
+| Slideshow auto-rotate on mobile | Done | `setInterval` at 5s — arrows/indicators hidden so autoplay is the only navigation |
+| Slide text bleed-through fix | Done | `transition: none` on `.hero-slide` in mobile media query prevents crossfade overlap |
+| Hamburger menu close button | Done | `.mobile-menu-close` (absolute-positioned X) on all 5 main pages |
+| Hamburger menu redesign | Done | Opaque #1A1A2E background, grouped navigation (Services label), tap-to-call, Instagram link, gold CTA button |
+| Header CTA hidden when menu open | Done | `:has(.navbar-toggle.active)` hides Get a Quote in header |
+| AOS CDN fix | Done | Switched from cdnjs (404) to jsdelivr; `AOS.init()` wrapped in try-catch on 4 pages |
+| Hamburger double-toggle bug | Done | Removed duplicate inline `onclick` — only `addEventListener` handler remains |
+| Horizontal overflow fix | Done | Added `html { overflow-x: hidden; }` to prevent AOS fade-left/right from causing scroll |
+| contact.html mobile menu parity | Done | Added `mobile-menu` class + inline `<style>` block for contact page (uses different nav implementation) |
 
 ---
 

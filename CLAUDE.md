@@ -140,7 +140,7 @@ This project maintains two tracking files that must be kept current across all s
 - **Purpose:** Logs every significant architectural or design decision with rationale
 - **When to update:** When making a non-trivial choice (new technology, structural change, naming convention, etc.)
 - **Structure:** Numbered entries (D01, D02...) with Decision, Rationale, and Trade-offs
-- **Next ID:** D16
+- **Next ID:** D18
 
 ### Rules for All Sessions
 1. **Read both files at the start** of any session that involves code changes

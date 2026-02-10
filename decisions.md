@@ -294,3 +294,34 @@ Timestamp: PAGE_LOAD_TIME vs submission time, reject if < 3000ms
 - The ABN format is correct (11 digits with spaces) so schema validators pass
 
 **Risk:** Launching with fake review data violates Google's structured data guidelines and could result in a manual action. Must update before going live.
+
+---
+
+## D16: AOS CDN Switch — cdnjs to jsDelivr
+
+**Decision:** Switch AOS (Animate on Scroll) library from `cdnjs.cloudflare.com` to `cdn.jsdelivr.net` and wrap `AOS.init()` in try-catch.
+
+**Rationale:**
+- cdnjs URL was returning 404 for `aos/2.3.4/aos.min.js` and `aos.css`, causing "AOS is not defined" which crashed all subsequent JavaScript on every page
+- jsDelivr serves the same files reliably at `cdn.jsdelivr.net/npm/aos@2.3.4/dist/`
+- Try-catch around `AOS.init()` ensures that even if the CDN fails in future, the rest of the page's JS (slideshow, menu, forms) continues to work
+
+**Trade-offs:**
+- jsDelivr is another external CDN dependency — could self-host AOS in future
+- Try-catch means AOS failures are silent — no visual indication that scroll animations aren't loading
+
+---
+
+## D17: Mobile Hero — Instant Slide Switching (No Crossfade)
+
+**Decision:** Disable CSS transitions on `.hero-slide` in the mobile media query (`transition: none`) and auto-rotate slides via `setInterval` at 5-second intervals.
+
+**Rationale:**
+- The desktop crossfade transition (0.8s opacity) caused two slides to be visible simultaneously on mobile, with text from both slides overlapping
+- On mobile the hero is smaller and the overlap is much more noticeable and distracting
+- With arrows and indicators hidden on mobile, autoplay is the only way users see different slides — the 5s interval gives enough reading time
+- Instant switching is cleaner on small screens where the crossfade doesn't add perceived quality
+
+**Trade-offs:**
+- Mobile users see an abrupt slide change rather than a smooth fade
+- Desktop retains the original crossfade behaviour (desktop media query is unaffected)
