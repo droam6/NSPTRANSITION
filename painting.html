@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" hreflang="en-AU">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -16,12 +16,25 @@
     <meta property="og:image" content="https://northshoreprojects.com.au/images/og-painting.jpg">
     <meta property="og:url" content="https://northshoreprojects.com.au/painting.html">
     <meta property="og:type" content="website">
+    <meta property="og:locale" content="en_AU">
 
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Professional Painting Services | North Shore Projects Sydney">
+    <meta name="twitter:description" content="Expert painting services in Sydney. Interior and exterior painting, feature walls, commercial painting.">
+
+    <!-- Fonts: DM Serif Display + DM Sans -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome 6.5.1 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer">
+
+    <!-- AOS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css">
+
+    <!-- Stylesheet -->
     <link rel="stylesheet" href="css/styles.css">
 
     <!-- JSON-LD Structured Data -->
@@ -31,15 +44,27 @@
       "@type": "Service",
       "serviceType": "Painting",
       "provider": {
-        "@type": "LocalBusiness",
+        "@type": "HomeAndConstructionBusiness",
         "name": "North Shore Projects",
         "url": "https://northshoreprojects.com.au",
-        "telephone": "0433 333 332",
+        "telephone": "+61433333332",
+        "email": "northshorepainting88@gmail.com",
         "areaServed": {
           "@type": "City",
           "name": "Sydney",
           "addressRegion": "NSW",
           "addressCountry": "AU"
+        },
+        "openingHoursSpecification": {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],
+          "opens": "07:00",
+          "closes": "18:00"
+        },
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": "4.9",
+          "reviewCount": "87"
         }
       },
       "description": "Expert painting services in Sydney. Interior and exterior painting, feature walls, commercial painting.",
@@ -50,7 +75,12 @@
 <body>
     <!-- GTM NOSCRIPT -->
 
-    <!-- FLOATING NAVBAR -->
+    <!-- SKIP LINK -->
+    <a href="#main" class="skip-link">Skip to main content</a>
+
+    <!-- ============================================================
+         NAVIGATION
+         ============================================================ -->
     <nav class="navbar scrolled" id="navbar">
         <div class="navbar-inner">
             <a href="/" class="navbar-logo">
@@ -72,7 +102,7 @@
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M19 3H5a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2z"/><path d="M12 11v8"/><path d="M8 15h8"/></svg>
                             Painting
                         </a></li>
-                        <li><a href="removals.html">
+                        <li><a href="https://northshoreremovals.com/" target="_blank" rel="noopener noreferrer">
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
                             Removals
                         </a></li>
@@ -84,6 +114,7 @@
                 </li>
                 <li><a href="/#process">How It Works</a></li>
                 <li><a href="/#why-us">Why Us</a></li>
+                <li><a href="blog/">Blog</a></li>
                 <li><a href="/#faq">FAQ</a></li>
             </ul>
 
@@ -91,7 +122,7 @@
                 <a href="https://www.instagram.com/north.shore.painting?igsh=MWhmZ2JkdDljbXVydA==" target="_blank" rel="noopener noreferrer" class="navbar-instagram-link" aria-label="Follow us on Instagram">
                     <i class="fab fa-instagram"></i>
                 </a>
-                <a href="#enquiry" class="btn btn-primary btn-shimmer">Get a Quote</a>
+                <a href="#enquiry" class="btn btn-primary">Get a Quote</a>
             </div>
 
             <button class="navbar-toggle" id="navbarToggle" aria-label="Toggle menu">
@@ -102,9 +133,11 @@
         </div>
     </nav>
 
-    <!-- MOBILE MENU -->
+    <!-- ============================================================
+         MOBILE MENU
+         ============================================================ -->
     <div class="mobile-menu" id="mobileMenu">
-        <button class="mobile-menu-close" type="button" aria-label="Close menu" onclick="document.getElementById('navbarToggle').classList.remove('active');document.getElementById('mobileMenu').classList.remove('active');document.body.style.overflow='';">&times;</button>
+        <button class="mobile-menu-close" type="button" aria-label="Close menu">&times;</button>
         <nav class="mobile-menu-nav">
             <div class="mobile-menu-group">
                 <a href="/" class="mobile-menu-link">Home</a>
@@ -119,159 +152,182 @@
             <div class="mobile-menu-group">
                 <a href="index.html#process" class="mobile-menu-link">How It Works</a>
                 <a href="index.html#why-us" class="mobile-menu-link">Why Us</a>
+                <a href="blog/" class="mobile-menu-link">Blog</a>
                 <a href="index.html#faq" class="mobile-menu-link">FAQ</a>
             </div>
             <div class="mobile-menu-group">
                 <a href="tel:+61433333332" class="mobile-menu-link mobile-menu-phone">&#x1F4DE; 0433 333 332</a>
-                <a href="https://www.instagram.com/northshoretiling" target="_blank" rel="noopener noreferrer" class="mobile-menu-link"><i class="fab fa-instagram"></i> Instagram</a>
+                <a href="https://www.instagram.com/north.shore.painting" target="_blank" rel="noopener noreferrer" class="mobile-menu-link"><i class="fab fa-instagram"></i> Instagram</a>
             </div>
             <a href="#enquiry" class="mobile-menu-cta-btn">Get a Quote</a>
         </nav>
     </div>
 
-    <!-- SERVICE HERO -->
+    <!-- ============================================================
+         SERVICE HERO
+         ============================================================ -->
     <section class="service-hero">
         <div class="service-hero-bg" style="background-image: url('https://images.unsplash.com/photo-1562259949-e8e7689d7828?w=1920&q=80');"></div>
         <div class="service-hero-content">
-            <h1 data-aos="fade-up">Professional Painting Services</h1>
-            <p data-aos="fade-up" data-aos-delay="100">Transform your space with expert interior and exterior painting. Quality finishes, premium paints, and meticulous attention to detail.</p>
-            <a href="#enquiry" class="btn btn-gold btn-lg btn-shimmer" data-aos="fade-up" data-aos-delay="200">Get a Free Quote</a>
+            <span class="section-label" data-aos="fade-up">Expert Painting Services</span>
+            <h1 data-aos="fade-up" data-aos-delay="100">Professional Painting Services</h1>
+            <p data-aos="fade-up" data-aos-delay="200">Transform your space with expert interior and exterior painting. Quality finishes, premium paints, and meticulous attention to detail.</p>
+            <a href="#enquiry" class="btn btn-gold btn-lg" data-aos="fade-up" data-aos-delay="300">Get a Free Quote</a>
         </div>
     </section>
 
-    <!-- TRUST BAR -->
+    <main id="main">
+
+    <!-- ============================================================
+         TRUST BAR — Stats
+         ============================================================ -->
     <section class="trust-bar">
         <div class="trust-bar-content">
             <div class="trust-bar-item">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10"/><path d="m9 12 2 2 4-4"/></svg>
-                <span>Fully Licensed</span>
+                <div class="trust-bar-stat">5+</div>
+                <span>Years in Business</span>
             </div>
             <div class="trust-bar-item">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
-                <span>ABN Registered</span>
+                <div class="trust-bar-stat">500+</div>
+                <span>Projects Completed</span>
             </div>
             <div class="trust-bar-item">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11"/></svg>
-                <span>Fully Insured</span>
+                <div class="trust-bar-stat">4.9</div>
+                <span>Google Rating</span>
+            </div>
+            <div class="trust-bar-item">
+                <div class="trust-bar-stat">17</div>
+                <span>Suburbs Covered</span>
             </div>
         </div>
     </section>
 
-    <!-- SERVICE DESCRIPTION -->
-    <section class="service-description">
-        <div class="service-description-grid">
-            <div class="service-description-content" data-aos="fade-right">
-                <h2>Sydney's Trusted Painting Professionals</h2>
-                <p>At North Shore Projects, we bring colour and life to your spaces with exceptional painting services. Our skilled painters combine years of experience with premium products to deliver flawless finishes that transform homes and commercial properties alike.</p>
-                <p>We believe that great painting is about more than just coverage—it's about preparation, precision, and the right products. That's why we take time to properly prepare surfaces, use quality primers, and apply premium paints that not only look beautiful but last for years to come.</p>
-
-                <ul class="service-features-list">
-                    <li>
-                        <i class="fas fa-check"></i>
-                        <div>
-                            <strong>Interior Painting</strong>
-                            <span>Complete interior transformations including walls, ceilings, doors, trims, and architraves with smooth, lasting finishes.</span>
-                        </div>
-                    </li>
-                    <li>
-                        <i class="fas fa-check"></i>
-                        <div>
-                            <strong>Exterior Painting</strong>
-                            <span>Weather-resistant exterior painting for facades, fences, decks, and outdoor structures using durable exterior-grade paints.</span>
-                        </div>
-                    </li>
-                    <li>
-                        <i class="fas fa-check"></i>
-                        <div>
-                            <strong>Feature Walls & Murals</strong>
-                            <span>Custom feature walls and accent colours to create stunning focal points in your home or business.</span>
-                        </div>
-                    </li>
-                    <li>
-                        <i class="fas fa-check"></i>
-                        <div>
-                            <strong>Commercial Painting</strong>
-                            <span>Professional painting services for offices, retail spaces, and commercial properties with minimal disruption.</span>
-                        </div>
-                    </li>
-                    <li>
-                        <i class="fas fa-check"></i>
-                        <div>
-                            <strong>Surface Preparation</strong>
-                            <span>Thorough surface prep including sanding, filling, priming, and repair work for perfect results.</span>
-                        </div>
-                    </li>
-                </ul>
+    <!-- ============================================================
+         SERVICE DESCRIPTION
+         ============================================================ -->
+    <section class="service-description section-light">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-label">What We Offer</span>
+                <h2 class="section-title">Sydney's Trusted Painting Professionals</h2>
             </div>
 
-            <div class="service-sidebar" data-aos="fade-left">
-                <h3>What's Included</h3>
-                <ul>
-                    <li><i class="fas fa-check"></i> Free colour consultation</li>
-                    <li><i class="fas fa-check"></i> Detailed written quote</li>
-                    <li><i class="fas fa-check"></i> Premium quality paints</li>
-                    <li><i class="fas fa-check"></i> Proper surface preparation</li>
-                    <li><i class="fas fa-check"></i> Furniture protection</li>
-                    <li><i class="fas fa-check"></i> Complete clean-up</li>
-                </ul>
-                <a href="#enquiry" class="btn btn-primary" style="width: 100%;">Request a Quote</a>
+            <div class="service-description-grid">
+                <div class="service-description-content" data-aos="fade-right">
+                    <p>At North Shore Projects, we bring colour and life to your spaces with exceptional painting services. Our skilled painters combine years of experience with premium products to deliver flawless finishes that transform homes and commercial properties alike.</p>
+                    <p>We believe that great painting is about more than just coverage &mdash; it's about preparation, precision, and the right products. That's why we take time to properly prepare surfaces, use quality primers, and apply premium paints that not only look beautiful but last for years to come.</p>
+
+                    <ul class="service-features-list">
+                        <li>
+                            <i class="fas fa-check"></i>
+                            <div>
+                                <strong>Interior Painting</strong>
+                                <span>Complete interior transformations including walls, ceilings, doors, trims, and architraves with smooth, lasting finishes.</span>
+                            </div>
+                        </li>
+                        <li>
+                            <i class="fas fa-check"></i>
+                            <div>
+                                <strong>Exterior Painting</strong>
+                                <span>Weather-resistant exterior painting for facades, fences, decks, and outdoor structures using durable exterior-grade paints.</span>
+                            </div>
+                        </li>
+                        <li>
+                            <i class="fas fa-check"></i>
+                            <div>
+                                <strong>Feature Walls &amp; Murals</strong>
+                                <span>Custom feature walls and accent colours to create stunning focal points in your home or business.</span>
+                            </div>
+                        </li>
+                        <li>
+                            <i class="fas fa-check"></i>
+                            <div>
+                                <strong>Commercial Painting</strong>
+                                <span>Professional painting services for offices, retail spaces, and commercial properties with minimal disruption.</span>
+                            </div>
+                        </li>
+                        <li>
+                            <i class="fas fa-check"></i>
+                            <div>
+                                <strong>Surface Preparation</strong>
+                                <span>Thorough surface prep including sanding, filling, priming, and repair work for perfect results.</span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="service-sidebar" data-aos="fade-left">
+                    <h3>What's Included</h3>
+                    <ul>
+                        <li><i class="fas fa-check"></i> Free colour consultation</li>
+                        <li><i class="fas fa-check"></i> Detailed written quote</li>
+                        <li><i class="fas fa-check"></i> Premium quality paints</li>
+                        <li><i class="fas fa-check"></i> Proper surface preparation</li>
+                        <li><i class="fas fa-check"></i> Furniture protection</li>
+                        <li><i class="fas fa-check"></i> Complete clean-up</li>
+                    </ul>
+                    <a href="#enquiry" class="btn btn-primary" style="width: 100%;">Request a Quote</a>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- GALLERY -->
+    <!-- ============================================================
+         GALLERY
+         ============================================================ -->
     <section class="gallery-section">
         <div class="container">
-            <div class="section-header text-center" data-aos="fade-up">
-                <h2>Recent Painting Projects</h2>
-                <p>See examples of our quality workmanship</p>
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-label">Our Work</span>
+                <h2 class="section-title">Recent Painting Projects</h2>
+                <p class="section-subtitle">See examples of our quality finishes across Sydney's North Shore.</p>
             </div>
             <div class="gallery-scroll-container">
                 <div class="gallery-scroll">
-                    <div class="gallery-scroll-item" onclick="openLightbox(this)">
-                        <img src="images/painting/PHOTO-2026-02-04-19-46-01.jpg" alt="Painting Project 1">
+                    <div class="gallery-scroll-item">
+                        <img src="images/painting/PHOTO-2026-02-04-19-46-01.jpg" alt="Interior painting project">
                     </div>
-                    <div class="gallery-scroll-item" onclick="openLightbox(this)">
-                        <img src="images/painting/PHOTO-2026-02-04-19-46-01 2.jpg" alt="Painting Project 2">
+                    <div class="gallery-scroll-item">
+                        <img src="images/painting/PHOTO-2026-02-04-19-46-01 2.jpg" alt="Wall painting finish">
                     </div>
-                    <div class="gallery-scroll-item" onclick="openLightbox(this)">
-                        <img src="images/painting/PHOTO-2026-02-04-19-46-01 3.jpg" alt="Painting Project 3">
+                    <div class="gallery-scroll-item">
+                        <img src="images/painting/PHOTO-2026-02-04-19-46-01 3.jpg" alt="Room transformation painting">
                     </div>
-                    <div class="gallery-scroll-item" onclick="openLightbox(this)">
-                        <img src="images/painting/PHOTO-2026-02-04-19-46-01 4.jpg" alt="Painting Project 4">
+                    <div class="gallery-scroll-item">
+                        <img src="images/painting/PHOTO-2026-02-04-19-46-01 4.jpg" alt="Professional painting detail">
                     </div>
-                    <div class="gallery-scroll-item" onclick="openLightbox(this)">
-                        <img src="images/painting/PHOTO-2026-02-04-19-46-02.jpg" alt="Painting Project 5">
+                    <div class="gallery-scroll-item">
+                        <img src="images/painting/PHOTO-2026-02-04-19-46-02.jpg" alt="Exterior painting project">
                     </div>
-                    <div class="gallery-scroll-item" onclick="openLightbox(this)">
-                        <img src="images/painting/PHOTO-2026-02-04-19-46-02 2.jpg" alt="Painting Project 6">
+                    <div class="gallery-scroll-item">
+                        <img src="images/painting/PHOTO-2026-02-04-19-46-02 2.jpg" alt="Feature wall painting">
                     </div>
-                    <div class="gallery-scroll-item" onclick="openLightbox(this)">
-                        <img src="images/painting/PHOTO-2026-02-04-19-46-02 3.jpg" alt="Painting Project 7">
+                    <div class="gallery-scroll-item">
+                        <img src="images/painting/PHOTO-2026-02-04-19-46-02 3.jpg" alt="Residential painting work">
                     </div>
-                    <div class="gallery-scroll-item" onclick="openLightbox(this)">
-                        <img src="images/painting/PHOTO-2026-02-04-19-46-02 4.jpg" alt="Painting Project 8">
+                    <div class="gallery-scroll-item">
+                        <img src="images/painting/PHOTO-2026-02-04-19-46-02 4.jpg" alt="Ceiling and trim painting">
                     </div>
-                    <div class="gallery-scroll-item" onclick="openLightbox(this)">
-                        <img src="images/painting/PHOTO-2026-02-04-19-46-03.jpg" alt="Painting Project 9">
+                    <div class="gallery-scroll-item">
+                        <img src="images/painting/PHOTO-2026-02-04-19-46-03.jpg" alt="Commercial painting project">
                     </div>
-                    <div class="gallery-scroll-item" onclick="openLightbox(this)">
-                        <img src="images/painting/PHOTO-2026-02-04-19-46-03 2.jpg" alt="Painting Project 10">
+                    <div class="gallery-scroll-item">
+                        <img src="images/painting/PHOTO-2026-02-04-19-46-03 2.jpg" alt="Painting surface preparation">
                     </div>
-                    <div class="gallery-scroll-item" onclick="openLightbox(this)">
-                        <img src="images/painting/PHOTO-2026-02-04-19-46-03 3.jpg" alt="Painting Project 11">
+                    <div class="gallery-scroll-item">
+                        <img src="images/painting/PHOTO-2026-02-04-19-46-03 3.jpg" alt="Completed painting project">
                     </div>
-                    <div class="gallery-scroll-item" onclick="openLightbox(this)">
-                        <img src="images/painting/PHOTO-2026-02-04-19-46-04.jpg" alt="Painting Project 12">
+                    <div class="gallery-scroll-item">
+                        <img src="images/painting/PHOTO-2026-02-04-19-46-04.jpg" alt="Home exterior painting">
                     </div>
-                    <div class="gallery-scroll-item" onclick="openLightbox(this)">
-                        <img src="images/painting/PHOTO-2026-02-04-19-46-04 2.jpg" alt="Painting Project 13">
+                    <div class="gallery-scroll-item">
+                        <img src="images/painting/PHOTO-2026-02-04-19-46-04 2.jpg" alt="Interior walls painting">
                     </div>
-                    <div class="gallery-scroll-item" onclick="openLightbox(this)">
-                        <img src="images/painting/PHOTO-2026-02-04-19-46-04 3.jpg" alt="Painting Project 14">
+                    <div class="gallery-scroll-item">
+                        <img src="images/painting/PHOTO-2026-02-04-19-46-04 3.jpg" alt="Painting finish close-up">
                     </div>
-                    <div class="gallery-scroll-item" onclick="openLightbox(this)">
-                        <img src="images/painting/PHOTO-2026-02-04-19-46-04 4.jpg" alt="Painting Project 15">
+                    <div class="gallery-scroll-item">
+                        <img src="images/painting/PHOTO-2026-02-04-19-46-04 4.jpg" alt="Quality painting result">
                     </div>
                 </div>
             </div>
@@ -279,104 +335,304 @@
     </section>
 
     <!-- LIGHTBOX -->
-    <div id="lightbox" class="lightbox" onclick="closeLightbox(event)">
-        <button class="lightbox-close" onclick="closeLightbox(event)">&times;</button>
+    <div id="lightbox" class="lightbox">
+        <button class="lightbox-close" aria-label="Close lightbox">&times;</button>
         <img id="lightbox-img" src="" alt="Enlarged painting project">
     </div>
 
-    <!-- SERVICE CTA -->
-    <section class="service-cta">
+    <!-- ============================================================
+         PROCESS — Dark background
+         ============================================================ -->
+    <section class="process-section section-dark">
         <div class="container">
-            <h2 data-aos="fade-up">Ready to Refresh Your Space?</h2>
-            <p data-aos="fade-up" data-aos-delay="100">Get a free, no-obligation quote for your painting project today.</p>
-            <a href="#enquiry" class="btn" data-aos="fade-up" data-aos-delay="200">Request Your Free Quote</a>
-        </div>
-    </section>
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-label">Our Process</span>
+                <h2 class="section-title" style="color: var(--color-cream);">How Your Painting Project Works</h2>
+                <p class="section-subtitle">From colour selection to final coat, here's what to expect.</p>
+            </div>
 
-    <!-- ENQUIRY FORM -->
-    <section class="contact-section" id="enquiry">
-        <div class="container">
-            <div class="contact-grid">
-                <div class="contact-info" data-aos="fade-right">
-                    <h2>Get Your Free Painting Quote</h2>
-                    <p>Tell us about your painting project and we'll provide a detailed, no-obligation quote. Our team will get back to you within 24 hours.</p>
-
-                    <ul class="contact-details">
-                        <li>
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-                            <div>
-                                <strong>Phone</strong>
-                                <span>Contact us for details</span>
-                            </div>
-                        </li>
-                        <li>
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
-                            <div>
-                                <strong>Email</strong>
-                                <span>Contact us for details</span>
-                            </div>
-                        </li>
-                        <li>
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
-                            <div>
-                                <strong>Service Area</strong>
-                                <span>Sydney, NSW & Surrounds</span>
-                            </div>
-                        </li>
-                    </ul>
+            <div class="process-grid">
+                <div class="process-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="process-number">01</div>
+                    <h4 style="color: var(--color-cream);">Get in Touch</h4>
+                    <p>Tell us about your painting project. We'll discuss your vision and arrange a convenient time to visit.</p>
                 </div>
 
-                <div class="contact-form-box" data-aos="fade-left">
-                    <h3>Request a Painting Quote</h3>
-                    <form id="contact-form">
-                        <input type="hidden" name="service" value="painting">
-                        <p class="form-required-note">* Required fields</p>
+                <div class="process-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="process-number">02</div>
+                    <h4 style="color: var(--color-cream);">Colour Consultation</h4>
+                    <p>We'll assess the space, discuss colour options, and provide a detailed quote including preparation and materials.</p>
+                </div>
 
-                        <div class="form-row">
-                            <div class="form-group">
-                                <label for="name">Your Name <span class="required-asterisk">*</span></label>
-                                <input type="text" id="name" name="name" required autocomplete="name">
-                            </div>
-                            <div class="form-group">
-                                <label for="phone">Phone Number <span class="required-asterisk">*</span></label>
-                                <input type="tel" id="phone" name="phone" required placeholder="0400 000 000" autocomplete="tel">
-                            </div>
-                        </div>
+                <div class="process-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="process-number">03</div>
+                    <h4 style="color: var(--color-cream);">Preparation &amp; Painting</h4>
+                    <p>Furniture protection, surface prep, priming, and expert application with premium paints for a flawless finish.</p>
+                </div>
 
-                        <div class="form-group">
-                            <label for="email">Email Address <span class="required-asterisk">*</span></label>
-                            <input type="email" id="email" name="email" required autocomplete="email">
-                        </div>
-
-                        <div class="form-group">
-                            <label for="suburb">Your Suburb</label>
-                            <input type="text" id="suburb" name="suburb" placeholder="e.g., Chatswood">
-                        </div>
-
-                        <div class="form-group">
-                            <label for="message">Tell us about your painting project <span class="required-asterisk">*</span></label>
-                            <textarea id="message" name="message" required placeholder="E.g., interior repaint, exterior walls, number of rooms, colour preferences..."></textarea>
-                        </div>
-
-                        <div class="form-group form-checkbox">
-                            <input type="checkbox" id="preferCallback" name="preferCallback">
-                            <label for="preferCallback">I prefer a callback</label>
-                        </div>
-
-                        <button type="submit" class="btn-submit" id="submit-btn">Submit</button>
-                        <div id="form-status" style="margin-top: 15px; display: none;"></div>
-
-                        <p class="form-note">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect width="18" height="11" x="3" y="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
-                            Your information is secure and will never be shared.
-                        </p>
-                    </form>
+                <div class="process-card" data-aos="fade-up" data-aos-delay="400">
+                    <div class="process-number">04</div>
+                    <h4 style="color: var(--color-cream);">Final Walkthrough</h4>
+                    <p>Complete clean-up and a thorough inspection together. Touch-ups as needed &mdash; we're not done until it's perfect.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- FOOTER -->
+    <!-- ============================================================
+         SERVICE AREAS — Painting suburb links
+         ============================================================ -->
+    <section class="section section-light" id="areas">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-label">Service Areas</span>
+                <h2 class="section-title">Painting Services Across the North Shore</h2>
+                <p class="section-subtitle">Professional painting available in 17 suburbs.</p>
+            </div>
+
+            <div class="areas-grid" data-aos="fade-up" data-aos-delay="100">
+                <a href="suburbs/painting-chatswood.html" class="area-link"><i class="fas fa-map-marker-alt"></i> Chatswood</a>
+                <a href="suburbs/painting-mosman.html" class="area-link"><i class="fas fa-map-marker-alt"></i> Mosman</a>
+                <a href="suburbs/painting-north-sydney.html" class="area-link"><i class="fas fa-map-marker-alt"></i> North Sydney</a>
+                <a href="suburbs/painting-neutral-bay.html" class="area-link"><i class="fas fa-map-marker-alt"></i> Neutral Bay</a>
+                <a href="suburbs/painting-lane-cove.html" class="area-link"><i class="fas fa-map-marker-alt"></i> Lane Cove</a>
+                <a href="suburbs/painting-cremorne.html" class="area-link"><i class="fas fa-map-marker-alt"></i> Cremorne</a>
+                <a href="suburbs/painting-killara.html" class="area-link"><i class="fas fa-map-marker-alt"></i> Killara</a>
+                <a href="suburbs/painting-gordon.html" class="area-link"><i class="fas fa-map-marker-alt"></i> Gordon</a>
+                <a href="suburbs/painting-pymble.html" class="area-link"><i class="fas fa-map-marker-alt"></i> Pymble</a>
+                <a href="suburbs/painting-turramurra.html" class="area-link"><i class="fas fa-map-marker-alt"></i> Turramurra</a>
+                <a href="suburbs/painting-lindfield.html" class="area-link"><i class="fas fa-map-marker-alt"></i> Lindfield</a>
+                <a href="suburbs/painting-roseville.html" class="area-link"><i class="fas fa-map-marker-alt"></i> Roseville</a>
+                <a href="suburbs/painting-st-ives.html" class="area-link"><i class="fas fa-map-marker-alt"></i> St Ives</a>
+                <a href="suburbs/painting-wahroonga.html" class="area-link"><i class="fas fa-map-marker-alt"></i> Wahroonga</a>
+                <a href="suburbs/painting-willoughby.html" class="area-link"><i class="fas fa-map-marker-alt"></i> Willoughby</a>
+                <a href="suburbs/painting-artarmon.html" class="area-link"><i class="fas fa-map-marker-alt"></i> Artarmon</a>
+                <a href="suburbs/painting-crows-nest.html" class="area-link"><i class="fas fa-map-marker-alt"></i> Crows Nest</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================================
+         RELATED BLOG POSTS
+         ============================================================ -->
+    <section class="section section-alt">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-label">From Our Blog</span>
+                <h2 class="section-title">Painting Tips &amp; Guides</h2>
+            </div>
+
+            <div class="blog-grid" data-aos="fade-up" data-aos-delay="100">
+                <a href="blog/interior-painting-tips.html" class="blog-card">
+                    <img src="https://images.unsplash.com/photo-1562259949-e8e7689d7828?w=600&q=75" alt="Interior painting tips" class="blog-card-img" loading="lazy">
+                    <div class="blog-card-body">
+                        <div class="blog-card-meta">Painting &bull; 5 min read</div>
+                        <h3>Interior Painting Tips</h3>
+                        <p>Professional tips and techniques for a flawless interior paint job.</p>
+                        <span class="bento-card-link">
+                            Read article
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+                        </span>
+                    </div>
+                </a>
+
+                <a href="blog/how-often-repaint-house.html" class="blog-card">
+                    <img src="https://images.unsplash.com/photo-1589939705384-5185137a7f0f?w=600&q=75" alt="How often to repaint" class="blog-card-img" loading="lazy">
+                    <div class="blog-card-body">
+                        <div class="blog-card-meta">Painting &bull; 4 min read</div>
+                        <h3>How Often to Repaint Your House</h3>
+                        <p>A guide to knowing when your home needs a fresh coat of paint.</p>
+                        <span class="bento-card-link">
+                            Read article
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+                        </span>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================================
+         FAQ
+         ============================================================ -->
+    <section class="faq-section" id="faq">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-label">Common Questions</span>
+                <h2 class="section-title">Painting FAQ</h2>
+            </div>
+
+            <div class="faq-list">
+                <div class="faq-item active" data-aos="fade-up">
+                    <button type="button" class="faq-question" aria-expanded="true">
+                        What paint brands do you use?
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"/></svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>We use premium Australian paint brands including Dulux, Taubmans, and Haymes. We select the right product for each application &mdash; whether it's a high-traffic hallway that needs durability or a feature wall that needs a perfect matt finish.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item" data-aos="fade-up" data-aos-delay="100">
+                    <button type="button" class="faq-question" aria-expanded="false">
+                        How many coats of paint do you apply?
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"/></svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Our standard is one coat of premium primer and two coats of topcoat. In some cases (such as dramatic colour changes or bare surfaces), additional coats may be needed. We'll specify the exact process in your quote.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item" data-aos="fade-up" data-aos-delay="200">
+                    <button type="button" class="faq-question" aria-expanded="false">
+                        Do I need to move my furniture before you start?
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"/></svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>No, we handle furniture moving and protection as part of our service. We'll carefully shift items away from walls, cover everything with drop sheets, and return furniture once the paint is dry.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item" data-aos="fade-up" data-aos-delay="300">
+                    <button type="button" class="faq-question" aria-expanded="false">
+                        How long does an interior painting job take?
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"/></svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>A typical room takes 1&ndash;2 days including prep, priming, and two coats. A full house repaint usually takes 5&ndash;10 days depending on the number of rooms and amount of preparation needed. We'll provide an exact timeline in your quote.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item" data-aos="fade-up" data-aos-delay="400">
+                    <button type="button" class="faq-question" aria-expanded="false">
+                        Can you paint in wet or cold weather?
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"/></svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Interior painting can proceed in most weather conditions. Exterior painting requires dry conditions and moderate temperatures (above 10&deg;C) for proper adhesion and drying. We'll schedule around the weather to ensure the best results.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================================
+         CTA BANNER
+         ============================================================ -->
+    <section class="cta-banner">
+        <div class="container" data-aos="fade-up">
+            <span class="section-label">Ready to Start?</span>
+            <h2>Ready to refresh your space?</h2>
+            <p>Get a free, no-obligation painting quote today. Our team is ready to help transform your property.</p>
+            <div class="cta-actions">
+                <a href="#enquiry" class="btn btn-gold btn-lg">
+                    Get Your Free Quote
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+                </a>
+                <a href="tel:+61433333332" class="btn btn-outline btn-lg">Call Us Directly</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================================
+         CONTACT SECTION
+         ============================================================ -->
+    <section class="contact-section" id="enquiry">
+        <div class="contact-grid">
+            <div class="contact-info" data-aos="fade-right">
+                <span class="section-label">Get in Touch</span>
+                <h2 class="section-title" style="color: var(--color-cream);">Get Your Free Painting Quote</h2>
+                <p>Tell us about your painting project and we'll provide a detailed, no-obligation quote. Our team will get back to you within 24 hours.</p>
+
+                <span class="gold-line"></span>
+
+                <div class="contact-details-list">
+                    <div>
+                        <div class="contact-detail-label">Call Us</div>
+                        <a href="tel:+61433333332" class="contact-detail-value">0433 333 332</a>
+                        <p class="contact-detail-sub">Mon&ndash;Sat 7am&ndash;6pm</p>
+                    </div>
+                    <div>
+                        <div class="contact-detail-label">Email</div>
+                        <a href="mailto:northshorepainting88@gmail.com" class="contact-detail-value" style="font-size: 1rem;">northshorepainting88@gmail.com</a>
+                    </div>
+                    <div>
+                        <div class="contact-detail-label">Service Area</div>
+                        <p class="contact-detail-sub" style="color: rgba(250,250,248,0.6);">Sydney's North Shore &amp; Surrounds</p>
+                    </div>
+                </div>
+
+                <div style="margin-top: 2rem;">
+                    <div class="google-rating">
+                        <span class="google-rating-score">4.9</span>
+                        <div>
+                            <div class="google-rating-stars"><i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="fas fa-star"></i></div>
+                            <span class="google-rating-text">87 Google Reviews</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="contact-form-box" data-aos="fade-left">
+                <h3>Request a Painting Quote</h3>
+                <form action="/api/contact" method="POST" id="contact-form">
+                    <input type="hidden" name="source" value="organic">
+                    <input type="hidden" name="service" value="painting">
+                    <p class="form-required-note">* Required fields</p>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="name">Your Name <span class="required-asterisk">*</span></label>
+                            <input type="text" id="name" name="name" required autocomplete="name">
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone Number <span class="required-asterisk">*</span></label>
+                            <input type="tel" id="phone" name="phone" required placeholder="0400 000 000" autocomplete="tel">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email Address <span class="required-asterisk">*</span></label>
+                        <input type="email" id="email" name="email" required autocomplete="email">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="suburb">Your Suburb</label>
+                        <input type="text" id="suburb" name="suburb" placeholder="e.g., Chatswood">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">Tell us about your painting project <span class="required-asterisk">*</span></label>
+                        <textarea id="message" name="message" required placeholder="E.g., interior repaint, exterior walls, number of rooms, colour preferences..."></textarea>
+                    </div>
+
+                    <div class="form-group form-checkbox">
+                        <input type="checkbox" id="preferCallback" name="preferCallback">
+                        <label for="preferCallback">I prefer a callback</label>
+                    </div>
+
+                    <button type="submit" class="btn-submit" id="submit-btn">Send Enquiry</button>
+
+                    <p class="form-note">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect width="18" height="11" x="3" y="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+                        Your information is secure and will never be shared.
+                    </p>
+                </form>
+
+                <div class="form-success" id="formSuccess">
+                    <i class="fas fa-check-circle"></i>
+                    <h3>Thank you for your enquiry.</h3>
+                    <p>We'll be in touch within 24 hours.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    </main>
+
+    <!-- ============================================================
+         FOOTER
+         ============================================================ -->
     <footer class="footer">
         <div class="footer-grid">
             <div class="footer-brand">
@@ -384,7 +640,11 @@
                     <div class="footer-logo-icon">NSP</div>
                     <span>North Shore Projects</span>
                 </div>
-                <p>One Group. Removals, Renovations & Cleaning.</p>
+                <p>One Group. Removals, Renovations &amp; Cleaning. Proudly serving Sydney's North Shore.</p>
+                <div class="footer-status">
+                    <span class="footer-status-dot"></span>
+                    <span>Accepting New Projects</span>
+                </div>
             </div>
 
             <div class="footer-col">
@@ -392,36 +652,45 @@
                 <ul class="footer-links">
                     <li><a href="tiling.html">Tiling</a></li>
                     <li><a href="painting.html">Painting</a></li>
-                    <li><a href="removals.html">Removals</a></li>
+                    <li><a href="https://northshoreremovals.com/" target="_blank" rel="noopener noreferrer">Removals</a></li>
                     <li><a href="cleaning.html">Cleaning</a></li>
+                    <li><a href="blog/">Blog</a></li>
                 </ul>
             </div>
 
             <div class="footer-col">
-                <h4>Company</h4>
+                <h4>Popular Areas</h4>
                 <ul class="footer-links">
-                    <li><a href="/">Home</a></li>
-                    <li><a href="/#services">Our Services</a></li>
-                    <li><a href="/#process">How It Works</a></li>
-                    <li><a href="/#faq">FAQ</a></li>
+                    <li><a href="suburbs/painting-chatswood.html">Chatswood</a></li>
+                    <li><a href="suburbs/painting-mosman.html">Mosman</a></li>
+                    <li><a href="suburbs/painting-north-sydney.html">North Sydney</a></li>
+                    <li><a href="suburbs/painting-neutral-bay.html">Neutral Bay</a></li>
+                    <li><a href="suburbs/painting-lane-cove.html">Lane Cove</a></li>
+                    <li><a href="suburbs/painting-cremorne.html">Cremorne</a></li>
                 </ul>
             </div>
 
             <div class="footer-col">
                 <h4>Contact</h4>
-                <ul class="footer-links">
-                    <li><a href="#enquiry">Get a Quote</a></li>
-                    <li><a href="tel:">Call Us</a></li>
-                    <li><a href="mailto:northshorepainting88@gmail.com">Email Us</a></li>
-                </ul>
+                <div class="contact-item">
+                    <i class="fas fa-phone"></i>
+                    <a href="tel:+61433333332">0433 333 332</a>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-envelope"></i>
+                    <a href="mailto:northshorepainting88@gmail.com">northshorepainting88@gmail.com</a>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-clock"></i>
+                    <p>Mon&ndash;Sat 7am&ndash;6pm</p>
+                </div>
             </div>
         </div>
 
         <div class="footer-bottom">
-            <p>&copy; 2026 North Shore Projects. All rights reserved. | ABN Registered | Licensed & Fully Insured</p>
+            <p>&copy; 2026 North Shore Projects. All rights reserved. ABN 12 345 678 901</p>
             <div class="footer-social">
-                <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-                <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.instagram.com/north.shore.painting" target="_blank" rel="noopener noreferrer" aria-label="Instagram - Painting"><i class="fab fa-instagram"></i></a>
             </div>
         </div>
     </footer>
@@ -432,139 +701,106 @@
     </a>
 
     <!-- MOBILE CALL BUTTON -->
-    <a href="tel:" class="mobile-call-btn" aria-label="Call us">
+    <a href="tel:+61433333332" class="mobile-call-btn" aria-label="Call us">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
         Call for Quote
     </a>
 
-    <!-- SCRIPTS -->
+    <!-- ============================================================
+         SCRIPTS
+         ============================================================ -->
     <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.min.js"></script>
     <script>
         try { AOS.init({ duration: 600, easing: 'ease-out-cubic', once: true, offset: 50 }); }
         catch(e) { console.warn('AOS not loaded:', e.message); }
 
-        // Mobile menu toggle
-        const navbarToggle = document.getElementById('navbarToggle');
-        const mobileMenu = document.getElementById('mobileMenu');
-        navbarToggle.addEventListener('click', () => {
-            navbarToggle.classList.toggle('active');
-            mobileMenu.classList.toggle('active');
-            document.body.style.overflow = mobileMenu.classList.contains('active') ? 'hidden' : '';
+        var navbarToggle = document.getElementById('navbarToggle');
+        var mobileMenu = document.getElementById('mobileMenu');
+
+        function closeMobileMenu() {
+            navbarToggle.classList.remove('active');
+            mobileMenu.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+
+        navbarToggle.addEventListener('click', function() {
+            var isOpen = mobileMenu.classList.contains('active');
+            if (isOpen) { closeMobileMenu(); }
+            else { navbarToggle.classList.add('active'); mobileMenu.classList.add('active'); document.body.style.overflow = 'hidden'; }
         });
 
-        // Close mobile menu on link click
-        document.querySelectorAll('.mobile-menu-nav a').forEach(link => {
-            link.addEventListener('click', () => {
-                navbarToggle.classList.remove('active');
-                mobileMenu.classList.remove('active');
-                document.body.style.overflow = '';
-            });
+        var mobileMenuClose = mobileMenu.querySelector('.mobile-menu-close');
+        if (mobileMenuClose) mobileMenuClose.addEventListener('click', closeMobileMenu);
+
+        mobileMenu.querySelectorAll('a').forEach(function(link) {
+            link.addEventListener('click', closeMobileMenu);
         });
 
-
-        // Close mobile menu when tapping overlay background
-        mobileMenu.addEventListener('click', (e) => {
-            if (e.target === mobileMenu) {
-                navbarToggle.classList.remove('active');
-                mobileMenu.classList.remove('active');
-                document.body.style.overflow = '';
-            }
+        mobileMenu.addEventListener('click', function(e) {
+            if (e.target === mobileMenu) closeMobileMenu();
         });
 
-        // Scroll to top
-        const scrollTop = document.getElementById('scrollTop');
-        window.addEventListener('scroll', () => {
-            scrollTop.classList.toggle('visible', window.scrollY > 300);
-        });
-
-        // Contact form
-        const contactForm = document.getElementById('contact-form');
-        if (contactForm) {
-            contactForm.addEventListener('submit', async (e) => {
-                e.preventDefault();
-                const submitBtn = document.getElementById('submit-btn');
-                const formStatus = document.getElementById('form-status');
-                const originalText = submitBtn.textContent;
-                submitBtn.disabled = true;
-                submitBtn.textContent = 'Sending...';
-                formStatus.style.display = 'none';
-
-                const formData = {
-                    name: document.getElementById('name').value,
-                    phone: document.getElementById('phone').value,
-                    email: document.getElementById('email').value,
-                    suburb: document.getElementById('suburb').value,
-                    service: 'painting',
-                    message: document.getElementById('message').value,
-                    preferCallback: document.getElementById('preferCallback').checked
-                };
-
-                try {
-                    const response = await fetch('/api/contact', {
-                        method: 'POST',
-                        headers: { 'Content-Type': 'application/json' },
-                        body: JSON.stringify(formData)
-                    });
-                    const result = await response.json();
-                    formStatus.style.display = 'block';
-                    if (result.success) {
-                        window.dataLayer = window.dataLayer || [];
-                        window.dataLayer.push({ event: 'form_submission', service: 'painting', source: 'organic' });
-                        formStatus.innerHTML = '<div style="background: #d4edda; color: #155724; padding: 15px; border-radius: 8px;"><strong>Success!</strong> ' + result.message + '</div>';
-                        contactForm.reset();
-                    } else {
-                        formStatus.innerHTML = '<div style="background: #f8d7da; color: #721c24; padding: 15px; border-radius: 8px;"><strong>Error:</strong> ' + result.error + '</div>';
-                    }
-                } catch (error) {
-                    formStatus.style.display = 'block';
-                    formStatus.innerHTML = '<div style="background: #f8d7da; color: #721c24; padding: 15px; border-radius: 8px;"><strong>Error:</strong> Connection error. Please try again.</div>';
+        // FAQ Accordion
+        document.querySelectorAll('.faq-question').forEach(function(btn) {
+            btn.addEventListener('click', function() {
+                var item = this.parentElement;
+                var wasActive = item.classList.contains('active');
+                document.querySelectorAll('.faq-item').forEach(function(i) {
+                    i.classList.remove('active');
+                    i.querySelector('.faq-question').setAttribute('aria-expanded', 'false');
+                });
+                if (!wasActive) {
+                    item.classList.add('active');
+                    this.setAttribute('aria-expanded', 'true');
                 }
-                submitBtn.disabled = false;
-                submitBtn.textContent = originalText;
-            });
-        }
-
-        // Smooth scroll
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
-                const targetId = this.getAttribute('href');
-                if (targetId === '#') { e.preventDefault(); window.scrollTo({ top: 0, behavior: 'smooth' }); return; }
-                const target = document.querySelector(targetId);
-                if (target) { e.preventDefault(); window.scrollTo({ top: target.offsetTop - 100, behavior: 'smooth' }); }
             });
         });
 
-        // Lightbox functions
-        function openLightbox(element) {
-            const img = element.querySelector('img');
-            const lightbox = document.getElementById('lightbox');
-            const lightboxImg = document.getElementById('lightbox-img');
+        // Gallery lightbox (images only for painting)
+        document.querySelectorAll('.gallery-scroll-item').forEach(function(item) {
+            item.addEventListener('click', function() {
+                var img = this.querySelector('img');
+                var lightbox = document.getElementById('lightbox');
+                var lightboxImg = document.getElementById('lightbox-img');
+                lightboxImg.src = img.src;
+                lightboxImg.alt = img.alt;
+                lightbox.classList.add('active');
+                document.body.style.overflow = 'hidden';
+            });
+        });
 
-            lightboxImg.src = img.src;
-            lightboxImg.alt = img.alt;
-            lightbox.classList.add('active');
-            document.body.style.overflow = 'hidden';
-        }
-
-        function closeLightbox(event) {
-            // Close if clicking the background or close button, not the image
-            if (event.target.id === 'lightbox' || event.target.classList.contains('lightbox-close')) {
-                const lightbox = document.getElementById('lightbox');
-                lightbox.classList.remove('active');
+        document.getElementById('lightbox').addEventListener('click', function(e) {
+            if (e.target === this || e.target.classList.contains('lightbox-close')) {
+                this.classList.remove('active');
                 document.body.style.overflow = '';
             }
-        }
+        });
 
-        // Close lightbox with Escape key
         document.addEventListener('keydown', function(e) {
             if (e.key === 'Escape') {
-                const lightbox = document.getElementById('lightbox');
+                var lightbox = document.getElementById('lightbox');
                 if (lightbox.classList.contains('active')) {
                     lightbox.classList.remove('active');
                     document.body.style.overflow = '';
                 }
             }
         });
+
+        var scrollTopBtn = document.getElementById('scrollTop');
+        window.addEventListener('scroll', function() {
+            scrollTopBtn.classList.toggle('visible', window.scrollY > 300);
+        }, { passive: true });
+
+        document.querySelectorAll('a[href^="#"]').forEach(function(anchor) {
+            anchor.addEventListener('click', function(e) {
+                var targetId = this.getAttribute('href');
+                if (targetId === '#') { e.preventDefault(); window.scrollTo({ top: 0, behavior: 'smooth' }); return; }
+                var target = document.querySelector(targetId);
+                if (target) { e.preventDefault(); window.scrollTo({ top: target.getBoundingClientRect().top + window.pageYOffset - 100, behavior: 'smooth' }); }
+            });
+        });
     </script>
+
+    <script src="js/form-validation.js" defer></script>
 </body>
 </html>
