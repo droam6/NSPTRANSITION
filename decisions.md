@@ -325,3 +325,35 @@ Timestamp: PAGE_LOAD_TIME vs submission time, reject if < 3000ms
 **Trade-offs:**
 - Mobile users see an abrupt slide change rather than a smooth fade
 - Desktop retains the original crossfade behaviour (desktop media query is unaffected)
+
+---
+
+## D18: Visual Redesign — Bosland-Inspired Design System (v2)
+
+**Decision:** Rewrite the entire CSS design system to follow the visual language of the Bosland Properties site (https://github.com/droam6/bosland-properties-site), adapted to NSP's brand colours.
+
+**What changed:**
+- **Fonts:** Montserrat + Open Sans → **DM Serif Display** (headings) + **DM Sans** (body). DM Serif is a modern serif that conveys premium quality; DM Sans pairs cleanly for body text. Matches the Bosland aesthetic exactly.
+- **Gold accent:** #D4A853 → **#C19A6B** (warmer, more muted gold — closer to Bosland's #C9A96E)
+- **Background:** Pure white → **#FAFAF8 cream / #FDFCFA warm-white** (subtle warmth, less clinical)
+- **Body text colour:** Navy → **#71706E muted** for body copy (softer contrast, editorial feel)
+- **Section pattern:** Added Bosland-style section labels (11px uppercase gold, 0.3em tracking) above section titles
+- **Services layout:** Added editorial numbered list layout alongside bento grid
+- **Trust bar:** Stats section with gold-bordered dark background
+- **Navigation:** Refined to match Bosland (transparent→opaque with backdrop-blur, gold-bordered CTA)
+- **Forms:** Transparent bg inputs, cream border, gold focus state (dark sections); light variant for cream sections
+- **Footer:** Darker navy-dark (#12121F), 4-column grid, gold category labels
+- **New components:** FAQ accordion, process steps, gallery/lightbox, CTA banners, service hero, Google rating badge
+- **All existing class names preserved** — `.navbar`, `.mobile-menu`, `.hero-slideshow`, `.section`, `.form-group`, `.blog-card`, etc. all still work
+
+**Rationale:**
+- Bosland's editorial aesthetic (serif headings, muted palette, generous whitespace, numbered services) feels upmarket — aligned with North Shore Sydney's demographic
+- The Bosland site is a proven design for a local professional services business targeting the same geographic area
+- Keeping class names identical means no HTML changes are needed for the CSS swap — pages degrade gracefully until HTML is rebuilt
+- The serif heading + sans body pairing differentiates NSP from the typical all-sans-serif trades business website
+
+**Trade-offs:**
+- HTML pages still load Montserrat + Open Sans via Google Fonts CDN — fonts will fall back to Georgia/Helvetica until `<link>` tags are updated
+- Gold colour change (#D4A853 → #C19A6B) means any inline styles or landing page CSS using the old gold will be visually inconsistent
+- DM Serif Display is a display font — may not be ideal at very small sizes (below 16px). Body text uses DM Sans to avoid this
+- CSS grew from ~1,400 to ~2,900 lines — more component styles for the richer visual system

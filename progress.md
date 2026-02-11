@@ -1,6 +1,6 @@
 # North Shore Projects — Progress Tracker
 
-> Last updated: 2026-02-10
+> Last updated: 2026-02-11
 
 ---
 
@@ -130,6 +130,26 @@ Chatswood, Killara, Gordon, Pymble, Turramurra, Lindfield, Roseville, St Ives, W
 | Hamburger double-toggle bug | Done | Removed duplicate inline `onclick` — only `addEventListener` handler remains |
 | Horizontal overflow fix | Done | Added `html { overflow-x: hidden; }` to prevent AOS fade-left/right from causing scroll |
 | contact.html mobile menu parity | Done | Added `mobile-menu` class + inline `<style>` block for contact page (uses different nav implementation) |
+
+---
+
+## Phase 10: Bosland-Inspired Visual Redesign (v2) — IN PROGRESS
+
+| Item | Status | Notes |
+|------|--------|-------|
+| CSS design system rewrite (`css/styles.css`) | Done | 2,885 lines. Full Bosland-style adaptation: DM Serif Display + DM Sans fonts, gold #C19A6B, cream #FAFAF8 backgrounds, editorial section labels, numbered services, trust bar, FAQ accordion, gallery/lightbox, dark contact section |
+| All existing class names preserved | Done | `.navbar`, `.mobile-menu`, `.hero-slideshow`, `.section`, `.form-group`, `.blog-card`, `.footer`, etc. — HTML pages continue to render |
+| New component styles added | Done | `.trust-bar`, `.bento-card`, `.service-item` (numbered), `.why-card`, `.process-card`, `.faq-item`, `.gallery-scroll`, `.lightbox`, `.google-rating`, `.form-wrapper` |
+| Light/dark form variants | Done | Dark (default) and `.form-light` variants with appropriate colors, placeholders, select arrows |
+| Service page hero/description | Done | `.service-hero` with overlay, `.service-description` two-column layout, `.service-sidebar` |
+| Minified CSS (`css/styles.min.css`) | Remaining | Must re-minify after CSS changes |
+| Google Fonts `<link>` update | Remaining | HTML pages still load Montserrat + Open Sans — need DM Serif Display + DM Sans |
+| Homepage HTML rebuild | Remaining | Will be done page-by-page |
+| Service pages HTML rebuild | Remaining | tiling.html, painting.html, cleaning.html |
+| Contact page HTML rebuild | Remaining | contact.html |
+| Suburb pages HTML update | Remaining | 51 suburb pages need font links + any class changes |
+| Blog pages HTML update | Remaining | Blog listing + 5 posts |
+| Landing pages CSS update | Remaining | Inline CSS on landing pages uses old gold #D4A853 |
 
 ---
 
