@@ -143,8 +143,8 @@ Chatswood, Killara, Gordon, Pymble, Turramurra, Lindfield, Roseville, St Ives, W
 | Light/dark form variants | Done | Dark (default) and `.form-light` variants with appropriate colors, placeholders, select arrows |
 | Service page hero/description | Done | `.service-hero` with overlay, `.service-description` two-column layout, `.service-sidebar` |
 | Minified CSS (`css/styles.min.css`) | Remaining | Must re-minify after CSS changes |
-| Google Fonts `<link>` update | Remaining | HTML pages still load Montserrat + Open Sans — need DM Serif Display + DM Sans |
-| Homepage HTML rebuild | Remaining | Will be done page-by-page |
+| Google Fonts `<link>` update | Partial | index.html updated to DM Serif Display + DM Sans — remaining pages still load Montserrat + Open Sans |
+| Homepage HTML rebuild | Done | Full Bosland-style rebuild: DM Serif Display + DM Sans fonts, editorial numbered services, trust bar with stats, section labels, FAQ accordion, service areas grid (17 suburbs), blog preview, dark contact section with Google rating, scroll indicator, skip-link, form-validation.js integration, all empty tel:/mailto: links fixed, removals → external partner |
 | Service pages HTML rebuild | Remaining | tiling.html, painting.html, cleaning.html |
 | Contact page HTML rebuild | Remaining | contact.html |
 | Suburb pages HTML update | Remaining | 51 suburb pages need font links + any class changes |
