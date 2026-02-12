@@ -4,3 +4,5 @@ north-shore-projects/
 nul
 .DS_Store
 *.log
+package.json
+package-lock.json
