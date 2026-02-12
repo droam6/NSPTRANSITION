@@ -24,72 +24,72 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
   <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Open+Sans:wght@400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet">
 
   <!-- Font Awesome 6 -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer">
 
   <style>
     *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
-    body { font-family: 'Open Sans', Arial, sans-serif; color: #e0e0e0; background: #1a1a2e; line-height: 1.6; -webkit-font-smoothing: antialiased; }
-    h1, h2, h3 { font-family: 'Montserrat', Arial, sans-serif; }
+    body { font-family: 'DM Sans', 'Helvetica Neue', Arial, sans-serif; color: #e0e0e0; background: #1a1a2e; line-height: 1.6; -webkit-font-smoothing: antialiased; }
+    h1, h2, h3 { font-family: 'DM Serif Display', Georgia, serif; font-weight: 400; }
 
     /* Top Bar */
-    .top-bar { background: #D4A853; text-align: center; padding: 10px 16px; }
-    .top-bar a { color: #1a1a2e; font-family: 'Montserrat', Arial, sans-serif; font-weight: 700; font-size: 1.05rem; text-decoration: none; letter-spacing: 0.5px; }
+    .top-bar { background: #C19A6B; text-align: center; padding: 10px 16px; }
+    .top-bar a { color: #1a1a2e; font-family: 'DM Sans', 'Helvetica Neue', Arial, sans-serif; font-weight: 700; font-size: 1.05rem; text-decoration: none; letter-spacing: 0.5px; }
     .top-bar a i { margin-right: 6px; }
 
     /* Hero */
     .hero { max-width: 1100px; margin: 0 auto; padding: 40px 20px 50px; display: grid; grid-template-columns: 1fr 420px; gap: 40px; align-items: start; }
 
     /* Left Content */
-    .hero-content h1 { font-size: 2rem; font-weight: 700; color: #fff; line-height: 1.25; margin-bottom: 14px; }
-    .hero-content h1 span { color: #D4A853; }
+    .hero-content h1 { font-size: 2rem; color: #fff; line-height: 1.25; margin-bottom: 14px; }
+    .hero-content h1 span { color: #C19A6B; }
     .hero-subtitle { font-size: 1.05rem; color: #c0c0c0; margin-bottom: 24px; }
 
     /* Trust Badges */
     .trust-badges { display: inline-flex; gap: 16px; flex-wrap: wrap; margin-bottom: 24px; }
-    .trust-badge { display: flex; align-items: center; gap: 8px; background: rgba(212,168,83,0.1); border: 1px solid rgba(212,168,83,0.25); border-radius: 6px; padding: 8px 14px; font-size: 0.85rem; color: #fff; }
-    .trust-badge i { color: #D4A853; font-size: 1rem; }
+    .trust-badge { display: flex; align-items: center; gap: 8px; background: rgba(193,154,107,0.1); border: 1px solid rgba(193,154,107,0.25); border-radius: 0; padding: 8px 14px; font-size: 0.85rem; color: #fff; }
+    .trust-badge i { color: #C19A6B; font-size: 1rem; }
 
     /* Bullets */
     .benefits-list { list-style: none; margin-bottom: 24px; }
     .benefits-list li { padding: 6px 0; font-size: 0.95rem; color: #d0d0d0; }
-    .benefits-list li i { color: #D4A853; margin-right: 10px; width: 16px; text-align: center; }
+    .benefits-list li i { color: #C19A6B; margin-right: 10px; width: 16px; text-align: center; }
 
     /* Google Rating */
-    .google-rating { display: flex; align-items: center; gap: 10px; margin-bottom: 24px; background: rgba(255,255,255,0.05); border-radius: 8px; padding: 12px 16px; }
-    .google-rating .stars { color: #D4A853; font-size: 1rem; letter-spacing: 1px; }
+    .google-rating { display: flex; align-items: center; gap: 10px; margin-bottom: 24px; background: rgba(255,255,255,0.05); border-radius: 0; padding: 12px 16px; }
+    .google-rating .stars { color: #C19A6B; font-size: 1rem; letter-spacing: 1px; }
     .google-rating .rating-text { font-size: 0.9rem; color: #c0c0c0; }
     .google-rating .rating-text strong { color: #fff; }
 
     /* Testimonial */
-    .testimonial { background: rgba(255,255,255,0.04); border-left: 3px solid #D4A853; border-radius: 0 8px 8px 0; padding: 16px 18px; margin-bottom: 10px; }
+    .testimonial { background: rgba(255,255,255,0.04); border-left: 3px solid #C19A6B; border-radius: 0; padding: 16px 18px; margin-bottom: 10px; }
     .testimonial p { font-size: 0.9rem; color: #c8c8c8; font-style: italic; margin-bottom: 8px; line-height: 1.55; }
-    .testimonial cite { font-size: 0.82rem; color: #D4A853; font-style: normal; font-weight: 600; }
+    .testimonial cite { font-size: 0.82rem; color: #C19A6B; font-style: normal; font-weight: 600; }
 
     /* Form Box */
-    .form-box { background: #fff; border-radius: 12px; padding: 30px 28px; box-shadow: 0 8px 32px rgba(0,0,0,0.35); }
+    .form-box { background: #fff; border-radius: 0; padding: 30px 28px; box-shadow: 0 8px 32px rgba(0,0,0,0.35); }
     .form-box h3 { font-size: 1.35rem; color: #1a1a2e; text-align: center; margin-bottom: 4px; }
     .form-box .form-subtitle { text-align: center; font-size: 0.85rem; color: #666; margin-bottom: 20px; }
     .form-group { margin-bottom: 14px; }
-    .form-group label { display: block; font-size: 0.82rem; font-weight: 600; color: #333; margin-bottom: 4px; font-family: 'Montserrat', Arial, sans-serif; }
+    .form-group label { display: block; font-size: 0.82rem; font-weight: 600; color: #333; margin-bottom: 4px; font-family: 'DM Sans', 'Helvetica Neue', Arial, sans-serif; }
     .form-group input,
     .form-group select,
-    .form-group textarea { width: 100%; padding: 10px 12px; border: 1px solid #d0d0d0; border-radius: 6px; font-size: 0.92rem; font-family: 'Open Sans', Arial, sans-serif; color: #333; background: #fafafa; transition: border-color 0.2s; }
+    .form-group textarea { width: 100%; padding: 10px 12px; border: 1px solid #d0d0d0; border-radius: 0; font-size: 0.92rem; font-family: 'DM Sans', 'Helvetica Neue', Arial, sans-serif; color: #333; background: #fafafa; transition: border-color 0.2s; }
     .form-group input:focus,
     .form-group select:focus,
-    .form-group textarea:focus { outline: none; border-color: #D4A853; background: #fff; }
+    .form-group textarea:focus { outline: none; border-color: #C19A6B; background: #fff; }
     .form-group textarea { height: 70px; resize: vertical; }
     .form-group select { cursor: pointer; }
 
-    .btn-submit { display: block; width: 100%; padding: 14px; background: #D4A853; color: #1a1a2e; border: none; border-radius: 6px; font-family: 'Montserrat', Arial, sans-serif; font-size: 1.05rem; font-weight: 700; cursor: pointer; transition: background 0.2s; letter-spacing: 0.3px; }
-    .btn-submit:hover { background: #c4983f; }
+    .btn-submit { display: block; width: 100%; padding: 14px; background: #C19A6B; color: #1a1a2e; border: none; border-radius: 0; font-family: 'DM Sans', 'Helvetica Neue', Arial, sans-serif; font-size: 1.05rem; font-weight: 700; cursor: pointer; transition: background 0.2s; letter-spacing: 0.3px; }
+    .btn-submit:hover { background: #A88455; }
 
     .form-call { text-align: center; margin-top: 12px; font-size: 0.9rem; color: #555; }
     .form-call a { color: #1a1a2e; font-weight: 600; text-decoration: none; }
-    .form-call a:hover { color: #D4A853; }
-    .form-call i { margin-right: 4px; color: #D4A853; }
+    .form-call a:hover { color: #C19A6B; }
+    .form-call i { margin-right: 4px; color: #C19A6B; }
     .form-trust { text-align: center; margin-top: 10px; font-size: 0.75rem; color: #999; }
     .form-trust i { margin-right: 4px; }
 
@@ -260,7 +260,7 @@
       <div class="form-success" id="form-success">
         <i class="fas fa-check-circle"></i>
         <h3>Thank You!</h3>
-        <p>We've received your enquiry and will get back to you within 2 hours. If urgent, call us at <a href="tel:0433333332" style="color:#D4A853;font-weight:600;">0433 333 332</a>.</p>
+        <p>We've received your enquiry and will get back to you within 2 hours. If urgent, call us at <a href="tel:0433333332" style="color:#C19A6B;font-weight:600;">0433 333 332</a>.</p>
       </div>
     </div>
 

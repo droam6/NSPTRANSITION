@@ -1,6 +1,6 @@
 # North Shore Projects — Progress Tracker
 
-> Last updated: 2026-02-12
+> Last updated: 2026-02-12 (Phase 10 complete — all 65 pages rebuilt)
 
 ---
 
@@ -133,7 +133,7 @@ Chatswood, Killara, Gordon, Pymble, Turramurra, Lindfield, Roseville, St Ives, W
 
 ---
 
-## Phase 10: Bosland-Inspired Visual Redesign (v2) — IN PROGRESS
+## Phase 10: Bosland-Inspired Visual Redesign (v2) — COMPLETE (except CSS minification)
 
 | Item | Status | Notes |
 |------|--------|-------|
@@ -143,13 +143,13 @@ Chatswood, Killara, Gordon, Pymble, Turramurra, Lindfield, Roseville, St Ives, W
 | Light/dark form variants | Done | Dark (default) and `.form-light` variants with appropriate colors, placeholders, select arrows |
 | Service page hero/description | Done | `.service-hero` with overlay, `.service-description` two-column layout, `.service-sidebar` |
 | Minified CSS (`css/styles.min.css`) | Remaining | Must re-minify after CSS changes |
-| Google Fonts `<link>` update | Partial | index.html + 4 service pages updated to DM Serif Display + DM Sans — suburb/blog/landing/contact pages still load Montserrat + Open Sans |
+| Google Fonts `<link>` update | Partial | index.html + 4 service pages + contact + 6 blog + 3 landing pages updated to DM Serif Display + DM Sans — 51 suburb pages still load Montserrat + Open Sans |
 | Homepage HTML rebuild | Done | Full Bosland-style rebuild: DM Serif Display + DM Sans fonts, editorial numbered services, trust bar with stats, section labels, FAQ accordion, service areas grid (17 suburbs), blog preview, dark contact section with Google rating, scroll indicator, skip-link, form-validation.js integration, all empty tel:/mailto: links fixed, removals → external partner |
 | Service pages HTML rebuild | Done | tiling.html (843 lines), painting.html (806 lines), cleaning.html (748 lines), removals.html (686 lines). All rebuilt with: hreflang, Twitter Card, og:locale, skip link, DM Serif+DM Sans, FA 6.5.1 SRI, AOS jsdelivr try-catch, enhanced JSON-LD (HomeAndConstructionBusiness, email, hours, rating), Bosland nav with Blog link + removals→external, mobile menu with close button (addEventListener), section labels, trust bar stats, numbered process steps (dark bg), FAQ accordion (5 Qs each), CTA banner, dark contact section with gold-line + Google rating, form action="/api/contact" + form-validation.js, Popular Areas footer, fixed empty tel:/mailto: links. Tiling/painting have real image galleries; cleaning/removals have placeholders. Cleaning has 17 suburb links + 1 blog post. Removals has no suburb links (per D04) and no blog posts. |
 | Contact page HTML rebuild | Done | contact.html rebuilt: replaced old `.nav`/`.nav-toggle` structure with `.navbar`/`.navbar-toggle`, removed inline `<style>` mobile menu block, DM Serif+DM Sans fonts, AOS added, service hero header, trust bar, Bosland dark contact section with gold-line + Google rating, form with service/suburb selects + action="/api/contact", map placeholder preserved, FAQ section (5 general Qs), CTA banner, updated footer, suburb dropdown expanded to 17 suburbs, all inline handlers removed |
-| Suburb pages HTML update | Remaining | 51 suburb pages need font links + any class changes |
-| Blog pages HTML update | Remaining | Blog listing + 5 posts |
-| Landing pages CSS update | Remaining | Inline CSS on landing pages uses old gold #D4A853 |
+| Suburb pages HTML rebuild | Done | All 51 suburb pages (17 tiling + 17 painting + 17 cleaning) rebuilt with Bosland navbar, mobile menu, footer, DM Serif Display + DM Sans fonts, AOS, section labels, FAQ accordion, CTA banner, scroll-to-top, mobile call button |
+| Blog pages HTML update | Done | Blog listing + 5 article pages rebuilt with Bosland navbar, mobile menu, footer, AOS, section labels, scroll-to-top, mobile call button. Service-specific footer emails (tiling→northshoretiling8, painting→northshorepainting88, cleaning→northshorecleaning8). Blog listing cards fixed to point to correct files. |
+| Landing pages CSS update | Done | All 3 landing pages rebuilt with Bosland-style inline CSS: DM Serif Display + DM Sans fonts, gold #C19A6B, border-radius: 0, font-weight: 400 headings |
 
 ---
 
