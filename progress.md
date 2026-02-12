@@ -133,7 +133,7 @@ Chatswood, Killara, Gordon, Pymble, Turramurra, Lindfield, Roseville, St Ives, W
 
 ---
 
-## Phase 10: Bosland-Inspired Visual Redesign (v2) — COMPLETE (except CSS minification)
+## Phase 10: Bosland-Inspired Visual Redesign (v2) — COMPLETE
 
 | Item | Status | Notes |
 |------|--------|-------|
@@ -142,7 +142,7 @@ Chatswood, Killara, Gordon, Pymble, Turramurra, Lindfield, Roseville, St Ives, W
 | New component styles added | Done | `.trust-bar`, `.bento-card`, `.service-item` (numbered), `.why-card`, `.process-card`, `.faq-item`, `.gallery-scroll`, `.lightbox`, `.google-rating`, `.form-wrapper` |
 | Light/dark form variants | Done | Dark (default) and `.form-light` variants with appropriate colors, placeholders, select arrows |
 | Service page hero/description | Done | `.service-hero` with overlay, `.service-description` two-column layout, `.service-sidebar` |
-| Minified CSS (`css/styles.min.css`) | Remaining | Must re-minify after CSS changes |
+| Minified CSS (`css/styles.min.css`) | Done | Re-minified via csso-cli: 61.8KB → 44.1KB (29% reduction). Note: all HTML pages reference `styles.css` directly, not the minified version |
 | Google Fonts `<link>` update | Partial | index.html + 4 service pages + contact + 6 blog + 3 landing pages updated to DM Serif Display + DM Sans — 51 suburb pages still load Montserrat + Open Sans |
 | Homepage HTML rebuild | Done | Full Bosland-style rebuild: DM Serif Display + DM Sans fonts, editorial numbered services, trust bar with stats, section labels, FAQ accordion, service areas grid (17 suburbs), blog preview, dark contact section with Google rating, scroll indicator, skip-link, form-validation.js integration, all empty tel:/mailto: links fixed, removals → external partner |
 | Service pages HTML rebuild | Done | tiling.html (843 lines), painting.html (806 lines), cleaning.html (748 lines), removals.html (686 lines). All rebuilt with: hreflang, Twitter Card, og:locale, skip link, DM Serif+DM Sans, FA 6.5.1 SRI, AOS jsdelivr try-catch, enhanced JSON-LD (HomeAndConstructionBusiness, email, hours, rating), Bosland nav with Blog link + removals→external, mobile menu with close button (addEventListener), section labels, trust bar stats, numbered process steps (dark bg), FAQ accordion (5 Qs each), CTA banner, dark contact section with gold-line + Google rating, form action="/api/contact" + form-validation.js, Popular Areas footer, fixed empty tel:/mailto: links. Tiling/painting have real image galleries; cleaning/removals have placeholders. Cleaning has 17 suburb links + 1 blog post. Removals has no suburb links (per D04) and no blog posts. |
