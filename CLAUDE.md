@@ -1,5 +1,9 @@
 # North Shore Projects — Website Documentation
 
+## Local Path
+- **Mac:** `~/Desktop/NSP/NSP-Website-Building/NORTH-SHORE-PROJECTS`
+- **Windows:** *(to be updated)*
+
 ## Business
 - **Name:** North Shore Projects
 - **Domain:** https://northshoreprojects.com.au
