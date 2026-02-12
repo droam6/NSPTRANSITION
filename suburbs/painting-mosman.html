@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en-AU" dir="ltr">
+<html lang="en" hreflang="en-AU">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,7 +9,6 @@
     <title>Painting Mosman | Licensed &amp; Insured | North Shore Projects</title>
     <meta name="description" content="Premium painter in Mosman for luxury harbourside mansions, period home restoration and heritage colours. Dulux and Haymes paints. Licensed, insured. Free quote.">
     <link rel="canonical" href="https://northshoreprojects.com.au/suburbs/painting-mosman.html">
-    <link rel="alternate" hreflang="en-AU" href="https://northshoreprojects.com.au/suburbs/painting-mosman.html">
 
     <!-- Open Graph -->
     <meta property="og:title" content="Painting Mosman | Licensed &amp; Insured | North Shore Projects">
@@ -17,6 +16,8 @@
     <meta property="og:image" content="https://northshoreprojects.com.au/images/og-painting.jpg">
     <meta property="og:url" content="https://northshoreprojects.com.au/suburbs/painting-mosman.html">
     <meta property="og:type" content="website">
+    <meta property="og:site_name" content="North Shore Projects">
+    <meta property="og:locale" content="en_AU">
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
@@ -24,122 +25,116 @@
     <meta name="twitter:description" content="Premium painter in Mosman for luxury harbourside mansions, period home restoration and heritage colours. Dulux and Haymes paints. Licensed, insured. Free quote.">
     <meta name="twitter:image" content="https://northshoreprojects.com.au/images/og-painting.jpg">
 
-    <!-- Preconnect -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
-
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
-
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-
-    <!-- Stylesheet -->
-    <link rel="stylesheet" href="../css/styles.min.css">
-
-    <!-- Sitemap -->
+    <link rel="alternate" hreflang="en-AU" href="https://northshoreprojects.com.au/suburbs/painting-mosman.html">
     <link rel="sitemap" type="application/xml" href="/sitemap.xml">
 
-    <!-- JSON-LD: Service Schema -->
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "Service",
-        "serviceType": "Painting",
-        "name": "Painting Services in Mosman",
-        "description": "Premium painting services for luxury harbourside homes in Mosman. Period home restoration, heritage colour consultation, detailed exterior work, and premium Dulux and Haymes paints.",
-        "provider": {
-            "@type": "LocalBusiness",
-            "name": "North Shore Projects",
-            "telephone": "0433 333 332",
-            "email": "northshorepainting88@gmail.com",
-            "url": "https://northshoreprojects.com.au",
-            "image": "https://northshoreprojects.com.au/images/og-painting.jpg",
-            "address": {
-                "@type": "PostalAddress",
-                "addressRegion": "NSW",
-                "addressCountry": "AU"
-            },
-            "openingHoursSpecification": [
-                {
-                    "@type": "OpeningHoursSpecification",
-                    "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
-                    "opens": "07:00",
-                    "closes": "18:00"
-                }
-            ],
-            "aggregateRating": {
-                "@type": "AggregateRating",
-                "ratingValue": "4.9",
-                "reviewCount": "87"
-            },
-            "areaServed": {
-                "@type": "City",
-                "name": "Mosman"
-            }
-        }
-    }
-    </script>
+    <!-- Fonts: DM Serif Display + DM Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet">
 
-    <!-- JSON-LD: LocalBusiness Schema -->
+    <!-- Font Awesome 6.5.1 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer">
+
+    <!-- AOS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css">
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="../css/styles.css">
+
+    <!-- JSON-LD Structured Data -->
     <script type="application/ld+json">
     {
-        "@context": "https://schema.org",
-        "@type": "LocalBusiness",
-        "name": "North Shore Projects",
-        "telephone": "0433 333 332",
-        "email": "northshorepainting88@gmail.com",
-        "url": "https://northshoreprojects.com.au",
-        "image": "https://northshoreprojects.com.au/images/og-painting.jpg",
-        "address": {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Service",
+          "name": "Painting Services in Mosman",
+          "serviceType": "Painting Service",
+          "provider": {"@type": "HomeAndConstructionBusiness", "name": "North Shore Projects"},
+          "areaServed": {"@type": "City", "name": "Mosman, NSW, Australia"},
+          "description": "Premium painting services for luxury harbourside homes in Mosman. Period home restoration, heritage colour consultation, detailed exterior work, and premium Dulux and Haymes paints."
+        },
+        {
+          "@type": "HomeAndConstructionBusiness",
+          "name": "North Shore Projects",
+          "telephone": "+61433333332",
+          "email": "northshorepainting88@gmail.com",
+          "url": "https://northshoreprojects.com.au",
+          "image": "https://northshoreprojects.com.au/images/og-painting.jpg",
+          "areaServed": {"@type": "City", "name": "Mosman, NSW, Australia"},
+          "openingHoursSpecification": {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],
+            "opens": "07:00",
+            "closes": "18:00"
+          },
+          "address": {
             "@type": "PostalAddress",
+            "addressLocality": "Mosman",
             "addressRegion": "NSW",
             "addressCountry": "AU"
-        },
-        "openingHoursSpecification": [
-            {
-                "@type": "OpeningHoursSpecification",
-                "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
-                "opens": "07:00",
-                "closes": "18:00"
-            }
-        ],
-        "aggregateRating": {
-            "@type": "AggregateRating",
-            "ratingValue": "4.9",
-            "reviewCount": "87"
-        },
-        "areaServed": {
-            "@type": "City",
-            "name": "Mosman"
+          },
+          "aggregateRating": {"@type": "AggregateRating", "ratingValue": "4.9", "reviewCount": "87"}
         }
+      ]
     }
     </script>
 </head>
 <body>
     <!-- GTM NOSCRIPT -->
 
+    <!-- SKIP LINK -->
     <a href="#main" class="skip-link">Skip to main content</a>
 
-    <!-- Navigation -->
-    <nav class="nav" aria-label="Main navigation">
-        <div class="nav-inner">
-            <a href="../index.html" class="nav-logo" aria-label="North Shore Projects home">
-                <span class="nav-logo-text">North Shore <span>Projects</span></span>
+    <!-- ============================================================
+         NAVIGATION
+         ============================================================ -->
+    <nav class="navbar scrolled" id="navbar">
+        <div class="navbar-inner">
+            <a href="../index.html" class="navbar-logo">
+                <div class="navbar-logo-icon">NSP</div>
+                <span>North Shore Projects</span>
             </a>
-            <div class="nav-links">
-                <a href="../index.html">Home</a>
-                <a href="../tiling.html">Tiling</a>
-                <a href="../painting.html" class="active">Painting</a>
-                <a href="../cleaning.html">Cleaning</a>
-                <a href="../blog/index.html">Blog</a>
-                <a href="../contact.html">Contact</a>
+
+            <ul class="navbar-nav">
+                <li class="dropdown">
+                    <a href="../index.html#services">Services
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="12" height="12"><path d="m6 9 6 6 6-6"/></svg>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a href="../tiling.html">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+                            Tiling
+                        </a></li>
+                        <li><a href="../painting.html">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M19 3H5a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2z"/><path d="M12 11v8"/><path d="M8 15h8"/></svg>
+                            Painting
+                        </a></li>
+                        <li><a href="https://northshoreremovals.com/" target="_blank" rel="noopener noreferrer">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+                            Removals
+                        </a></li>
+                        <li><a href="../cleaning.html">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2v4"/><path d="m6.34 6.34 2.83 2.83"/><path d="M2 12h4"/><path d="m6.34 17.66 2.83-2.83"/><path d="M12 18v4"/><path d="m17.66 17.66-2.83-2.83"/><path d="M18 12h4"/><path d="m17.66 6.34-2.83 2.83"/></svg>
+                            Cleaning
+                        </a></li>
+                    </ul>
+                </li>
+                <li><a href="../index.html#process">How It Works</a></li>
+                <li><a href="../index.html#why-us">Why Us</a></li>
+                <li><a href="../blog/">Blog</a></li>
+                <li><a href="../index.html#faq">FAQ</a></li>
+            </ul>
+
+            <div class="navbar-actions">
+                <a href="https://www.instagram.com/northshore.painting" target="_blank" rel="noopener noreferrer" class="navbar-instagram-link" aria-label="Follow us on Instagram">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="#enquiry" class="btn btn-primary">Get a Quote</a>
             </div>
-            <div class="nav-cta">
-                <a href="#contact" class="btn btn-primary btn-sm">Get Free Quote</a>
-            </div>
-            <button class="nav-toggle" aria-label="Toggle mobile menu" aria-expanded="false">
+
+            <button class="navbar-toggle" id="navbarToggle" aria-label="Toggle menu">
                 <span></span>
                 <span></span>
                 <span></span>
@@ -147,208 +142,475 @@
         </div>
     </nav>
 
-    <!-- Mobile Menu -->
-    <div class="nav-mobile" aria-label="Mobile navigation">
-        <a href="../index.html">Home</a>
-        <a href="../tiling.html">Tiling</a>
-        <a href="../painting.html" class="active">Painting</a>
-        <a href="../cleaning.html">Cleaning</a>
-        <a href="../blog/index.html">Blog</a>
-        <a href="../contact.html">Contact</a>
-        <a href="#contact" class="btn btn-primary">Get Free Quote</a>
+    <!-- ============================================================
+         MOBILE MENU
+         ============================================================ -->
+    <div class="mobile-menu" id="mobileMenu">
+        <button class="mobile-menu-close" type="button" aria-label="Close menu">&times;</button>
+        <nav class="mobile-menu-nav">
+            <div class="mobile-menu-group">
+                <a href="../index.html" class="mobile-menu-link">Home</a>
+            </div>
+            <div class="mobile-menu-group">
+                <span class="mobile-menu-label">Services</span>
+                <a href="../tiling.html" class="mobile-menu-link">Tiling</a>
+                <a href="../painting.html" class="mobile-menu-link">Painting</a>
+                <a href="../cleaning.html" class="mobile-menu-link">Cleaning</a>
+                <a href="https://northshoreremovals.com/" target="_blank" rel="noopener noreferrer" class="mobile-menu-link">Removals</a>
+            </div>
+            <div class="mobile-menu-group">
+                <a href="../index.html#process" class="mobile-menu-link">How It Works</a>
+                <a href="../index.html#why-us" class="mobile-menu-link">Why Us</a>
+                <a href="../blog/" class="mobile-menu-link">Blog</a>
+                <a href="../index.html#faq" class="mobile-menu-link">FAQ</a>
+            </div>
+            <div class="mobile-menu-group">
+                <a href="tel:+61433333332" class="mobile-menu-link mobile-menu-phone">&#x1F4DE; 0433 333 332</a>
+                <a href="https://www.instagram.com/northshore.painting" target="_blank" rel="noopener noreferrer" class="mobile-menu-link"><i class="fab fa-instagram"></i> Instagram</a>
+            </div>
+            <a href="#enquiry" class="mobile-menu-cta-btn">Get a Quote</a>
+        </nav>
     </div>
 
-    <!-- Main Content -->
+    <!-- ============================================================
+         SERVICE HERO
+         ============================================================ -->
+    <section class="service-hero" style="min-height: 45vh;">
+        <div class="service-hero-bg" style="background-image: url('https://images.unsplash.com/photo-1589939705384-5185137a7f0f?w=1920&q=80');"></div>
+        <div class="service-hero-content">
+            <span class="section-label" data-aos="fade-up">Painting Services</span>
+            <h1 data-aos="fade-up" data-aos-delay="100">Painting in Mosman</h1>
+            <p data-aos="fade-up" data-aos-delay="200">Premium painting for luxury harbourside mansions, period homes and heritage properties in Mosman.</p>
+            <nav class="breadcrumb" aria-label="Breadcrumb navigation" data-aos="fade-up" data-aos-delay="300" style="margin-top: 1rem;">
+                <a href="../index.html" style="color: rgba(250,250,248,0.7);">Home</a> &raquo;
+                <a href="../painting.html" style="color: rgba(250,250,248,0.7);">Painting</a> &raquo;
+                <span style="color: var(--color-gold);">Mosman</span>
+            </nav>
+        </div>
+    </section>
+
     <main id="main">
 
-        <!-- Page Header -->
-        <section class="page-header">
-            <div class="container">
-                <nav class="breadcrumb" aria-label="Breadcrumb">
-                    <a href="../index.html">Home</a>
-                    <span>/</span>
-                    <a href="../painting.html">Painting</a>
-                    <span>/</span>
-                    <span>Mosman</span>
-                </nav>
-                <h1>Painting in Mosman | North Shore Projects</h1>
+    <!-- ============================================================
+         TRUST BAR
+         ============================================================ -->
+    <section class="trust-bar">
+        <div class="trust-bar-content">
+            <div class="trust-bar-item">
+                <div class="trust-bar-stat">5+</div>
+                <span>Years in Business</span>
             </div>
-        </section>
+            <div class="trust-bar-item">
+                <div class="trust-bar-stat">500+</div>
+                <span>Projects Completed</span>
+            </div>
+            <div class="trust-bar-item">
+                <div class="trust-bar-stat">4.9</div>
+                <span>Google Rating</span>
+            </div>
+            <div class="trust-bar-item">
+                <div class="trust-bar-stat">17</div>
+                <span>Suburbs Covered</span>
+            </div>
+        </div>
+    </section>
 
-        <!-- Service Content -->
-        <section class="section">
-            <div class="container">
-                <div class="two-col">
-                    <div>
-                        <h2>Luxury Painting Services for Mosman's Finest Homes</h2>
-                        <p>Mosman is synonymous with luxury living on Sydney's lower North Shore. With its stunning harbourside mansions, grand Federation estates, and beautifully maintained period homes, the suburb demands a standard of painting that matches its prestigious reputation. At North Shore Projects, we bring a meticulous, detail-oriented approach to every Mosman painting project. Our team understands that Mosman homeowners expect nothing less than perfection, and we deliver results that honour the architectural heritage and exceptional quality of these remarkable properties using only the finest premium paint products.</p>
+    <!-- ============================================================
+         CONTENT SECTION
+         ============================================================ -->
+    <section class="service-description section-light">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-label">Mosman Painting</span>
+                <h2 class="section-title">Luxury Painting Services for Mosman's Finest Homes</h2>
+            </div>
 
-                        <h3>Luxury Harbourside Mansion Painting</h3>
-                        <p>Mosman's harbourside mansions are among the most valuable residential properties in Australia, and painting them requires an elevated level of care, skill, and attention to detail. These large-scale homes often feature complex facades, multiple storeys, extensive eave lines, decorative mouldings, and expansive interior spaces that demand a systematic, well-planned approach. Our painters are experienced with the scale and complexity of Mosman's luxury homes, coordinating multi-week projects with precision and delivering a flawless finish across every surface. We use premium products from Dulux, Haymes, and specialty ranges that provide superior coverage, colour depth, and long-term durability in the demanding coastal environment.</p>
+            <div class="content-block" data-aos="fade-up" data-aos-delay="100">
+                <p>Mosman is synonymous with luxury living on Sydney's lower North Shore. With its stunning harbourside mansions, grand Federation estates, and beautifully maintained period homes, the suburb demands a standard of painting that matches its prestigious reputation. At North Shore Projects, we bring a meticulous, detail-oriented approach to every Mosman painting project. Our team understands that Mosman homeowners expect nothing less than perfection, and we deliver results that honour the architectural heritage and exceptional quality of these remarkable properties using only the finest premium paint products.</p>
 
-                        <h3>Period Home Restoration &amp; Heritage Colour Consultation</h3>
-                        <p>Many of Mosman's most cherished homes date from the Federation and Edwardian eras, featuring original timber fretwork, decorative corbels, detailed verandah posts, and ornate ceiling roses that require specialist painting techniques to restore and maintain. Our heritage painting service treats these elements with the care they deserve, using traditional methods where appropriate and selecting colours from authentic heritage palettes that complement the home's original architectural style. Our heritage colour consultation draws on period colour charts from Dulux Heritage and Haymes Heritage collections, helping you choose schemes that are historically sympathetic while meeting your personal aesthetic preferences.</p>
+                <h3>Luxury Harbourside Mansion Painting</h3>
+                <p>Mosman's harbourside mansions are among the most valuable residential properties in Australia, and painting them requires an elevated level of care, skill, and attention to detail. These large-scale homes often feature complex facades, multiple storeys, extensive eave lines, decorative mouldings, and expansive interior spaces that demand a systematic, well-planned approach. Our painters are experienced with the scale and complexity of Mosman's luxury homes, coordinating multi-week projects with precision and delivering a flawless finish across every surface. We use premium products from Dulux, Haymes, and specialty ranges that provide superior coverage, colour depth, and long-term durability in the demanding coastal environment.</p>
 
-                        <h3>Detailed Exterior Work</h3>
-                        <p>The exterior presentation of a Mosman home is paramount, and our team excels at delivering detailed exterior painting that enhances kerb appeal and protects surfaces against the harsh coastal conditions. From rendered walls and timber weatherboards to stone features, iron lacework, and garden fencing, we prepare and paint every element with care. Our exterior process includes thorough pressure washing, scraping, sanding, crack repair, and premium priming before multiple coats of UV-resistant, weather-proof exterior coatings are applied. The result is a finish that looks stunning and stands up to the salt air, strong sun, and seasonal rain that Mosman properties face year-round.</p>
+                <h3>Period Home Restoration &amp; Heritage Colour Consultation</h3>
+                <p>Many of Mosman's most cherished homes date from the Federation and Edwardian eras, featuring original timber fretwork, decorative corbels, detailed verandah posts, and ornate ceiling roses that require specialist painting techniques to restore and maintain. Our heritage painting service treats these elements with the care they deserve, using traditional methods where appropriate and selecting colours from authentic heritage palettes that complement the home's original architectural style. Our heritage colour consultation draws on period colour charts from Dulux Heritage and Haymes Heritage collections, helping you choose schemes that are historically sympathetic while meeting your personal aesthetic preferences.</p>
 
-                        <p>For guidance on maintaining the longevity of your paintwork, explore our article on <a href="../blog/how-often-repaint-house.html">how often you should repaint your house</a>. Our expert team also provides <a href="../painting.html">painting services across the entire North Shore</a>.</p>
+                <h3>Detailed Exterior Work</h3>
+                <p>The exterior presentation of a Mosman home is paramount, and our team excels at delivering detailed exterior painting that enhances kerb appeal and protects surfaces against the harsh coastal conditions. From rendered walls and timber weatherboards to stone features, iron lacework, and garden fencing, we prepare and paint every element with care. Our exterior process includes thorough pressure washing, scraping, sanding, crack repair, and premium priming before multiple coats of UV-resistant, weather-proof exterior coatings are applied. The result is a finish that looks stunning and stands up to the salt air, strong sun, and seasonal rain that Mosman properties face year-round.</p>
 
-                        <h4>Why Mosman Homeowners Trust North Shore Projects</h4>
-                        <ul class="service-detail-list">
-                            <li><i class="fa-solid fa-check" aria-hidden="true"></i> Licensed and fully insured professional painters</li>
-                            <li><i class="fa-solid fa-check" aria-hidden="true"></i> Premium Dulux and Haymes paints including heritage ranges</li>
-                            <li><i class="fa-solid fa-check" aria-hidden="true"></i> Period home restoration and heritage colour expertise</li>
-                            <li><i class="fa-solid fa-check" aria-hidden="true"></i> Luxury mansion and large-scale project experience</li>
-                            <li><i class="fa-solid fa-check" aria-hidden="true"></i> Detailed exterior painting and surface preparation</li>
-                            <li><i class="fa-solid fa-check" aria-hidden="true"></i> Complimentary colour consultation included</li>
-                            <li><i class="fa-solid fa-check" aria-hidden="true"></i> Transparent quoting with no hidden costs</li>
-                            <li><i class="fa-solid fa-check" aria-hidden="true"></i> 5-year workmanship warranty on all painting projects</li>
-                        </ul>
+                <p>For guidance on maintaining the longevity of your paintwork, explore our article on <a href="../blog/how-often-repaint-house.html">how often you should repaint your house</a>. Our expert team also provides <a href="../painting.html">painting services across the entire North Shore</a>.</p>
+            </div>
+        </div>
+    </section>
 
-                        <!-- Nearby Suburbs -->
-                        <div class="suburb-nearby">
-                            <h4>Painting Services Near Mosman</h4>
-                            <p>We also provide professional painting services in suburbs near Mosman, including:</p>
-                            <ul>
-                                <li><a href="painting-neutral-bay.html">Painting in Neutral Bay</a></li>
-                                <li><a href="painting-cremorne.html">Painting in Cremorne</a></li>
-                                <li><a href="painting-north-sydney.html">Painting in North Sydney</a></li>
-                            </ul>
-                            <p><a href="../painting.html">View all painting service areas</a></p>
-                        </div>
+    <!-- ============================================================
+         NEARBY SUBURBS
+         ============================================================ -->
+    <section class="section section-light" id="areas" data-aos="fade-up">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">Nearby Areas</span>
+                <h2 class="section-title">Also Servicing Nearby Suburbs</h2>
+                <p class="section-subtitle">In addition to Mosman, we provide professional painting services across these neighbouring North Shore suburbs.</p>
+            </div>
+
+            <div class="areas-grid">
+                <a href="painting-neutral-bay.html" class="area-link"><i class="fas fa-map-marker-alt"></i> Neutral Bay</a>
+                <a href="painting-cremorne.html" class="area-link"><i class="fas fa-map-marker-alt"></i> Cremorne</a>
+                <a href="painting-north-sydney.html" class="area-link"><i class="fas fa-map-marker-alt"></i> North Sydney</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================================
+         PROCESS — Dark background
+         ============================================================ -->
+    <section class="process-section section-dark">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-label">Our Process</span>
+                <h2 class="section-title" style="color: var(--color-cream);">How Your Painting Project Works</h2>
+                <p class="section-subtitle">From consultation to final inspection, here's what to expect.</p>
+            </div>
+
+            <div class="process-grid">
+                <div class="process-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="process-number">01</div>
+                    <h4 style="color: var(--color-cream);">Get in Touch</h4>
+                    <p>Tell us about your painting project. We'll discuss colours, scope and timing.</p>
+                </div>
+                <div class="process-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="process-number">02</div>
+                    <h4 style="color: var(--color-cream);">Colour Consultation</h4>
+                    <p>We'll visit your property, assess surfaces and help you choose the perfect colours and finishes.</p>
+                </div>
+                <div class="process-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="process-number">03</div>
+                    <h4 style="color: var(--color-cream);">Expert Painting</h4>
+                    <p>Our professional painters prepare all surfaces and apply premium paints with meticulous care.</p>
+                </div>
+                <div class="process-card" data-aos="fade-up" data-aos-delay="400">
+                    <div class="process-number">04</div>
+                    <h4 style="color: var(--color-cream);">Final Inspection</h4>
+                    <p>A detailed walkthrough to ensure every wall, trim and detail meets our high standards.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================================
+         FAQ
+         ============================================================ -->
+    <section class="faq-section" id="faq">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-label">Common Questions</span>
+                <h2 class="section-title">Painting FAQ</h2>
+            </div>
+
+            <div class="faq-list">
+                <div class="faq-item active" data-aos="fade-up">
+                    <button type="button" class="faq-question" aria-expanded="true">
+                        What paint brands do you use?
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"/></svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>We use premium paints from Dulux, Haymes and other leading Australian brands. We select the right product for each surface and environment, whether it's a low-VOC interior paint for bedrooms or a weather-resistant exterior coating.</p>
                     </div>
+                </div>
 
-                    <!-- Sidebar Enquiry Form -->
+                <div class="faq-item" data-aos="fade-up" data-aos-delay="100">
+                    <button type="button" class="faq-question" aria-expanded="false">
+                        How long does it take to paint a house interior?
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"/></svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>A standard 3-bedroom home interior typically takes 3&ndash;5 working days including preparation, priming and two coats. Larger homes or those requiring extensive preparation may take longer. We'll provide an accurate timeline in your quote.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item" data-aos="fade-up" data-aos-delay="200">
+                    <button type="button" class="faq-question" aria-expanded="false">
+                        Do you offer a colour consultation?
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"/></svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Yes, we provide complimentary colour consultations as part of our quoting process. We can suggest palettes that suit your home's architecture and natural light, and we carry colour charts from all major brands.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================================
+         CTA BANNER
+         ============================================================ -->
+    <section class="cta-banner">
+        <div class="container" data-aos="fade-up">
+            <span class="section-label">Ready to Start?</span>
+            <h2>Ready to Transform Your Mosman Property?</h2>
+            <p>Get a free, no-obligation painting quote today. Our team is ready to bring your vision to life.</p>
+            <div class="cta-actions">
+                <a href="#enquiry" class="btn btn-gold btn-lg">
+                    Get Your Free Quote
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+                </a>
+                <a href="tel:+61433333332" class="btn btn-outline btn-lg">Call Us Directly</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================================
+         CONTACT SECTION
+         ============================================================ -->
+    <section class="contact-section" id="enquiry">
+        <div class="contact-grid">
+            <div class="contact-info" data-aos="fade-right">
+                <span class="section-label">Get in Touch</span>
+                <h2 class="section-title" style="color: var(--color-cream);">Get Your Free Painting Quote</h2>
+                <p>Tell us about your painting project and we'll provide a detailed, no-obligation quote. Our team will get back to you within 24 hours.</p>
+
+                <span class="gold-line"></span>
+
+                <div class="contact-details-list">
                     <div>
-                        <div class="form-wrapper">
-                            <h3 class="text-center">Get a Free Quote</h3>
-                            <p class="text-center" style="margin-bottom:1.5rem;">Mosman painting enquiry</p>
-                            <form id="contact-form" action="/api/contact" method="POST" aria-label="Mosman painting enquiry form">
-                                <div class="form-group">
-                                    <label for="sidebar-name">Name <span aria-hidden="true">*</span></label>
-                                    <input type="text" id="sidebar-name" name="name" placeholder="Your full name" required aria-required="true">
-                                </div>
-                                <div class="form-group">
-                                    <label for="sidebar-email">Email <span aria-hidden="true">*</span></label>
-                                    <input type="email" id="sidebar-email" name="email" placeholder="you@example.com" required aria-required="true">
-                                </div>
-                                <div class="form-group">
-                                    <label for="sidebar-phone">Phone</label>
-                                    <input type="tel" id="sidebar-phone" name="phone" placeholder="04XX XXX XXX">
-                                </div>
-                                <div class="form-group">
-                                    <label for="sidebar-service">Service</label>
-                                    <select id="sidebar-service" name="service">
-                                        <option value="Tiling">Tiling</option>
-                                        <option value="Painting" selected>Painting</option>
-                                        <option value="Cleaning">Cleaning</option>
-                                    </select>
-                                </div>
-                                <div class="form-group">
-                                    <label for="sidebar-suburb">Suburb</label>
-                                    <input type="text" id="sidebar-suburb" name="suburb" value="Mosman" readonly>
-                                </div>
-                                <div class="form-group">
-                                    <label for="sidebar-message">Message</label>
-                                    <textarea id="sidebar-message" name="message" placeholder="Tell us about your painting project..." rows="3"></textarea>
-                                </div>
-                                <input type="hidden" name="source" value="organic">
-                                <button type="submit" class="btn btn-primary" style="width:100%;">Send Enquiry</button>
-                            </form>
-                            <div class="form-success" role="alert">
-                                <i class="fa-solid fa-circle-check" aria-hidden="true"></i>
-                                <h3>Thank You!</h3>
-                                <p>Your enquiry has been received. We will contact you within 24 hours to discuss your Mosman painting project.</p>
-                            </div>
+                        <div class="contact-detail-label">Call Us</div>
+                        <a href="tel:+61433333332" class="contact-detail-value">0433 333 332</a>
+                        <p class="contact-detail-sub">Mon&ndash;Sat 7am&ndash;6pm</p>
+                    </div>
+                    <div>
+                        <div class="contact-detail-label">Email</div>
+                        <a href="mailto:northshorepainting88@gmail.com" class="contact-detail-value" style="font-size: 1rem;">northshorepainting88@gmail.com</a>
+                    </div>
+                    <div>
+                        <div class="contact-detail-label">Service Area</div>
+                        <p class="contact-detail-sub" style="color: rgba(250,250,248,0.6);">Mosman &amp; North Shore Sydney</p>
+                    </div>
+                </div>
+
+                <div style="margin-top: 2rem;">
+                    <div class="google-rating">
+                        <span class="google-rating-score">4.9</span>
+                        <div>
+                            <div class="google-rating-stars"><i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="fas fa-star"></i></div>
+                            <span class="google-rating-text">87 Google Reviews</span>
                         </div>
                     </div>
                 </div>
             </div>
-        </section>
 
-        <!-- CTA Banner -->
-        <section class="cta-banner">
-            <div class="container">
-                <h2>Ready to Restore Your Mosman Home's Beauty?</h2>
-                <p>Get a free, no-obligation painting quote from our North Shore team today.</p>
-                <a href="#contact" class="btn btn-primary btn-lg">Get Your Free Quote</a>
+            <div class="contact-form-box" data-aos="fade-left">
+                <h3>Request a Painting Quote</h3>
+                <form action="/api/contact" method="POST" id="contact-form">
+                    <input type="hidden" name="source" value="organic">
+                    <input type="hidden" name="service" value="painting">
+                    <input type="hidden" name="landing" value="painting-mosman">
+                    <p class="form-required-note">* Required fields</p>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="name">Your Name <span class="required-asterisk">*</span></label>
+                            <input type="text" id="name" name="name" required autocomplete="name">
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone Number <span class="required-asterisk">*</span></label>
+                            <input type="tel" id="phone" name="phone" required placeholder="0400 000 000" autocomplete="tel">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email Address <span class="required-asterisk">*</span></label>
+                        <input type="email" id="email" name="email" required autocomplete="email">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="suburb">Your Suburb</label>
+                        <select id="suburb" name="suburb">
+                            <option value="" disabled>Select your suburb</option>
+                            <option value="Artarmon">Artarmon</option>
+                            <option value="Chatswood">Chatswood</option>
+                            <option value="Cremorne">Cremorne</option>
+                            <option value="Crows Nest">Crows Nest</option>
+                            <option value="Gordon">Gordon</option>
+                            <option value="Killara">Killara</option>
+                            <option value="Lane Cove">Lane Cove</option>
+                            <option value="Lindfield">Lindfield</option>
+                            <option value="Mosman" selected>Mosman</option>
+                            <option value="Neutral Bay">Neutral Bay</option>
+                            <option value="North Sydney">North Sydney</option>
+                            <option value="Pymble">Pymble</option>
+                            <option value="Roseville">Roseville</option>
+                            <option value="St Ives">St Ives</option>
+                            <option value="Turramurra">Turramurra</option>
+                            <option value="Wahroonga">Wahroonga</option>
+                            <option value="Willoughby">Willoughby</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">Tell us about your painting project <span class="required-asterisk">*</span></label>
+                        <textarea id="message" name="message" required placeholder="E.g., interior repaint, exterior painting, number of rooms, colour preferences..."></textarea>
+                    </div>
+
+                    <button type="submit" class="btn-submit" id="submit-btn">Send Enquiry</button>
+
+                    <p class="form-note">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect width="18" height="11" x="3" y="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+                        Your information is secure and will never be shared.
+                    </p>
+                </form>
+
+                <div class="form-success" id="formSuccess">
+                    <i class="fas fa-check-circle"></i>
+                    <h3>Thank you for your enquiry.</h3>
+                    <p>We'll be in touch within 24 hours to discuss your painting project in Mosman.</p>
+                </div>
             </div>
-        </section>
+        </div>
+    </section>
 
     </main>
 
-    <!-- Footer -->
+    <!-- ============================================================
+         FOOTER
+         ============================================================ -->
     <footer class="footer">
-        <div class="container">
-            <div class="footer-grid">
-                <div class="footer-col">
-                    <h4>About North Shore Projects</h4>
-                    <p>North Shore Projects delivers professional tiling, painting, and cleaning services to homes and businesses across Sydney's North Shore. Licensed, insured, and committed to quality on every job.</p>
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <div class="footer-logo">
+                    <div class="footer-logo-icon">NSP</div>
+                    <span>North Shore Projects</span>
                 </div>
-                <div class="footer-col">
-                    <h4>Our Services</h4>
-                    <a href="../tiling.html">Tiling Services</a>
-                    <a href="../painting.html">Painting Services</a>
-                    <a href="../cleaning.html">Cleaning Services</a>
-                    <a href="../blog/index.html">Blog &amp; Advice</a>
-                </div>
-                <div class="footer-col">
-                    <h4>Popular Areas</h4>
-                    <a href="painting-chatswood.html">Chatswood</a>
-                    <a href="painting-killara.html">Killara</a>
-                    <a href="painting-mosman.html">Mosman</a>
-                    <a href="painting-north-sydney.html">North Sydney</a>
-                    <a href="painting-lane-cove.html">Lane Cove</a>
-                    <a href="painting-pymble.html">Pymble</a>
-                </div>
-                <div class="footer-col">
-                    <h4>Contact Us</h4>
-                    <div class="contact-item">
-                        <i class="fa-solid fa-phone" aria-hidden="true"></i>
-                        <p><a href="tel:0433333332" aria-label="Call North Shore Projects on 0433 333 332">0433 333 332</a></p>
-                    </div>
-                    <div class="contact-item">
-                        <i class="fa-solid fa-envelope" aria-hidden="true"></i>
-                        <p><a href="mailto:northshorepainting88@gmail.com" aria-label="Email North Shore Projects">northshorepainting88@gmail.com</a></p>
-                    </div>
-                    <div class="contact-item">
-                        <i class="fa-solid fa-clock" aria-hidden="true"></i>
-                        <p>Mon &ndash; Sat: 7:00am &ndash; 6:00pm</p>
-                    </div>
+                <p>One Group. Removals, Renovations &amp; Cleaning. Proudly serving Sydney's North Shore.</p>
+                <div class="footer-status">
+                    <span class="footer-status-dot"></span>
+                    <span>Accepting New Projects</span>
                 </div>
             </div>
-            <div class="footer-bottom">
-                <p>&copy; 2026 North Shore Projects. ABN 12 345 678 901. All rights reserved. <a href="../privacy.html">Privacy Policy</a> | <a href="../terms.html">Terms of Service</a></p>
+
+            <div class="footer-col">
+                <h4>Services</h4>
+                <ul class="footer-links">
+                    <li><a href="../tiling.html">Tiling</a></li>
+                    <li><a href="../painting.html">Painting</a></li>
+                    <li><a href="https://northshoreremovals.com/" target="_blank" rel="noopener noreferrer">Removals</a></li>
+                    <li><a href="../cleaning.html">Cleaning</a></li>
+                    <li><a href="../blog/">Blog</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4>Popular Areas</h4>
+                <ul class="footer-links">
+                    <li><a href="painting-lane-cove.html">Lane Cove</a></li>
+                    <li><a href="painting-willoughby.html">Willoughby</a></li>
+                    <li><a href="painting-north-sydney.html">North Sydney</a></li>
+                    <li><a href="painting-mosman.html">Mosman</a></li>
+                    <li><a href="painting-neutral-bay.html">Neutral Bay</a></li>
+                    <li><a href="painting-crows-nest.html">Crows Nest</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4>Contact</h4>
+                <div class="contact-item">
+                    <i class="fas fa-phone"></i>
+                    <a href="tel:+61433333332">0433 333 332</a>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-envelope"></i>
+                    <a href="mailto:northshorepainting88@gmail.com">northshorepainting88@gmail.com</a>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-clock"></i>
+                    <p>Mon&ndash;Sat 7am&ndash;6pm</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2026 North Shore Projects. All rights reserved. ABN 12 345 678 901</p>
+            <div class="footer-social">
+                <a href="https://www.instagram.com/northshore.painting" target="_blank" rel="noopener noreferrer" aria-label="Instagram - Painting"><i class="fab fa-instagram"></i></a>
             </div>
         </div>
     </footer>
 
-    <!-- JavaScript -->
-    <script src="../js/form-validation.js" defer></script>
+    <!-- SCROLL TO TOP -->
+    <a href="#" class="scroll-top" id="scrollTop" aria-label="Scroll to top">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20"><path d="m18 15-6-6-6 6"/></svg>
+    </a>
+
+    <!-- MOBILE CALL BUTTON -->
+    <a href="tel:+61433333332" class="mobile-call-btn" aria-label="Call us">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        Call for Quote
+    </a>
+
+    <!-- ============================================================
+         SCRIPTS
+         ============================================================ -->
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.min.js"></script>
     <script>
-        // Mobile menu toggle
-        (function () {
-            var toggle = document.querySelector('.nav-toggle');
-            var mobileMenu = document.querySelector('.nav-mobile');
+        try { AOS.init({ duration: 600, easing: 'ease-out-cubic', once: true, offset: 50 }); }
+        catch(e) { console.warn('AOS not loaded:', e.message); }
 
-            if (toggle && mobileMenu) {
-                toggle.addEventListener('click', function () {
-                    var isActive = mobileMenu.classList.toggle('active');
-                    toggle.classList.toggle('active');
-                    toggle.setAttribute('aria-expanded', isActive ? 'true' : 'false');
-                });
+        var navbarToggle = document.getElementById('navbarToggle');
+        var mobileMenu = document.getElementById('mobileMenu');
 
-                var mobileLinks = mobileMenu.querySelectorAll('a');
-                mobileLinks.forEach(function (link) {
-                    link.addEventListener('click', function () {
-                        mobileMenu.classList.remove('active');
-                        toggle.classList.remove('active');
-                        toggle.setAttribute('aria-expanded', 'false');
-                    });
+        function closeMobileMenu() {
+            navbarToggle.classList.remove('active');
+            mobileMenu.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+
+        navbarToggle.addEventListener('click', function() {
+            var isOpen = mobileMenu.classList.contains('active');
+            if (isOpen) { closeMobileMenu(); }
+            else { navbarToggle.classList.add('active'); mobileMenu.classList.add('active'); document.body.style.overflow = 'hidden'; }
+        });
+
+        var mobileMenuClose = mobileMenu.querySelector('.mobile-menu-close');
+        if (mobileMenuClose) mobileMenuClose.addEventListener('click', closeMobileMenu);
+
+        mobileMenu.querySelectorAll('a').forEach(function(link) {
+            link.addEventListener('click', closeMobileMenu);
+        });
+
+        mobileMenu.addEventListener('click', function(e) {
+            if (e.target === mobileMenu) closeMobileMenu();
+        });
+
+        // FAQ Accordion
+        document.querySelectorAll('.faq-question').forEach(function(btn) {
+            btn.addEventListener('click', function() {
+                var item = this.parentElement;
+                var wasActive = item.classList.contains('active');
+                document.querySelectorAll('.faq-item').forEach(function(i) {
+                    i.classList.remove('active');
+                    i.querySelector('.faq-question').setAttribute('aria-expanded', 'false');
                 });
-            }
-        })();
+                if (!wasActive) {
+                    item.classList.add('active');
+                    this.setAttribute('aria-expanded', 'true');
+                }
+            });
+        });
+
+        var scrollTopBtn = document.getElementById('scrollTop');
+        window.addEventListener('scroll', function() {
+            scrollTopBtn.classList.toggle('visible', window.scrollY > 300);
+        }, { passive: true });
+
+        document.querySelectorAll('a[href^="#"]').forEach(function(anchor) {
+            anchor.addEventListener('click', function(e) {
+                var targetId = this.getAttribute('href');
+                if (targetId === '#') { e.preventDefault(); window.scrollTo({ top: 0, behavior: 'smooth' }); return; }
+                var target = document.querySelector(targetId);
+                if (target) { e.preventDefault(); window.scrollTo({ top: target.getBoundingClientRect().top + window.pageYOffset - 100, behavior: 'smooth' }); }
+            });
+        });
     </script>
+
+    <script src="../js/form-validation.js" defer></script>
 </body>
 </html>
