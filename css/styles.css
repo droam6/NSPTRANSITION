@@ -1,5 +1,5 @@
 /* ================================================================
-   NORTH SHORE PROJECTS — Design System v2 (Bosland-inspired)
+   NORTH SHORE PROJECTS — Design System v2 (editorial redesign)
    Navy #1A1A2E + Gold #C19A6B + Cream #FAFAF8
    DM Serif Display (headings) + DM Sans (body)
    ================================================================ */
@@ -879,7 +879,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* ================================================================
-   SERVICES — Editorial numbered list (Bosland style)
+   SERVICES — Editorial numbered list
    ================================================================ */
 .services-section {
   padding: var(--section-pad);
