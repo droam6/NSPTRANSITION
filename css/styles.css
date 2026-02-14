@@ -1871,10 +1871,14 @@ h1, h2, h3, h4, h5, h6 {
   overflow-x: auto;
   overflow-y: hidden;
   -webkit-overflow-scrolling: touch;
-  scrollbar-width: none;
+  scrollbar-width: thin;
+  scrollbar-color: var(--color-gold) rgba(0,0,0,0.1);
 }
 
-.gallery-scroll-container::-webkit-scrollbar { display: none; }
+.gallery-scroll-container::-webkit-scrollbar { height: 8px; }
+.gallery-scroll-container::-webkit-scrollbar-track { background: rgba(0,0,0,0.06); border-radius: 4px; }
+.gallery-scroll-container::-webkit-scrollbar-thumb { background: var(--color-gold); border-radius: 4px; }
+.gallery-scroll-container::-webkit-scrollbar-thumb:hover { background: var(--color-gold-hover); }
 
 .gallery-scroll {
   display: flex;
