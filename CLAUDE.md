@@ -122,11 +122,11 @@ All enquiry forms POST to `/api/contact` with fields:
 - [ ] Add actual Google Map embed on contact page
 - [ ] Create privacy.html and terms.html pages
 - [ ] Add favicon and apple-touch-icon
-- [ ] Remove landing pages from sitemap.xml
-- [ ] Add `Disallow: /landing/` to robots.txt
+- [x] Remove landing pages from sitemap.xml
+- [x] Add `Disallow: /landing/` to robots.txt
 - [ ] Replace placeholder ABN with real ABN
 - [ ] Replace placeholder aggregate ratings with real review data
-- [ ] Standardise hidden field names (`landing` vs `suburb_page`) across suburb pages
+- [x] Standardise hidden field names (`landing` vs `suburb_page`) across suburb pages — verified all 51 use `name="landing"` consistently
 - [ ] Minify form-validation.js for production
 
 ---
@@ -144,7 +144,7 @@ This project maintains two tracking files that must be kept current across all s
 - **Purpose:** Logs every significant architectural or design decision with rationale
 - **When to update:** When making a non-trivial choice (new technology, structural change, naming convention, etc.)
 - **Structure:** Numbered entries (D01, D02...) with Decision, Rationale, and Trade-offs
-- **Next ID:** D18
+- **Next ID:** D21
 
 ### Rules for All Sessions
 1. **Read both files at the start** of any session that involves code changes

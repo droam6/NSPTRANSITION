@@ -1,6 +1,6 @@
 # North Shore Projects — Progress Tracker
 
-> Last updated: 2026-02-14 (Blog removed from site — all links, sections, and sitemap entries stripped)
+> Last updated: 2026-02-15 (Bug fix pass: navbar, overflow, hero mobile, dynamic copyright, sitemap/robots landing pages)
 
 ---
 
@@ -146,6 +146,19 @@ Chatswood, Killara, Gordon, Pymble, Turramurra, Lindfield, Roseville, St Ives, W
 
 ---
 
+## Phase 11: Bug Fix Pass — COMPLETE
+
+| Item | Status | Notes |
+|------|--------|-------|
+| contact.html navbar parity | Done | Instagram link was missing `?igsh=MW9vbzJtaXRoY3h3OQ==` tracking parameter — added to match all other pages |
+| Mobile horizontal overflow | Done | Added `overflow-x: hidden` to `body` in styles.css (was only on `html`). Both needed for mobile Safari/Chrome to prevent AOS fade-left/right overflow |
+| Hero text overlap on small screens | Done | Added comprehensive mobile overrides at `@media (max-width: 767px)`: reduced min-height to 85vh/85svh, tightened font sizes, spacing, button padding. Prevents label+title+subtitle+2 CTAs from overflowing viewport |
+| Dynamic copyright year | Done | Replaced hardcoded `&copy; 2026` with `&copy; <script>document.write(new Date().getFullYear())</script>` across 63 files (root + suburbs/ + blog/). Landing pages excluded (inline CSS, separate maintenance) |
+| Hidden form field consistency | Done | Verified: all 51 suburb pages already use `name="landing"` consistently (no `name="suburb_page"` exists). Field patterns are intentionally different by page type: homepage/contact use `source` only + dropdown `<select>` for service; service pages use `source` + hidden `service`; suburb pages use `source` + hidden `service` + hidden `landing` |
+| Landing pages removed from sitemap | Done | Removed 3 `/landing/*.html` `<url>` entries from sitemap.xml. Added `Disallow: /landing/` to robots.txt. Resolves D09 inconsistency |
+
+---
+
 ## REMAINING WORK
 
 ### High Priority (blocks launch)
@@ -186,10 +199,6 @@ Chatswood, Killara, Gordon, Pymble, Turramurra, Lindfield, Roseville, St Ives, W
 
 | Issue | Severity | Details |
 |-------|----------|---------|
-| Landing pages in sitemap.xml | Low | 3 landing pages have `noindex, nofollow` but are listed in sitemap.xml. Should be removed from sitemap or sitemap should exclude `/landing/` |
-| Landing pages not blocked in robots.txt | Low | `/landing/` directory should have `Disallow` since pages are noindex |
 | ABN is placeholder | Medium | `12 345 678 901` is a dummy ABN — needs real ABN before launch |
 | Aggregate ratings in schema | Medium | 4.9 stars / 87 reviews hardcoded in JSON-LD — need real review data or remove |
-| Hidden field inconsistency | Low | Suburb pages use either `name="landing"` or `name="suburb_page"` depending on batch — should standardise |
 | Blog dates may be future-dated | Low | Blog posts dated Jan-Feb 2026 — verify these match desired publish schedule |
-| Contact page footer year | Low | Verify `2025` vs `2026` copyright year consistency across all footers |

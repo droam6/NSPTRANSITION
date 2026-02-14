@@ -385,3 +385,31 @@ Timestamp: PAGE_LOAD_TIME vs submission time, reject if < 3000ms
 - Loss of SEO topical authority from informational content (see D11)
 - Blog files still exist on disk — could be accidentally discovered via direct URL
 - If blog is restored later, all links must be re-added across 60+ files
+
+---
+
+## D20: Bug Fix Pass — 6 Fixes Before Launch
+
+**Decision:** Systematically fix 6 known bugs/inconsistencies across the site.
+
+**Fixes applied:**
+
+1. **contact.html navbar** — Instagram link was missing `?igsh=MW9vbzJtaXRoY3h3OQ==` tracking parameter that all other pages had. Added for consistency.
+
+2. **Mobile horizontal overflow** — AOS `fade-left`/`fade-right` animations create off-screen elements that caused horizontal scrollbar. `overflow-x: hidden` was only on `html` — added to `body` as well. Both are needed because mobile Safari and Chrome handle overflow differently on `html` vs `body`.
+
+3. **Hero text overlap on small screens** — On viewports under 767px, the hero's label + title + subtitle + 2 CTA buttons exceeded the 100vh container. Added comprehensive mobile overrides: reduced min-height to 85vh (with 85svh for iOS Safari), tightened all spacing and font sizes.
+
+4. **Dynamic copyright year** — Replaced hardcoded `&copy; 2026` with `<script>document.write(new Date().getFullYear())</script>` across 63 files. Landing pages excluded (they use inline CSS and are maintained separately).
+
+5. **Hidden form field consistency (verified)** — The `name="landing"` vs `name="suburb_page"` inconsistency noted in D12 no longer exists — all 51 suburb pages already use `name="landing"`. The different field sets across page types (homepage/contact vs service vs suburb) are intentional: pages where the service is already known use a hidden field; pages where the user chooses use a `<select>` dropdown.
+
+6. **Landing pages removed from sitemap.xml + robots.txt updated** — Removed 3 `/landing/*.html` entries from sitemap.xml and added `Disallow: /landing/` to robots.txt. Resolves D09 (noindex pages contradictorily listed in sitemap).
+
+**Rationale:**
+- All fixes target launch-readiness — mixed signals to crawlers, mobile UX regressions, and maintenance debt
+- No structural or architectural changes — pure bug fixes and consistency cleanup
+
+**Trade-offs:**
+- `document.write()` for copyright year is a deprecated API pattern, but it's safe in this context (inline, synchronous, no performance impact) and avoids the complexity of a DOMContentLoaded listener across 63 files
+- `overflow-x: hidden` on body may clip intentionally overflowing elements in future — acceptable since no current design requires horizontal overflow

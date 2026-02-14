@@ -54,6 +54,7 @@ body {
   line-height: 1.75;
   color: var(--color-navy);
   background: var(--color-warm-white);
+  overflow-x: hidden;
 }
 
 img { max-width: 100%; height: auto; display: block; }
@@ -2849,10 +2850,15 @@ h1, h2, h3, h4, h5, h6 {
    RESPONSIVE ADJUSTMENTS
    ================================================================ */
 @media (max-width: 767px) {
-  .hero-slide-content { padding-bottom: 2rem; }
+  .hero-slideshow { min-height: 85vh; min-height: 85svh; }
+  .hero-slide { padding-bottom: 2.5rem; }
+  .hero-slide-content { padding-bottom: 1rem; }
 
-  .hero-title { font-size: clamp(1.75rem, 6vw, 2.25rem); }
-  .hero-subtitle { font-size: 0.9375rem; }
+  .hero-label { margin-bottom: 0.75rem; font-size: 0.625rem; }
+  .hero-title { font-size: clamp(1.5rem, 5.5vw, 2rem); margin-bottom: 0.75rem; }
+  .hero-subtitle { font-size: 0.875rem; margin-bottom: 1.25rem; max-width: 100%; }
+  .hero-actions { gap: 0.75rem; }
+  .hero-actions .btn-lg { padding: 0.75rem 1.5rem; font-size: 0.75rem; }
 
   .trust-bar { padding: 2.5rem 0; }
 
