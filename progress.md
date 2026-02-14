@@ -1,6 +1,6 @@
 # North Shore Projects — Progress Tracker
 
-> Last updated: 2026-02-12 (Phase 10 complete — all 65 pages rebuilt)
+> Last updated: 2026-02-14 (Blog removed from site — all links, sections, and sitemap entries stripped)
 
 ---
 
@@ -39,18 +39,11 @@
 ### Suburbs covered
 Chatswood, Killara, Gordon, Pymble, Turramurra, Lindfield, Roseville, St Ives, Wahroonga, Lane Cove, Willoughby, Artarmon, Crows Nest, North Sydney, Neutral Bay, Mosman, Cremorne
 
-## Phase 3: Blog Infrastructure — COMPLETE
+## Phase 3: Blog Infrastructure — REMOVED
 
 | Item | Status | Notes |
 |------|--------|-------|
-| Blog listing page (`blog/index.html`) | Done | Card grid, 5 posts listed |
-| How to Choose Bathroom Tiles | Done | ~800-1200 words, links to tiling service + suburbs |
-| Interior Painting Tips | Done | ~800-1200 words, links to painting service + suburbs |
-| End of Lease Cleaning Checklist | Done | ~800-1200 words, links to cleaning service + suburbs |
-| Kitchen Splashback Trends 2026 | Done | ~800-1200 words, links to tiling service + suburbs |
-| How Often to Repaint Your House | Done | ~800-1200 words, links to painting service + suburbs |
-| Article schema (JSON-LD) | Done | Article type on blog posts |
-| Cross-links to services + suburbs | Done | Each post links to relevant service page + 1-2 suburb pages |
+| Blog removed from site | Done | All nav links, mobile menu links, footer links, blog preview sections, related blog sections, sitemap entries, and inline content links removed. Blog files still exist in `/blog/` but are unlinked. |
 
 ## Phase 4: Meta Ads Landing Pages (3) — COMPLETE
 

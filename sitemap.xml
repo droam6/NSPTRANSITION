@@ -32,44 +32,6 @@
     <priority>0.8</priority>
   </url>
 
-  <!-- Blog Pages -->
-  <url>
-    <loc>https://northshoreprojects.com.au/blog/</loc>
-    <lastmod>2026-02-08</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://northshoreprojects.com.au/blog/how-to-choose-bathroom-tiles.html</loc>
-    <lastmod>2026-01-15</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://northshoreprojects.com.au/blog/interior-painting-tips.html</loc>
-    <lastmod>2026-01-22</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://northshoreprojects.com.au/blog/end-of-lease-cleaning-checklist.html</loc>
-    <lastmod>2026-02-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://northshoreprojects.com.au/blog/kitchen-splashback-trends.html</loc>
-    <lastmod>2026-02-05</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://northshoreprojects.com.au/blog/how-often-repaint-house.html</loc>
-    <lastmod>2026-02-08</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
   <!-- Tiling Suburb Pages -->
   <url>
     <loc>https://northshoreprojects.com.au/suburbs/tiling-chatswood.html</loc>

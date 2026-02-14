@@ -357,3 +357,31 @@ Timestamp: PAGE_LOAD_TIME vs submission time, reject if < 3000ms
 - Gold colour change (#D4A853 → #C19A6B) means any inline styles or landing page CSS using the old gold will be visually inconsistent
 - DM Serif Display is a display font — may not be ideal at very small sizes (below 16px). Body text uses DM Sans to avoid this
 - CSS grew from ~1,400 to ~2,900 lines — more component styles for the richer visual system
+
+---
+
+## D19: Blog Removed from Site
+
+**Decision:** Remove all blog references from the live site — navigation, mobile menu, footer, homepage blog preview section, service page "Related Blog Posts" sections, inline content links in suburb pages, and sitemap.xml entries.
+
+**Rationale:**
+- Business decision — blog content is not needed for launch
+- Reduces site complexity and maintenance burden (5 blog posts + listing page = 6 fewer pages to maintain)
+- Blog files are retained in `/blog/` directory but completely unlinked — can be restored later if needed
+
+**What was removed:**
+- Nav `<li>` blog link from all 60 pages (root + suburb + removals)
+- Mobile menu blog link from all 60 pages
+- Footer blog link from all 60 pages
+- Homepage "Tips & Guides" blog preview section (3 blog cards)
+- tiling.html "Related Blog Posts" section (2 blog cards)
+- painting.html "Related Blog Posts" section (2 blog cards)
+- cleaning.html "Related Blog Posts" section (1 blog card)
+- 6 blog `<url>` entries from sitemap.xml
+- Inline `<a>` links to blog articles within suburb page content (51 pages)
+- Broken sentences from link removal fixed in tiling-gordon.html and painting-chatswood.html
+
+**Trade-offs:**
+- Loss of SEO topical authority from informational content (see D11)
+- Blog files still exist on disk — could be accidentally discovered via direct URL
+- If blog is restored later, all links must be re-added across 60+ files
