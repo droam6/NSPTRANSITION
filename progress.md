@@ -1,6 +1,6 @@
 # North Shore Projects — Progress Tracker
 
-> Last updated: 2026-02-15 (Bug fix pass: navbar, overflow, hero mobile, dynamic copyright, sitemap/robots landing pages)
+> Last updated: 2026-03-20 (Added 60 tiling photos to gallery + arrow navigation on all service pages)
 
 ---
 
@@ -156,6 +156,31 @@ Chatswood, Killara, Gordon, Pymble, Turramurra, Lindfield, Roseville, St Ives, W
 | Dynamic copyright year | Done | Replaced hardcoded `&copy; 2026` with `&copy; <script>document.write(new Date().getFullYear())</script>` across 63 files (root + suburbs/ + blog/). Landing pages excluded (inline CSS, separate maintenance) |
 | Hidden form field consistency | Done | Verified: all 51 suburb pages already use `name="landing"` consistently (no `name="suburb_page"` exists). Field patterns are intentionally different by page type: homepage/contact use `source` only + dropdown `<select>` for service; service pages use `source` + hidden `service`; suburb pages use `source` + hidden `service` + hidden `landing` |
 | Landing pages removed from sitemap | Done | Removed 3 `/landing/*.html` `<url>` entries from sitemap.xml. Added `Disallow: /landing/` to robots.txt. Resolves D09 inconsistency |
+
+---
+
+## Phase 12: Internal Removals Page — COMPLETE
+
+| Item | Status | Notes |
+|------|--------|-------|
+| `northshore-removals.html` created | Done | Full service page with: hero, trust bar (155+ reviews, 1,500+ moves), 6 services (house moves, office relocations, furniture delivery, packing, piano/heavy items, short/long distance), sidebar (free quote, protective wrapping, experienced movers, transit insurance, no hidden fees, weekend availability), pricing callout ($170/hr weekday, 2 men & truck), placeholder gallery (6 items), 4-step process, 5 FAQ questions, CTA banner, dark contact section with Google rating (4.9, 155+ reviews), form with service=removals hidden field, removals-specific footer email + Instagram |
+| index.html hero slide 3 updated | Done | Replaced "Get a Quote" button with "View Our Removals Page" link to northshore-removals.html (external "Learn More" CTA preserved) |
+| index.html services #03 updated | Done | Added secondary "View our removals page" link below existing external "Explore removals" link |
+| sitemap.xml updated | Done | Added northshore-removals.html entry with priority 0.9, lastmod 2026-03-20 |
+| Nav/footer links unchanged | Done | External northshoreremovals.com links preserved in nav dropdown, mobile menu, and footer per plan |
+
+---
+
+## Phase 13: Phone-Frame Video Section + Gallery Enhancements — COMPLETE
+
+| Item | Status | Notes |
+|------|--------|-------|
+| Phone-frame CSS component | Done | CSS-drawn iPhone mockup: 9/19.5 aspect ratio, dark bezel, notch, rounded corners, gold shadow accent. 280px mobile / 320px desktop. Added to `styles.css` |
+| `tiling.html` video section | Done | Inserted between gallery/lightbox and process section. `<video>` with autoplay, muted, loop, playsinline. Source: `videos/North Shore Tiling Ashfield.MOV`. Dark background section with gold heading + caption |
+| `index.html` teaser link | Done | "Watch our latest project" text link added below "Explore tiling" in services section (#01). Links to `tiling.html#video`. Subtle styling (smaller font, reduced opacity) |
+| Cross-browser note | Done | HTML comment noting .MOV should ideally be converted to .mp4 for Chrome/Firefox compatibility |
+| 60 new tiling photos added | Done | DSC06968–DSC07069 series copied from NSP-Tiling-Photos to `images/tiling/`. All 60 added to tiling.html gallery with `loading="lazy"` |
+| Gallery arrow navigation | Done | Left/right arrow buttons + progress bar added to all 4 service pages (tiling, painting, cleaning, removals). CSS: gold-bordered circular buttons, gold progress bar. JS: smooth scroll 350px per click, disabled state at edges, progress bar tracks scroll position |
 
 ---
 

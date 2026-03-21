@@ -413,3 +413,34 @@ Timestamp: PAGE_LOAD_TIME vs submission time, reject if < 3000ms
 **Trade-offs:**
 - `document.write()` for copyright year is a deprecated API pattern, but it's safe in this context (inline, synchronous, no performance impact) and avoids the complexity of a DOMContentLoaded listener across 63 files
 - `overflow-x: hidden` on body may clip intentionally overflowing elements in future — acceptable since no current design requires horizontal overflow
+
+---
+
+## D21: Internal Removals Page Alongside External Site
+
+**Decision:** Create `northshore-removals.html` as an internal removals service page on the NSP domain, while keeping all existing nav/footer/mobile menu links pointing to the external `northshoreremovals.com` site.
+
+**Rationale:**
+- The external removals site (`northshoreremovals.com`) is a separate domain and may not always rank for queries related to NSP
+- An internal page captures SEO value on the NSP domain — Google sees removals as a first-party service, not just an external referral
+- The page uses removals-specific data (155+ reviews, $170/hr pricing, 1,500+ moves) that differs from the generic NSP stats (87 reviews)
+- Secondary links added to index.html hero slide 3 and services section #03 give users a path to the internal page without disrupting the primary external CTA flow
+- The existing draft `removals.html` was not suitable — it used generic content and the old 87-review count
+
+**What changed:**
+- New file: `northshore-removals.html` (full service page with pricing callout, removals-specific trust bar, 6 services, FAQ, contact form)
+- index.html hero slide 3: "Get a Quote" button replaced with "View Our Removals Page" linking to internal page
+- index.html services #03: Secondary "View our removals page" link added below existing external link
+- sitemap.xml: New URL entry added
+
+**What was NOT changed:**
+- Nav dropdown links (still external northshoreremovals.com)
+- Mobile menu links (still external)
+- Footer service links (still external)
+- The existing draft `removals.html` (left as-is, unlinked)
+- No removals suburb pages created (per D04)
+
+**Trade-offs:**
+- Two removals pages now exist on the NSP domain (`removals.html` draft + `northshore-removals.html`) — the draft is unlinked and should be cleaned up or deleted eventually
+- Users may see both the external site and internal page in search results — this is intentional (more SERP real estate)
+- The internal page's review count (155) and pricing ($170/hr) must be kept in sync with the external site manually

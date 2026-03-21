@@ -84,7 +84,7 @@
     <nav class="navbar scrolled" id="navbar">
         <div class="navbar-inner">
             <a href="/" class="navbar-logo">
-                <div class="navbar-logo-icon">NSP</div>
+                <img src="images/logos/NSPAINTLOGO-HD-FINAL.png" alt="North Shore Painting" class="navbar-logo-icon">
                 <span>North Shore Projects</span>
             </a>
 
@@ -165,8 +165,9 @@
          SERVICE HERO
          ============================================================ -->
     <section class="service-hero">
-        <div class="service-hero-bg" style="background-image: url('https://images.unsplash.com/photo-1562259949-e8e7689d7828?w=1920&q=80');"></div>
+        <div class="service-hero-bg" style="background-image: url('images/painting/PHOTO-2026-02-04-19-46-02.jpg');"></div>
         <div class="service-hero-content">
+            <img src="images/logos/NSPAINTLOGO-HD-FINAL.png" alt="North Shore Painting" class="hero-logo" data-aos="fade-up">
             <span class="section-label" data-aos="fade-up">Expert Painting Services</span>
             <h1 data-aos="fade-up" data-aos-delay="100">Professional Painting Services</h1>
             <p data-aos="fade-up" data-aos-delay="200">Transform your space with expert interior and exterior painting. Quality finishes, premium paints, and meticulous attention to detail.</p>
@@ -280,7 +281,7 @@
                 <h2 class="section-title">Recent Painting Projects</h2>
                 <p class="section-subtitle">See examples of our quality finishes across Sydney's North Shore.</p>
             </div>
-            <div class="gallery-scroll-container">
+            <div class="gallery-scroll-container" id="galleryContainer">
                 <div class="gallery-scroll">
                     <div class="gallery-scroll-item">
                         <img src="images/painting/PHOTO-2026-02-04-19-46-01.jpg" alt="Interior painting project">
@@ -343,6 +344,15 @@
                         <img src="images/painting/painting-project-bedroom-2.jpg" alt="Painted bedroom with cream walls and park views">
                     </div>
                 </div>
+            </div>
+            <div class="gallery-nav" data-aos="fade-up">
+                <button type="button" class="gallery-arrow gallery-arrow-left" aria-label="Scroll gallery left">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m15 18-6-6 6-6"/></svg>
+                </button>
+                <div class="gallery-progress"><div class="gallery-progress-bar"></div></div>
+                <button type="button" class="gallery-arrow gallery-arrow-right" aria-label="Scroll gallery right">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m9 18 6-6-6-6"/></svg>
+                </button>
             </div>
         </div>
     </section>
@@ -610,7 +620,7 @@
         <div class="footer-grid">
             <div class="footer-brand">
                 <div class="footer-logo">
-                    <div class="footer-logo-icon">NSP</div>
+                    <img src="images/logos/NSPAINTLOGO-HD-FINAL.png" alt="North Shore Painting" class="footer-logo-icon">
                     <span>North Shore Projects</span>
                 </div>
                 <p>One Group. Removals, Renovations &amp; Cleaning. Proudly serving Sydney's North Shore.</p>
@@ -757,6 +767,37 @@
                 }
             }
         });
+
+        // Gallery arrow navigation + progress bar
+        (function() {
+            var gc = document.getElementById('galleryContainer');
+            if (!gc) return;
+            var leftBtn = gc.parentElement.querySelector('.gallery-arrow-left');
+            var rightBtn = gc.parentElement.querySelector('.gallery-arrow-right');
+            var progressBar = gc.parentElement.querySelector('.gallery-progress-bar');
+            var scrollAmount = 350;
+
+            function updateGalleryNav() {
+                var maxScroll = gc.scrollWidth - gc.clientWidth;
+                if (leftBtn) leftBtn.disabled = gc.scrollLeft <= 5;
+                if (rightBtn) rightBtn.disabled = gc.scrollLeft >= maxScroll - 5;
+                if (progressBar && maxScroll > 0) {
+                    progressBar.style.width = Math.max(10, (gc.scrollLeft / maxScroll) * 100) + '%';
+                } else if (progressBar) {
+                    progressBar.style.width = '100%';
+                }
+            }
+
+            if (leftBtn) leftBtn.addEventListener('click', function() {
+                gc.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+            });
+            if (rightBtn) rightBtn.addEventListener('click', function() {
+                gc.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+            });
+
+            gc.addEventListener('scroll', updateGalleryNav, { passive: true });
+            updateGalleryNav();
+        })();
 
         var scrollTopBtn = document.getElementById('scrollTop');
         window.addEventListener('scroll', function() {
