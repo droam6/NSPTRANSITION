@@ -13,7 +13,7 @@
 - **Emails (service-specific):**
   - Tiling: northshoretiling8@gmail.com
   - Painting: northshorepainting8@gmail.com
-  - Cleaning: northshorecleaning8@gmail.com
+  - Cleaning: northshorecleans8@gmail.com
   - General pages default to: northshoretiling8@gmail.com
 - **ABN:** 12 345 678 901
 - **Hours:** Mon–Sat 7am–6pm
